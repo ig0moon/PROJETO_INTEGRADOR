@@ -6,6 +6,10 @@
 <img src="img/OMAGAAA.jfif">
 <marquee>Omaagaa! centralizado</marquee>
 </div>
-
+<div>
+	<audio controls>
+		<source src="audio/OMGmeme.mp3" type="audio/mp3">
+	</audio>
+</div>
 </body>
 </html>
