@@ -3,9 +3,7 @@
 ?>
 
 
-<marquee>Omaagaa! centralizado</marquee>
-</div>
-<div id="sonido">
+
 	<audio controls>
 		<source src="audio/OMGmeme.mp3" type="audio/mp3">
 	</audio>
