@@ -1,0 +1,48 @@
+create database odontologia;
+create table admin(
+id_admin_pk int not null primary key, 
+telefone varchar(11), 
+email text, 
+nome text, 
+senha text );
+
+
+create table paciente(
+id_cliente_pk int not null primary key, 
+nome text, 
+telefone varchar(11), 
+email text, 
+cpf bigint(11)
+endereco text);
+
+
+create table exame(
+id_examen_pk int not null primary key, 
+tipo text, 
+descricao text, 
+resultado text, 
+hora time,
+data date,
+imagem longblob );
+
+create table dentista(
+id_funcionario_pk int no t null primary key
+cpf varchar(11),
+especialidade text,
+nome text,
+endereco text,
+telefone int(11),
+email char(),
+crm text
+);
+
+create table consulta(
+id_consulta_pk int not null primary key,
+diagnostico text,
+data date,
+valor decimal(10,2),
+situacao text,
+hora time,
+receita_medica text,
+descricao text,
+);
