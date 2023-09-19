@@ -12,7 +12,7 @@ class Banco{
 		$this->url="localhost";
 		$this->usuario="root";
 		$this->senha="";
-		$this->banco="odontologica";
+		$this->banco="odontologia";
 		$this->conexao=new mysqli($this->url,$this->usuario,
 			$this->senha,$this->banco);
 	}
