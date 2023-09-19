@@ -1,0 +1,60 @@
+drop database odontologia;
+create database odontologia;
+use odontologia;
+create table admin(
+id_admin_pk int not null primary key,
+telefone varchar(11), 
+email text, 
+nome text, 
+senha text );
+
+
+create table paciente(
+id_paciente_pk int not null primary key, 
+nome text, 
+telefone varchar(11), 
+email text, 
+cpf bigint(11),
+endereco text);
+
+create table dentista(
+id_funcionario_pk int not null primary key,
+cpf varchar(11),
+especialidade text,
+nome text,
+endereco text,
+telefone int(11),
+email text,
+crm text
+);
+
+create table exame(
+id_examen_pk int not null primary key, 
+id_dentista_fk int not null,
+id_paciente_fk int not null,
+tipo text, 
+descricao text, 
+resultado text, 
+hora time,
+data date,
+imagem longblob,
+foreign key id_dentista_fk references dentista(id_funcionario_pk),
+foreign key id_paciente_fk references paciente(id_paciente_pk)
+
+);
+
+create table consulta(
+id_consulta_pk int not null primary key,
+id_dentista_fk int not null,
+id_paciente_fk int not null,
+diagnostico text,
+data date,
+valor decimal(10,2),
+situacao text,
+hora time,
+receita_medica text,
+descricao text,
+foreign key (id_dentista_fk) references dentista(id_funcionario_pk),
+foreign key (id_paciente_fk) references paciente(id_paciente_pk)
+ 
+);

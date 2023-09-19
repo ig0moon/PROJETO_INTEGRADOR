@@ -6,6 +6,8 @@
 		private $telefone;
 		private $crm;
 		private $email;
+		private $cpf;
+		private $id_funcionario_pk;
 
 		public function setEspecialidade($especialidade){
 			$this->especialidade=$especialidade;
@@ -44,6 +46,20 @@
 
 		public function getEmail(){
 			return $this->email;
+		}
+		public function setCpf($cpf){
+			$this->cpf=$cpf;
+		}
+
+		public function getCpf(){
+			return $this->cpf;
+		}
+		public function setId_Funcionario_Pk($id_funcionario_pk){
+			$this->id_funcionario_pk=$id_funcionario_pk;
+		}
+
+		public function getId_Funcionario_Pk(){
+			return $this->id_funcionario_pk;
 		}
 	}
 
