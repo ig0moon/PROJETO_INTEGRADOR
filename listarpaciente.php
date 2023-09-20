@@ -28,7 +28,7 @@
 
 		while ($linha=$consulta->fetch_assoc()){
 			echo "<tr>";
-			echo "<td>".$linha['id']."</td>";
+			echo "<td>".$linha['id_paciente_pk']."</td>";
 			echo "<td>".$linha['nome']."</td>";
 			echo "<td>".$linha['telefone']."</td>";
 			echo "<td>".$linha['cpf']."</td>";

@@ -38,8 +38,8 @@ class PacientePA{
 	}
 
 	public function listar($inicio,$fim){
-		$sql="select * from paciente where id between $inicio and $fim";
-		return $this->conexao->listar($sql);
+		$sql="select * from paciente where id_paciente_pk between $inicio and $fim";
+		return $this->conexao->consultar($sql);
 	}
 
 	public function logar($nome,$cpf)
@@ -62,13 +62,13 @@ class PacientePA{
 		}
 		public function retornarId($cpf)
 		{
-			$sql="select id from paciente where cpf=$cpf";
+			$sql="select id_paciente_pk from paciente where cpf=$cpf";
 			return $this->conexao->consultar($sql);
 		}
 
 		public function converteIdParaNome($id)
 		{
-           $sql="select nome from paciente where id=$id";
+           $sql="select nome from paciente where id_paciente_pk=$id";
            return $this->conexao->consultar($sql);
 		}
 	}
