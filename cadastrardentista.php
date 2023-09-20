@@ -4,20 +4,21 @@
 
 	<form action="cadastrardentista.php" method="POST" enctype="multipart/form-data">
 		<h1>Cadastrar Dentista</h1>
-
-		<p>Cpf:</p>
-		<p><input type="text" name="cpf" maxlength="25" required></p>
+        
+        <p>Nome:</p>
+		<p><input type="text" name="nome" size="50" maxlength="50" required></p>
 		<p>Especialidade:</p>
-		<p><input type="text" name="especialidade"                            maxlength="25" required></p>
-		<p>Nome:</p>
-		<p><input type="text" name="nome" maxlength="30" required></p>       <p>Endereço:</p>
-		<p><input type="text" name="endereco" maxlength="30" required></p>
+		<p><input type="text" name="especialidade" size="25" maxlength="25" required></p>  
+		<p>Endereço:</p>
+		<p><input type="text" name="endereco" size="100" maxlength="100" required></p>
 		<p>Telefone:</p>
-		<p><input type="text" name="telefone" maxlength="14" required></p>
-		<p>Email:</p>
-		<p><input type="text" name="email" maxlength="14" required></p>
-		<p>Crm:</p>
-		<p><input type="number" name="crm" maxlength="14" required></p>
+		<p><input type="text" name="telefone" size="14" maxlength="14" required></p>
+		<p>E-mail:</p>
+		<p><input type="text" name="email" size="50" maxlength="50" required></p>
+		<p>CPF:</p>
+		<p><input type="text" name="cpf" size="25" maxlength="25" required></p>
+		<p>CRM:</p>
+		<p><input type="number" name="crm" size="14" maxlength="14" required></p>
 
 		<p><input type="submit" name="botao" value="Cadastrar"></p>
 	</form>
