@@ -66,5 +66,10 @@
 			$sql="select nome from dentista where id=$id";
 			return $this->conexao->consultar($sql);
 		}
+		public function listar()
+		{
+			$sql="select * from dentista";
+			return $this->conexao->consultar($sql);
+		}
 	}
 ?>
