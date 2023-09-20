@@ -15,17 +15,17 @@ require_once 'cabecalho.php';
 	if (isset($_POST['botao'])) {
 		require_once 'model/Admin.php';
 		require_once 'persistence/AdminPA.php';
-		$admin=new admin();
-		$adminpa=new adminPA();
+		$admin=new Admin();
+		$adminpa=new AdminPA();
 
-		$admin->setadmin($_POST['admin']);
+		$admin->setNome($_POST['admin']);
 		$admin->setSenha($_POST['senha']);
 		$resp=$adminpa->logar(
-			$admin->getadmin(),$admin->getSenha());
+			$admin->getNome(),$admin->getSenha());
 		if($resp){
 			echo "<h2>Bem vindo ".
-			$admin->getadmin()."!</h2>";
-			setcookie("admin",$admin->getadmin());
+			$admin->getNome()."!</h2>";
+			setcookie("admin",$admin->getNome());
 			echo "<section><a href=''>Entrar</a></section>";
 		}else{
 			echo "<h2>Login Incorreto!</h2>";
