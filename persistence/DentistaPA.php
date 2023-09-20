@@ -10,13 +10,14 @@
 
 	public function cadastrar($dentista){
 			$sql="insert into dentista values(".
-			$cliente->getEspecialidade().",'".
-			$cliente->getNome()."',".
-			$cliente->getTelefone().",'".
-			$cliente->getCrm()."','".
-			$cliente->getEmail()."','"
-			$cliente->getCpf()."','"
-			$cliente->getId_Funcionario_Pk()."')";
+			$dentista->getId_Funcionario_Pk().",'".
+			$dentista->getCpf()."','".
+			$dentista->getEspecialidade()."','".
+			$dentista->getNome()."','".
+			$dentista->getEndereco()."',".
+			$dentista->getTelefone().",'".
+			$dentista->getEmail()."','".
+			$dentista->getCrm()."')";
 
 
 			// echo "$sql";
@@ -24,15 +25,15 @@
 		}
 
 		public function retornarUltimo(){
-			$sql="select max(id) from dentista";
+			$sql="select max(id_funcionario_pk) from dentista";
 			$consulta=$this->conexao->consultar($sql);
 			if (!$consulta){
 				return false;
 			} else{
 				$linha=$consulta->fetch_assoc();
 				$id=0;
-				if($linha['max(id)']!=null){
-					$id=$linha['max(id)'];
+				if($linha['max(id_funcionario_pk)']!=null){
+					$id=$linha['max(id_funcionario_pk)'];
 				}
 				return $id;
 			}
@@ -58,12 +59,12 @@
 		}
 		public function retornarId($cpf)
 		{
-			$sql="select id from dentista where cpf=$cpf";
+			$sql="select id_funcionario_pk from dentista where cpf=$cpf";
 			return $this->conexao->consultar($sql);
 		}
 		public function converteIdParaNome($id)
 		{
-			$sql="select nome from dentista where id=$id";
+			$sql="select nome from dentista where id_funcionario_pk=$id";
 			return $this->conexao->consultar($sql);
 		}
 		public function listar()
