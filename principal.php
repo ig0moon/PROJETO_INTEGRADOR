@@ -19,9 +19,13 @@
     if (isset($_COOKIE['admin'])) {
         // echo "<li><a href='/PROJETO_INTEGRADOR/admin'>Admin</a></li>";
         echo "<li><a href='/PROJETO_INTEGRADOR/cadden'>Cadastrar Dentista</a></li>";
-        echo "<li><a href='/PROJETO_INTEGRADOR/listarden'>Listar Dentista</a></li><br/>";
+        echo "<li><a href='/PROJETO_INTEGRADOR/listarden'>Listar Dentista</a></li>";
         echo "<li><a href='/PROJETO_INTEGRADOR/cadpac'>Cadastrar Paciente</a></li>";
         echo "<li><a href='/PROJETO_INTEGRADOR/listarpac'>Listar Paciente</a></li>";
+        echo "<li><a href='/PROJETO_INTEGRADOR/cadcon'>Cadastrar Consulta</a></li>";
+        echo "<li><a href='/PROJETO_INTEGRADOR/listarcon'>Listar Consulta</a></li>";
+        echo "<li><a href='/PROJETO_INTEGRADOR/cadex'>Cadastrar Exame</a></li>";
+        echo "<li><a href='/PROJETO_INTEGRADOR/listarex'>Listar Exame</a></li>";
         echo "<li><a href='/PROJETO_INTEGRADOR/sairadmin'>Sair</a></li>";
 
     } else if (isset($_COOKIE['cliente'])) {

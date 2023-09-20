@@ -20,7 +20,7 @@ class ConsultaPA{
 			$consulta->getDescricao().",'".
 			$consulta->getDiagnostico()."')";
 			$consulta->getValor()."',".
-			$consulta->getReceita_medica().",'".
+			$consulta->getReceita_medica().",')";
 		return $this->conexao->executar($sql);
 	}
 

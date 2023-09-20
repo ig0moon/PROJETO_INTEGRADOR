@@ -40,6 +40,10 @@ switch ($url) {
 		require_once './cadastrarpaciente.php';
 		break;
 
+	case '/PROJETO_INTEGRADOR/cadcon':
+		require_once './cadastrarconsulta.php';
+		break;
+
 	case '/PROJETO_INTEGRADOR/listarpac':
 		require_once './listarpaciente.php';
 		break;
@@ -52,8 +56,16 @@ switch ($url) {
 		require_once './listar_exames.php';
 		break;
 
-	case '/PROJETO_INTEGRADOR/listcon':
+	case '/PROJETO_INTEGRADOR/listarcon':
 		require_once './listarconsulta.php';
+		break;
+
+	case '/PROJETO_INTEGRADOR/ajuda':
+		require_once './ajuda.php';
+		break;
+
+	case '/PROJETO_INTEGRADOR/sobre':
+		require_once './sobre.php';
 		break;
 
 	default:
