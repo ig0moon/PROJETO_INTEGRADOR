@@ -96,9 +96,8 @@
 	</div>
 
 	<div id="lks">
-		<p><a href="/PROJETO_INTEGRADOR/faq" target="quadro">Perguntas Frequentes</a></p>
 		<p><a href="/PROJETO_INTEGRADOR/ajuda" target="quadro">Ajuda</a></p>
-		<p><a href="/PROJETO_INTEGRADOR/contato" target="quadro">Contato</a></p>
+		<p><a href="/PROJETO_INTEGRADOR/sobre" target="quadro">Sobre</a></p>
 	</div>
 
 	<div id="sobre2">
