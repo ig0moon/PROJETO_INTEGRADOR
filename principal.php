@@ -16,6 +16,7 @@
             <ul class="nav">
             	<li><a href="/PROJETO_INTEGRADOR/login">Entrar</a></li>
             	<li><a href="/PROJETO_INTEGRADOR/cadpac">Cadastrar</a></li>
+                <li><a href="/PROJETO_INTEGRADOR/loginadmin">Admin</a></li>
         	</ul>
         </div>
 

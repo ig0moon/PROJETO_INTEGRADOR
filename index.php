@@ -16,6 +16,10 @@ switch ($url) {
 		require_once './login_paciente.php';
 		break;
 
+	case '/PROJETO_INTEGRADOR/loginadmin':
+		require_once './logaradmin.php';
+		break;
+
 	case '/PROJETO_INTEGRADOR/cadden':
 		require_once './cadastrardentista.php';
 		break;
