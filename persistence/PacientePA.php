@@ -34,12 +34,37 @@ class PacientePA{
 		}
 	}
 
-	public function listar(){
-	$sql="select * from paciente";
-	return $this->conexao->consultar($sql);	
-	}
+	
 
-	public function deletar($id){
-		$sql="delete from paciente where id=$id";
+	public function logar($nome,$cpf)
+		{
+			$sql="select nome,cpf from paciente";
+			$consulta=$this->conexao->consultar($sql);
+			if(!$consulta){
+				return false;
+			}else{
+				$teste=false;
+				while($linha=$consulta->fetch_assoc()){
+					if($linha['nome']==$nome){
+						if($linha['cpf']==$cpf){
+							return true;
+						}
+					}
+				}
+				return $teste;
+			}
+		}
+		public function retornarId($cpf)
+		{
+			$sql="select id from paciente where cpf=$cpf";
+			return $this->conexao->consultar($sql);
+		}
+
+		public function converteIdParaNome($id)
+		{
+           $sql="select nome from paciente where id=$id";
+           return $this->conexao->consultar($sql);
+		}
 	}
+?>
 }
