@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 20-Set-2023 às 21:46
+-- Generation Time: 20-Set-2023 às 21:54
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
 
@@ -21,6 +21,50 @@ SET time_zone = "+00:00";
 --
 -- Database: `odontologia`
 --
+CREATE DATABASE IF NOT EXISTS `odontologia` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `odontologia`;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE `admin` (
+  `id_admin_pk` int(11) NOT NULL,
+  `telefone` varchar(11) DEFAULT NULL,
+  `email` text,
+  `nome` text,
+  `senha` text
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `admin`
+--
+
+INSERT INTO `admin` (`id_admin_pk`, `telefone`, `email`, `nome`, `senha`) VALUES
+(1, '09009001728', 'senac@senac.senac', 'Carlos', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `consulta`
+--
+
+DROP TABLE IF EXISTS `consulta`;
+CREATE TABLE `consulta` (
+  `id_consulta_pk` int(11) NOT NULL,
+  `id_dentista_fk` int(11) NOT NULL,
+  `id_paciente_fk` int(11) NOT NULL,
+  `diagnostico` text,
+  `data` date DEFAULT NULL,
+  `valor` decimal(10,2) DEFAULT NULL,
+  `situacao` text,
+  `hora` time DEFAULT NULL,
+  `receita_medica` text,
+  `descricao` text
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -35,9 +79,44 @@ CREATE TABLE `dentista` (
   `especialidade` text,
   `nome` text,
   `endereco` text,
-  `telefone` int(12) DEFAULT NULL,
+  `telefone` bigint(12) DEFAULT NULL,
   `email` text,
   `crm` text
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `exame`
+--
+
+DROP TABLE IF EXISTS `exame`;
+CREATE TABLE `exame` (
+  `id_examen_pk` int(11) NOT NULL,
+  `id_dentista_fk` int(11) NOT NULL,
+  `id_paciente_fk` int(11) NOT NULL,
+  `tipo` text,
+  `descricao` text,
+  `resultado` text,
+  `hora` time DEFAULT NULL,
+  `data_agenda` date DEFAULT NULL,
+  `imagem` longblob
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `paciente`
+--
+
+DROP TABLE IF EXISTS `paciente`;
+CREATE TABLE `paciente` (
+  `id_paciente_pk` int(11) NOT NULL,
+  `nome` text,
+  `telefone` varchar(11) DEFAULT NULL,
+  `email` text,
+  `cpf` bigint(11) DEFAULT NULL,
+  `endereco` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -45,10 +124,38 @@ CREATE TABLE `dentista` (
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id_admin_pk`);
+
+--
+-- Indexes for table `consulta`
+--
+ALTER TABLE `consulta`
+  ADD PRIMARY KEY (`id_consulta_pk`),
+  ADD KEY `id_dentista_fk` (`id_dentista_fk`),
+  ADD KEY `id_paciente_fk` (`id_paciente_fk`);
+
+--
 -- Indexes for table `dentista`
 --
 ALTER TABLE `dentista`
   ADD PRIMARY KEY (`id_funcionario_pk`);
+
+--
+-- Indexes for table `exame`
+--
+ALTER TABLE `exame`
+  ADD PRIMARY KEY (`id_examen_pk`),
+  ADD KEY `id_dentista_fk` (`id_dentista_fk`),
+  ADD KEY `id_paciente_fk` (`id_paciente_fk`);
+
+--
+-- Indexes for table `paciente`
+--
+ALTER TABLE `paciente`
+  ADD PRIMARY KEY (`id_paciente_pk`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
