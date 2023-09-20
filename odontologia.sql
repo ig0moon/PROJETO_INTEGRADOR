@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 19-Set-2023 às 20:18
+-- Generation Time: 20-Set-2023 às 21:54
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
 
@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `odontologia`
 --
-CREATE DATABASE IF NOT EXISTS `odontologia` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `odontologia` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `odontologia`;
 
 -- --------------------------------------------------------
@@ -30,14 +30,21 @@ USE `odontologia`;
 -- Estrutura da tabela `admin`
 --
 
-CREATE TABLE IF NOT EXISTS `admin` (
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE `admin` (
   `id_admin_pk` int(11) NOT NULL,
   `telefone` varchar(11) DEFAULT NULL,
   `email` text,
   `nome` text,
-  `senha` text,
-  PRIMARY KEY (`id_admin_pk`)
+  `senha` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `admin`
+--
+
+INSERT INTO `admin` (`id_admin_pk`, `telefone`, `email`, `nome`, `senha`) VALUES
+(1, '09009001728', 'senac@senac.senac', 'Carlos', 'admin');
 
 -- --------------------------------------------------------
 
@@ -45,7 +52,8 @@ CREATE TABLE IF NOT EXISTS `admin` (
 -- Estrutura da tabela `consulta`
 --
 
-CREATE TABLE IF NOT EXISTS `consulta` (
+DROP TABLE IF EXISTS `consulta`;
+CREATE TABLE `consulta` (
   `id_consulta_pk` int(11) NOT NULL,
   `id_dentista_fk` int(11) NOT NULL,
   `id_paciente_fk` int(11) NOT NULL,
@@ -55,10 +63,7 @@ CREATE TABLE IF NOT EXISTS `consulta` (
   `situacao` text,
   `hora` time DEFAULT NULL,
   `receita_medica` text,
-  `descricao` text,
-  PRIMARY KEY (`id_consulta_pk`),
-  KEY `id_dentista_fk` (`id_dentista_fk`),
-  KEY `id_paciente_fk` (`id_paciente_fk`)
+  `descricao` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -67,16 +72,16 @@ CREATE TABLE IF NOT EXISTS `consulta` (
 -- Estrutura da tabela `dentista`
 --
 
-CREATE TABLE IF NOT EXISTS `dentista` (
+DROP TABLE IF EXISTS `dentista`;
+CREATE TABLE `dentista` (
   `id_funcionario_pk` int(11) NOT NULL,
   `cpf` varchar(11) DEFAULT NULL,
   `especialidade` text,
   `nome` text,
   `endereco` text,
-  `telefone` int(11) DEFAULT NULL,
+  `telefone` bigint(12) DEFAULT NULL,
   `email` text,
-  `crm` text,
-  PRIMARY KEY (`id_funcionario_pk`)
+  `crm` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -85,7 +90,8 @@ CREATE TABLE IF NOT EXISTS `dentista` (
 -- Estrutura da tabela `exame`
 --
 
-CREATE TABLE IF NOT EXISTS `exame` (
+DROP TABLE IF EXISTS `exame`;
+CREATE TABLE `exame` (
   `id_examen_pk` int(11) NOT NULL,
   `id_dentista_fk` int(11) NOT NULL,
   `id_paciente_fk` int(11) NOT NULL,
@@ -94,10 +100,7 @@ CREATE TABLE IF NOT EXISTS `exame` (
   `resultado` text,
   `hora` time DEFAULT NULL,
   `data_agenda` date DEFAULT NULL,
-  `imagem` longblob,
-  PRIMARY KEY (`id_examen_pk`),
-  KEY `id_dentista_fk` (`id_dentista_fk`),
-  KEY `id_paciente_fk` (`id_paciente_fk`)
+  `imagem` longblob
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -106,15 +109,53 @@ CREATE TABLE IF NOT EXISTS `exame` (
 -- Estrutura da tabela `paciente`
 --
 
-CREATE TABLE IF NOT EXISTS `paciente` (
+DROP TABLE IF EXISTS `paciente`;
+CREATE TABLE `paciente` (
   `id_paciente_pk` int(11) NOT NULL,
   `nome` text,
   `telefone` varchar(11) DEFAULT NULL,
   `email` text,
   `cpf` bigint(11) DEFAULT NULL,
-  `endereco` text,
-  PRIMARY KEY (`id_paciente_pk`)
+  `endereco` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id_admin_pk`);
+
+--
+-- Indexes for table `consulta`
+--
+ALTER TABLE `consulta`
+  ADD PRIMARY KEY (`id_consulta_pk`),
+  ADD KEY `id_dentista_fk` (`id_dentista_fk`),
+  ADD KEY `id_paciente_fk` (`id_paciente_fk`);
+
+--
+-- Indexes for table `dentista`
+--
+ALTER TABLE `dentista`
+  ADD PRIMARY KEY (`id_funcionario_pk`);
+
+--
+-- Indexes for table `exame`
+--
+ALTER TABLE `exame`
+  ADD PRIMARY KEY (`id_examen_pk`),
+  ADD KEY `id_dentista_fk` (`id_dentista_fk`),
+  ADD KEY `id_paciente_fk` (`id_paciente_fk`);
+
+--
+-- Indexes for table `paciente`
+--
+ALTER TABLE `paciente`
+  ADD PRIMARY KEY (`id_paciente_pk`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -4,6 +4,7 @@
 		private $especialidade;
 		private $nome;
 		private $telefone;
+		private $endereco;
 		private $crm;
 		private $email;
 		private $cpf;
@@ -19,6 +20,13 @@
 
 		public function setNome($nome){
 			$this->nome=$nome;
+		}
+
+		public function getEndereco(){
+			return $this->endereco;
+		}
+			public function setEndereco($endereco){
+			$this->endereco=$endereco;
 		}
 
 		public function getNome(){

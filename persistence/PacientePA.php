@@ -1,10 +1,10 @@
 <?php
-require_once 'banco.php';
+require_once 'Banco.php';
 
 class PacientePA{
 	private $conexao;
 
-	function__construct(){
+	function __construct(){
 		$this->conexao=new Banco();
 	}
 
@@ -14,21 +14,24 @@ class PacientePA{
 		$paciente->getNome()."','".
 		$paciente->getTelefone()."','".
 		$paciente->getEmail()."',".
-		$paciente->getCpf().")";
+		$paciente->getCpf().",'".
+		$paciente->getEndereco()."')";
+		
+		
 
 		return $this->conexao->executar($sql);
 	}
 
 	public function retornarUltimo(){
-		$sql="select max(id) from paciente";
+		$sql="select max(id_paciente_pk) from paciente";
 		$consulta=$this->conexao->consultar($sql);
 		if (!$consulta){
 			return false;
 		}else{
 			$linha=$consulta->fetch_assoc();
 			$id=0;
-			if ($linha['max(id)']!=null){
-				$id=$linha['max(id)'];
+			if ($linha['max(id_paciente_pk)']!=null){
+				$id=$linha['max(id_paciente_pk)'];
 			}
 			return $id;
 		}
@@ -70,4 +73,3 @@ class PacientePA{
 		}
 	}
 ?>
-}

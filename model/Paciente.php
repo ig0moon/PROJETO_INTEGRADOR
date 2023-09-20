@@ -6,6 +6,7 @@
    	   private $telefone;
    	   private $cpf;
    	   private $email;
+       private $endereco;
 
 
    	     public function setId($id){
@@ -38,12 +39,21 @@
       public function getCpf(){
       	return $this->cpf;
       }
-          public function setEmail($email){
-   	   	    $this->email=$email;
-   	   }
+
+      public function setEmail($email){
+   	   	$this->email=$email;
+   	  }
 
       public function getEmail(){
-      	return $this->email; 
-}
+      	return $this->email;
+      }
+
+      public function setEndereco($endereco){
+        $this->endereco=$endereco;
+      }
+
+      public function getEndereco(){
+        return $this->endereco; 
+      }
 }
 ?>

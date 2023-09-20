@@ -5,20 +5,19 @@
 	<form action="cadastrardentista.php" method="POST" enctype="multipart/form-data">
 		<h1>Cadastrar Dentista</h1>
 
-		<p>Nome:</p>
-		<p><input type="text" name="nome" maxlength="25" required></p>
+		<p>Cpf:</p>
+		<p><input type="text" name="cpf" maxlength="25" required></p>
 		<p>Especialidade:</p>
-		<p><input type="text" name="especialidade" maxlength="25" required></p>
-		<p>Endereço:</p>
-		<p><input type="text" name="endereco" maxlength="50" required></p>
-		<p>Email:</p>
-		<p><input type="text" name="email" maxlength="30" required></p>
+		<p><input type="text" name="especialidade"                            maxlength="25" required></p>
+		<p>Nome:</p>
+		<p><input type="text" name="nome" maxlength="30" required></p>       <p>Endereço:</p>
+		<p><input type="text" name="endereco" maxlength="30" required></p>
 		<p>Telefone:</p>
 		<p><input type="text" name="telefone" maxlength="14" required></p>
+		<p>Email:</p>
+		<p><input type="text" name="email" maxlength="14" required></p>
 		<p>Crm:</p>
-		<p><input type="text" name="crm" maxlength="14" required></p>
-		<p>Cpf:</p>
-		<p><input type="number" name="cpf" maxlength="14" required></p>
+		<p><input type="number" name="crm" maxlength="14" required></p>
 
 		<p><input type="submit" name="botao" value="Cadastrar"></p>
 	</form>
@@ -31,13 +30,13 @@
 		$dentista=new Dentista();
 		$dentistapa=new DentistaPA();
 
-		$dentista->setNome($_POST['nome']);
-		$dentista->setEspecialidade($_POST['especialidade']);
-		$dentista->setEndereco($_POST['endereco']);
-		$dentista->setEmail($_POST['email']);
-		$dentista->setTelefone($_POST['telefone']);
-		$dentista->setCrm($_POST['crm']);
 		$dentista->setCpf($_POST['cpf']);
+		$dentista->setEspecialidade($_POST['especialidade']);
+		$dentista->setNome($_POST['nome']);
+		$dentista->setEndereco($_POST['endereco']);
+		$dentista->setTelefone($_POST['telefone']);
+		$dentista->setEmail($_POST['email']);
+		$dentista->setCrm($_POST['crm']);
 
 		$id=$dentistapa->retornarUltimo();
 		if ($id>0){
