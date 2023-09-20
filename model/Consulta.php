@@ -59,7 +59,7 @@ public function setDescricao($descricao)
 		return $this->data;
 	}
 
-	public function setHoras($hora)
+	public function setHora($hora)
 	{
 		$this->hora=$hora;
 	}
