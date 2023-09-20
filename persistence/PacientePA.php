@@ -34,6 +34,10 @@ class PacientePA{
 		}
 	}
 
+	public function listar($inicio,$fim){
+		// code...
+	}
+
 	
 
 	public function logar($nome,$cpf)
