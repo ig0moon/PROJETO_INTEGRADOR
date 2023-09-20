@@ -26,7 +26,7 @@ require_once 'cabecalho.php';
 			echo "<h2>Bem vindo ".
 			$admin->getNome()."!</h2>";
 			setcookie("admin",$admin->getNome());
-			echo "<section><a href='/PROJETO_INTEGRADOR/home'>Entrar</a></section>";
+			echo "<section><a href='/PROJETO_INTEGRADOR/'>Entrar</a></section>";
 		}else{
 			echo "<h2>Login Incorreto!</h2>";
 		}
