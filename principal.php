@@ -5,7 +5,7 @@
 <section class="header">
 
         <div id="logo">
-            <a href=""><img src="img/icone-index.png"></a>
+            <a href="/PROJETO_INTEGRADOR/home" target="quadro"><img src="img/icone-index.png"></a>
         </div>
 
         <div id="titulo">
@@ -14,70 +14,16 @@
 
         <div id="links">
             <ul class="nav">
-            	<li><a href="login.php">Entrar</a></li>
-            	<li><a href="cadastrar.php">Cadastrar</a></li>
+            	<li><a href="/PROJETO_INTEGRADOR/login">Entrar</a></li>
+            	<li><a href="/PROJETO_INTEGRADOR/cadastro">Cadastrar</a></li>
         	</ul>
         </div>
 
 </section>
 
-<section>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
+<section class="conteudo">
+	<iframe src="/PROJETO_INTEGRADOR/home" id="quadro" name="quadro"></iframe>
 </section>
+
+</body>
+</html>
