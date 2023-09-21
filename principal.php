@@ -18,28 +18,28 @@
 <?php
     if (isset($_COOKIE['admin'])) {
         // echo "<li><a href='/PROJETO_INTEGRADOR/admin'>Admin</a></li>";
-        echo "<li><a href='/PROJETO_INTEGRADOR/cadden' target='quadro' title='Cadastrar Dentista'>
+        echo "<li><a href='/PROJETO_INTEGRADOR/cadden' target='quadro' title='Cadastrar Dentistas'>
         <span class='material-symbols-outlined'>dentistry</span><span class='material-symbols-outlined'>add</span></a></li>";
 
-        echo "<li><a href='/PROJETO_INTEGRADOR/listarden' target='quadro' title='Listar Dentista'>
+        echo "<li><a href='/PROJETO_INTEGRADOR/listarden' target='quadro' title='Listar Dentistas'>
         <span class='material-symbols-outlined'>dentistry</span><span class='material-symbols-outlined'>list</span></a></li>";
 
-        echo "<li><a href='/PROJETO_INTEGRADOR/cadpac' target='quadro' title='Cadastrar Paciente'>
+        echo "<li><a href='/PROJETO_INTEGRADOR/cadpac' target='quadro' title='Cadastrar Pacientes'>
         <span class='material-symbols-outlined'>personal_injury</span><span class='material-symbols-outlined'>add</span></a></li>";
 
-        echo "<li><a href='/PROJETO_INTEGRADOR/listarpac' target='quadro' title='Listar Paciente'>
+        echo "<li><a href='/PROJETO_INTEGRADOR/listarpac' target='quadro' title='Listar Pacientes'>
          <span class='material-symbols-outlined'>personal_injury</span><span class='material-symbols-outlined'>list</span></a></li>";
 
-        echo "<li><a href='/PROJETO_INTEGRADOR/cadcon' target='quadro' title='Cadastrar Consulta'>
+        echo "<li><a href='/PROJETO_INTEGRADOR/cadcon' target='quadro' title='Cadastrar Consultas'>
         <span class='material-symbols-outlined'>prescriptions</span><span class='material-symbols-outlined'>add</span></a></li>";
 
-        echo "<li><a href='/PROJETO_INTEGRADOR/listarcon' target='quadro' title='Listar Consulta'>
+        echo "<li><a href='/PROJETO_INTEGRADOR/listarcon' target='quadro' title='Listar Consultas'>
         <span class='material-symbols-outlined'>prescriptions</span><span class='material-symbols-outlined'>list</span></a></li>";
 
-        echo "<li><a href='/PROJETO_INTEGRADOR/cadex' target='quadro' title='Cadastrar Exame'>
+        echo "<li><a href='/PROJETO_INTEGRADOR/cadex' target='quadro' title='Cadastrar Exames'>
         <span class='material-symbols-outlined'>vital_signs</span><span class='material-symbols-outlined'>add</span></a></li>";
 
-        echo "<li><a href='/PROJETO_INTEGRADOR/listarex' target='quadro' title='Listar Exame'>
+        echo "<li><a href='/PROJETO_INTEGRADOR/listarex' target='quadro' title='Listar Exames'>
         <span class='material-symbols-outlined'>vital_signs</span><span class='material-symbols-outlined'>list</span></a></li>";
 
         echo "<li><a href='/PROJETO_INTEGRADOR/sairadmin' title='Sair'>
