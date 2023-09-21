@@ -96,7 +96,7 @@
 
 <section class="rodape">
 	<div id="sobre">
-		<p>Omaga<br/>Clinica Odontológica&reg;</p>
+		<p>Omaga&reg;<br/>Clinica Odontológica</p>
 		<p>&#9743;(42) 3232-7777</p>
 	</div>
 
@@ -114,10 +114,3 @@
 
 </body>
 </html>
-=======
-<br/>
-
-<?php
-	require_once 'rodape.php';
-?>
->>>>>>> bc9cced3fc186ad6dd22daae4512973ed9e8af76

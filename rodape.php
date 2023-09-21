@@ -4,7 +4,7 @@
 
 <section class="rodape">
 	<div id="sobre">
-		<p>Omaga<br/>Clinica Odontológica&reg;</p>
+		<p>Omaga&reg;<br/>Clinica Odontológica</p>
 		<p>&#9743;(42) 3232-7777</p>
 	</div>
 
@@ -14,9 +14,9 @@
 	</div>
 
 	<div id="sobre2">
-		<p>Desenvolvido no SENAC-PG&trade;</p>
-		<p>Rua X de Y, 99</p>
-		<p>Ponta Grossa-PR</p>
+		<p>Desenvolvido no SENAC&trade; Ponta Grossa</p>
+		<p>Av. João Manoel dos Santos Ribas, 313 - Nova Rússia</p>
+		<p>Ponta Grossa - PR</p>
 	</div>
 </section>
 
