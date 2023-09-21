@@ -11,7 +11,7 @@ require_once 'cabecalho.php';
 	if (isset($_POST['botao'])) {
 		require_once 'persistence/PacientePA.php';
 		$pacientepa=new PacientePA();
-		$resp=$clientepa->logar($_POST['nome'],$_POST['cpf']);
+		$resp=$pacientepa->logar($_POST['usuario'],$_POST['cpf']);
 		if (!$resp) {
 			echo "<h2>Login Incorreto!</h2>";
 		}else{
