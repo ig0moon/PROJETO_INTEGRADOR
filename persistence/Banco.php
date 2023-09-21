@@ -37,7 +37,6 @@ class Banco{
 			return false;
 		}
 	}
-
 }
 
 ?>

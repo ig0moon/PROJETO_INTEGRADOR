@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Igor, Jesus, Pedro, Leonardo, Tamires, Raphael, Gabriel, Osmar">
+	<meta name="keywords" content="Odonto, Odontologia, Clinica, Omaga">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<title>Omaga Odontologia</title>
 	<link rel="icon" href="img/icone.png">
