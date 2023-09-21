@@ -24,6 +24,7 @@ require_once 'cabecalho.php'
 <br>
 <p>Oferecemos uma ampla gama de serviços odontológicos, desde tratamentos preventivos até procedimentos avançados de reabilitação oral. Nossos serviços incluem:</p>
 <br>
+<<<<<<< HEAD
 	<ul class="sobrepag">
 		<li>&#129463;Limpeza e prevenção;</li>
 		<li>&#129463;Tratamentos estéticos, como clareamento dental e facetas de porcelana;</li>
@@ -33,6 +34,19 @@ require_once 'cabecalho.php'
 		<li>&#129463;Odontopediatria para cuidar dos sorrisos das crianças;</li>
 		<li>&#129463;Tratamento de periodontite e gengivite e;</li>
 		<li>&#129463;Restaurações de alta qualidade, incluindo restaurações estéticas e coroas.</li>
+=======
+	<ul>
+
+	<ul class="sobrepag">
+		<li>Limpeza e prevenção;</li>
+		<li>Tratamentos estéticos, como clareamento dental e facetas de porcelana;</li>
+		<li>Implantes dentários e reabilitação oral;</li>
+		<li>Ortodontia, incluindo Invisalign®;</li>
+		<li>Cirurgia bucal e maxilofacial;</li>
+		<li>Odontopediatria para cuidar dos sorrisos das crianças;</li>
+		<li>Tratamento de periodontite e gengivite e;</li>
+		<li>Restaurações de alta qualidade, incluindo restaurações estéticas e coroas.</li>
+>>>>>>> 60e638806b87948c9dc47788ff2f9bfa9b1b1c49
 	</ul>
 <br>
 	<h3>Nossa Dedicação à Comunidade</h3>
