@@ -27,7 +27,6 @@ require_once 'cabecalho.php';
 			$admin->getNome()."!</h2>";
 			setcookie("admin",$admin->getNome());
 			echo "<meta http-equiv='refresh' content='2;url=/PROJETO_INTEGRADOR/'>";
-			// echo "<section><a href='/PROJETO_INTEGRADOR/'>Entrar</a></section>";
 		}else{
 			echo "<h2>Login Incorreto!</h2>";
 		}

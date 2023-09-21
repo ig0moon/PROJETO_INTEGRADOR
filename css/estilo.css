@@ -108,6 +108,32 @@ iframe {
 	height: 89%;
 }
 
+#painel {
+	margin-left: auto;
+	margin-right: auto;
+	width: 30em;
+	margin-top: 15px;
+	background-color: var(--color-blue2);
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px var(--color-dark1);
+}
+
+#painel p {
+	padding: 1em;
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#painel a {
+	text-decoration: none;
+	color: var(--color-white);
+}
+
+#painel a:hover {
+	border-bottom: 3px solid var(--color-text);
+}
+
 .rodape {
 	display: flex;
 	justify-content: center;
