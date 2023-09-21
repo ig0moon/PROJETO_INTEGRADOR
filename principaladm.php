@@ -35,9 +35,7 @@
         echo "<h2>Você não está logado como administrador.</h2>";
     }
 ?>
-<?php
-    require_once 'rodape.php';
-?>
+
 
 </body>
 </html>
