@@ -4,9 +4,13 @@ require_once 'cabecalho.php'
 
 ?>
 
+<<<<<<< HEAD
+  		
+=======
   		<h1>Perguntas Frequentes:</h1>
-<br>
-<br>
+
+
+>>>>>>> 213d6505fc65a15d0137e99595c5f56acd3df3b7
 	<h2>Quais são os serviços oferecidos pela sua clínica odontológica?</h2>
 <br>
 <p>Oferecemos uma ampla gama de serviços odontológicos, incluindo limpeza dental, restaurações, tratamento de canal, extrações, implantes, ortodontia, odontopediatria e muito mais. Nossa equipe está preparada para atender às suas necessidades odontológicas.</p>
@@ -43,7 +47,7 @@ require_once 'cabecalho.php'
 <br>
 <p>Um dentista geral realiza uma variedade de tratamentos odontológicos básicos, enquanto um especialista possui treinamento adicional em áreas específicas, como ortodontia, periodontia ou endodontia. Se necessário, encaminharemos você a um especialista qualificado para cuidados mais específicos.</p>
 <br>
-	<h2>Vocês aceitam planos de seguro odontológico?</p>
+	<h2>Vocês aceitam planos de seguro odontológico?</h2>
 <br>
 <p>Sim, aceitamos muitos planos de seguro odontológico. Entre em contato conosco com informações sobre seu seguro, e nossa equipe terá prazer em ajudá-lo a entender os detalhes da cobertura.</p>
 <br>

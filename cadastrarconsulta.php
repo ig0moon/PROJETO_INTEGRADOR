@@ -5,7 +5,7 @@ require_once 'cabecalho.php';
 ?>
 
 <form action="cadastrarconsulta.php" method="POST" class="">
-	<h1>Cadastrar Consulta</h1>
+	<h2>Cadastrar Consulta</h2>
 	<p>Diagnostico:<textarea name="diagnostico" rows="5" cols="100" required></textarea></p>
 	<p>Data:<input type="date" name="data"></p>
 	<p>Valor R$:<input type="text" name="valor" maxlength="7" size="7" pattern="[0-9,.]{1,5}[0-9]{2}" placeholder="99.99"></p>
