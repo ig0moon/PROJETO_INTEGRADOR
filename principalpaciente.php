@@ -36,3 +36,10 @@
         </div>
 
 </section>
+
+<section class="conteudo">
+    <iframe src="/PROJETO_INTEGRADOR/home" id="quadro" name="quadro"></iframe>
+</section>
+
+</body>
+</html>
