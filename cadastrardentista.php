@@ -56,3 +56,17 @@
 	}
 
 ?>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<?php
+	require_once 'rodape.php';
+?>
