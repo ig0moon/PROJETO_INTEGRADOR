@@ -26,6 +26,7 @@
 <br/>
 <h2>&#129463;6. Tratamentos Odontológicos Avançados</h2>
 <h4>A odontologia avançou significativamente ao longo dos anos, oferecendo uma variedade de tratamentos para melhorar a saúde e a estética bucal. Desde implantes dentários até ortodontia moderna, há soluções para quase todos os problemas dentários. Consulte seu dentista para saber qual tratamento é mais adequado para você.</h4>
+<<<<<<< HEAD
 	<br/>
 	<br>
 	<br>
@@ -113,3 +114,10 @@
 
 </body>
 </html>
+=======
+<br/>
+
+<?php
+	require_once 'rodape.php';
+?>
+>>>>>>> bc9cced3fc186ad6dd22daae4512973ed9e8af76
