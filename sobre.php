@@ -49,5 +49,8 @@ require_once 'cabecalho.php'
 <br>
 <p>Na Clínica Odontológica OMAGA, acreditamos que um sorriso saudável é uma porta de entrada para uma vida mais feliz e confiante. Estamos aqui para ajudá-lo a alcançar o sorriso dos seus sonhos. Marque uma consulta hoje mesmo e descubra como podemos transformar sua saúde bucal e sua qualidade de vida. Junte-se a nós nesta jornada para um sorriso que transforma vidas!</p>
 <br>
+<?php
+	require_once 'rodape.php';
+?>
 </body>
 </html>

@@ -35,5 +35,8 @@ if(!$consulta){
 	
 }
 ?>
+<?php
+	require_once 'rodape.php';
+?>
 </body>
 </html>
