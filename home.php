@@ -21,23 +21,7 @@
 <h2>6. Tratamentos Odontológicos Avançados</h2>
 <h4>A odontologia avançou significativamente ao longo dos anos, oferecendo uma variedade de tratamentos para melhorar a saúde e a estética bucal. Desde implantes dentários até ortodontia moderna, há soluções para quase todos os problemas dentários. Consulte seu dentista para saber qual tratamento é mais adequado para você.</h4>
 <br/>
-<section class="rodape">
-	<div id="sobre">
-		<p>Omaga<br/>Clinica Odontológica&reg;</p>
-		<p>&#9743;(42) 3232-7777</p>
-	</div>
 
-	<div id="lks">
-		<p><a href="/PROJETO_INTEGRADOR/ajuda" target="quadro">Ajuda</a></p>
-		<p><a href="/PROJETO_INTEGRADOR/sobre" target="quadro">Sobre</a></p>
-	</div>
-
-	<div id="sobre2">
-		<p>Desenvolvido no SENAC-PG&trade;</p>
-		<p>Rua X de Y, 99</p>
-		<p>Ponta Grossa-PR</p>
-	</div>
-</section>
-
-</body>
-</html>
+<?php
+	require_once 'rodape.php';
+?>
