@@ -47,6 +47,17 @@ h1 {
 	font-family: 'Poppins', sans-serif;
 }
 
+.titulo {
+	color: var(--color-dark1);
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+}
+
+.titulo1 {
+	color: var(--color-blue1);
+	font-family: 'Poppins', sans-serif;
+}
+
 h2 {
 	color: var(--color-dark1);
 	font-family: 'Poppins', sans-serif;
@@ -101,6 +112,13 @@ li.cpf p {
 	max-width: 100%;
 }
 
+.home {
+max-height: 50%;
+max-width: 50%;
+margin: auto;
+margin-top: 5vh;
+}
+
 .conteudo{
 	width: 100vw;
 	height: 100vh;
@@ -118,6 +136,7 @@ iframe {
 }
 
 #painel {
+	color: var(--color-white);
 	margin-left: auto;
 	margin-right: auto;
 	width: 30em;
@@ -128,19 +147,27 @@ iframe {
 }
 
 #painel h2 {
+	color: var(--color-white);
 	text-align: center;
 }
 
 #painel p {
-	padding: 1em;
+	padding: 10px;
 	font-size: 20px;
 	text-align: center;
 	font-weight: bold;
 }
 
+input {
+	width: 90px;
+	height: 30px;
+}
+
 .btn {
-	font-size: ;
+	height: 40px;
+	font-size: 15px;
 	padding: 10px;
+	margin: 10px;
 }
 
 #painel a {

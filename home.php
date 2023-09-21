@@ -2,12 +2,12 @@
 	require_once 'cabecalho.php';
 	
 ?>
-<<<<<<< HEAD
 
-=======
-<h1>Clínica Odontológica OMAGA: Credibilidade e Experiência Inigualáveis no Mercado Odontológico</h1>
-
-<h2>Em meio à agitação do dia a dia, muitas vezes negligenciamos a importância dos cuidados odontológicos regulares. No entanto, a saúde bucal desempenha um papel crucial em nosso bem-estar geral. Neste artigo, vamos explorar por que cuidar dos seus dentes e gengivas não deve ser uma reflexão tardia, mas sim uma prioridade em sua rotina de cuidados de saúde.</h2>
+<img class="home" src="https://divertidosos.com.br/novidades/wp-content/uploads/2020/10/conheca-todas-as-especialidades-de-um-dentista.jpeg" alt="Dentistas">
+	<br>
+<h1 class="titulo">Clínica Odontológica OMAGA: Credibilidade e Experiência Inigualáveis no Mercado Odontológico</h1>
+	<br>
+<h2 class="titulo1">Em meio à agitação do dia a dia, muitas vezes negligenciamos a importância dos cuidados odontológicos regulares. No entanto, a saúde bucal desempenha um papel crucial em nosso bem-estar geral. Neste artigo, vamos explorar por que cuidar dos seus dentes e gengivas não deve ser uma reflexão tardia, mas sim uma prioridade em sua rotina de cuidados de saúde.</h2>
 <br/>
 <h2>&#129463;1. Prevenção é a Melhor Abordagem</h2>
 <h4>Em odontologia, como em muitas outras áreas da saúde, a prevenção é a chave para evitar problemas futuros. Consultas odontológicas regulares, geralmente a cada seis meses, ajudam a identificar e tratar problemas odontológicos em estágios iniciais, antes que se tornem graves. Isso não apenas economiza tempo e dinheiro, mas também evita desconforto desnecessário.</h4>
@@ -26,7 +26,6 @@
 <br/>
 <h2>&#129463;6. Tratamentos Odontológicos Avançados</h2>
 <h4>A odontologia avançou significativamente ao longo dos anos, oferecendo uma variedade de tratamentos para melhorar a saúde e a estética bucal. Desde implantes dentários até ortodontia moderna, há soluções para quase todos os problemas dentários. Consulte seu dentista para saber qual tratamento é mais adequado para você.</h4>
-<<<<<<< HEAD
 	<br/>
 	<br>
 	<br>
@@ -113,4 +112,8 @@
 </section>
 
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 9c68ecbf11d2dfe4694c360e4fa03220c1addbd0
