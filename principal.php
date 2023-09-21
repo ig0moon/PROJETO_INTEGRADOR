@@ -54,6 +54,7 @@
         echo "<li><a href='/PROJETO_INTEGRADOR/login'>Entrar</a></li>";
         echo "<li><a href='/PROJETO_INTEGRADOR/cadpac' target='quadro'>Cadastrar</a></li>";
         echo "<li><a href='/PROJETO_INTEGRADOR/loginadmin'>Admin</a></li>";
+        echo "<li><a href='/PROJETO_INTEGRADOR/logindentista'>Dentista</a></li>";
         }               
 ?>
         	</ul>
