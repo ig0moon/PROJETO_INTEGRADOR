@@ -12,7 +12,7 @@
 
 	require_once 'persistence/PacientePA.php';
 	$pacientepa=new PacientePA();
-	$consulta=$pacientepa->listar($inicio,$fim);
+	$consulta=$pacientepa->listar_inicio_fim($inicio,$fim);
 	if (!$consulta){
 		echo "<h2>Ainda não exitem pacientes.</h2>";
 
