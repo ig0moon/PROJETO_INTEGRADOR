@@ -1,9 +1,9 @@
-<?php
-	require_once 'cabecalho.php';
+ 	<?php
+	require_once 'cabecalho.php'
 ?>
 
 	<form action="cadastrarpaciente.php" method="POST" enctype="multipart/form-data" class="normal">
-		<h2>Cadastrar Paciente</h2>
+		<h1>Cadastrar Paciente</h1>
 
 		<p>Nome:</p>
 		<p><input type="text" name="nome" maxlength="25" required></p>
@@ -13,8 +13,6 @@
 		<p><input type="text" name="email" maxlength="30" required></p>
 		<p>Telefone:</p>
 		<p><input type="text" name="telefone" maxlength="14" required></p>
-		<p>Endereço:</p>
-		<p><input type="text" name="endereco" maxlength="100" required></p>
 
 		<p><input class="logar" type="submit" name="botao" value="Cadastrar"></p>
 	</form>
@@ -31,9 +29,7 @@
 		$paciente->setCpf($_POST['cpf']);
 		$paciente->setEmail($_POST['email']);
 		$paciente->setTelefone($_POST['telefone']);
-		$paciente->setEndereco($_POST['endereco']);
 		$id=$pacientepa->retornarUltimo();
-
 		if ($id>0){
 			$id++;
 		} else{
