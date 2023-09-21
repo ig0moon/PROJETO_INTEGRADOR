@@ -14,7 +14,6 @@ require_once 'cabecalho.php';
 
 		<p><input class="btn" type="submit" name="botao" value="Logar"></p>
 	</form>
-</div>
 
 <?php
 	if (isset($_POST['botao'])) {
@@ -38,5 +37,7 @@ require_once 'cabecalho.php';
 
 	}
 ?>
+
+</div>
 </body>
 </html>
