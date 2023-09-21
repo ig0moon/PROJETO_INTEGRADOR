@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 21-Set-2023 às 18:55
+-- Generation Time: 21-Set-2023 às 19:36
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
 
@@ -121,11 +121,19 @@ DROP TABLE IF EXISTS `paciente`;
 CREATE TABLE `paciente` (
   `id_paciente_pk` int(11) NOT NULL,
   `nome` text,
-  `telefone` varchar(11) DEFAULT NULL,
+  `telefone` bigint(11) DEFAULT NULL,
   `email` text,
-  `cpf` bigint(11) DEFAULT NULL,
+  `cpf` bigint(12) DEFAULT NULL,
   `endereco` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `paciente`
+--
+
+INSERT INTO `paciente` (`id_paciente_pk`, `nome`, `telefone`, `email`, `cpf`, `endereco`) VALUES
+(1, 'chincharron', 4249876549, 'chicharron@gmail.com', 123456789012, 'Rua X Y'),
+(2, 'pepito', 4249998834522, 'yanose@gmail.com', 12345678902, 'Rua X Z');
 
 --
 -- Indexes for dumped tables
