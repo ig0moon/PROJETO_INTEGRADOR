@@ -47,5 +47,8 @@ require_once 'cabecalho.php'
 <br>
 <p>Sim, aceitamos muitos planos de seguro odontológico. Entre em contato conosco com informações sobre seu seguro, e nossa equipe terá prazer em ajudá-lo a entender os detalhes da cobertura.</p>
 <br>
+<?php
+	require_once 'rodape.php';
+?>
 </body>
 </html>
