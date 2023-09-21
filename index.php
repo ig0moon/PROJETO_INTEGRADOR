@@ -20,6 +20,10 @@ switch ($url) {
 		require_once './principaldentista.php';
 		break;
 
+	case '/PROJETO_INTEGRADOR/paciente':
+		require_once './principalpaciente.php';
+		break;
+
 	case '/PROJETO_INTEGRADOR/sair':
 		require_once './sair.php';
 		break;

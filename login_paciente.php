@@ -15,9 +15,9 @@ require_once 'cabecalho.php';
 		if (!$resp) {
 			echo "<h2>Login Incorreto!</h2>";
 		}else{
-			setcookie("cliente",$_POST['cpf']);
+			setcookie("paciente",$_POST['cpf']);
 			echo "<h2>Login com sucesso!<h2>";
-			echo "<section><a href='/PROJETO_INTEGRADOR/'>Entrar</a></section>";
+			echo "<meta http-equiv='refresh' content='2;url=/PROJETO_INTEGRADOR/paciente'>";
 		}
 	}
 ?>
