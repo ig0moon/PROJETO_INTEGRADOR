@@ -17,6 +17,8 @@
 
 <?php
     if (isset($_COOKIE['paciente'])) {
+
+        echo "<li class='cpf'><p>CPF: ".$_COOKIE['paciente']."</p></li>";;
         
         echo "<li><a href='/PROJETO_INTEGRADOR/listarden' target='quadro' title='Listar Dentistas'>
         <span class='material-symbols-outlined'>dentistry</span><span class='material-symbols-outlined'>list</span></a></li>";

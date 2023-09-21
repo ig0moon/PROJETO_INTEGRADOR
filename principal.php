@@ -42,7 +42,7 @@
         echo "<li><a href='/PROJETO_INTEGRADOR/listarex' target='quadro' title='Listar Exames'>
         <span class='material-symbols-outlined'>vital_signs</span><span class='material-symbols-outlined'>list</span></a></li>";
 
-        echo "<li><a href='/PROJETO_INTEGRADOR/sairadmin' title='Sair'>
+        echo "<li><a href='/PROJETO_INTEGRADOR/sair' title='Sair'>
         <span class='material-symbols-outlined'>logout</span></a></li>";
 
     } else if (isset($_COOKIE['paciente'])) {

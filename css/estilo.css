@@ -52,6 +52,11 @@ h2 {
 	font-family: 'Poppins', sans-serif;
 }
 
+li.cpf p {
+	color: var(--color-white);
+	font-size: 20px;
+}
+
 .nav {
 	gap: 1em;
 	list-style: none;
