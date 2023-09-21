@@ -14,20 +14,22 @@ class ConsultaPA{
 	public function cadastrar($consulta)
 	{
 		$sql="insert into consulta values(".
-			$consulta->getSituacao().",'".
-			$consulta->getData()."','".
-			$consulta->getHora()."',".
-			$consulta->getDescricao().",'".
-			$consulta->getDiagnostico()."')";
-			$consulta->getValor()."',".
-			$consulta->getReceita_medica().",')";
+			$consulta->getId_consulta_pk().",".
+			$consulta->getId_funcionario_fk().",".
+			$consulta->getid_Paciente_fk().",'".
+			$consulta->getDiagnostico()."','".
+			$consulta->getData()."',".
+			$consulta->getValor().",'".
+			$consulta->getSituacao()."','".
+			$consulta->getHora()."','".
+			$consulta->getReceita_medica()."','".
+			$consulta->getDescricao()."')";
 		return $this->conexao->executar($sql);
 	}
 
 	public function retornarUltimo()
 	{
 		$sql="select max(id_consulta_pk) from consulta";
-		var_dump($sql);
 		$consulta=$this->conexao->consultar($sql);
 		if(!$consulta){
 			return false;
@@ -41,7 +43,7 @@ class ConsultaPA{
 		}
 	}
 
-	public function listar($inicio,$fim)
+	public function listar_inicio_fim($inicio,$fim)
 	{
 		$sql="select * from consulta where id 
 		between $inicio and $fim";

@@ -10,7 +10,7 @@ require_once 'cabecalho.php';
 		require_once "model/Paciente.php";
 		require_once "persistence/PacientePA.php";
 		echo"<p>Pacientes</p>";
-		echo "<select name='pacientes'>";
+		echo "<select name='pacientes' required>";
 		$paciente=new Paciente();
 		$pacientepa=new PacientePA();
 		$consultaP=$pacientepa->listar();
@@ -23,7 +23,7 @@ require_once 'cabecalho.php';
 		require_once "model/Dentista.php";
 		require_once "persistence/DentistaPA.php";
 		echo"<p>Dentista</p>";
-		echo "<select name='dentistas'>";
+		echo "<select name='dentistas' required>";
 		$Dentista=new Dentista();
 		$Dentistapa=new DentistaPA();
 		$consultaD=$Dentistapa->listar();
@@ -40,7 +40,7 @@ require_once 'cabecalho.php';
 	<p>Situação:<textarea name="situacao" rows="5" cols="100" required></textarea></p>
 	<p>Hora:<input type="time" name="hora"></p>
 	<p>Receita medica:<textarea name="receitamedica" rows="5" cols="100" required></textarea></p>
-	<p>Descriçaõ:<textarea name="descricao" rows="5" cols="100" required></textarea></p>
+	<p>Descrição:<textarea name="descricao" rows="5" cols="100" required></textarea></p>
 	<p><input type="submit" name="botao" value="Cadastrar"></p>
 </form>
 
@@ -61,16 +61,26 @@ if (isset($_POST['botao'])) {
 	$consulta->setReceita_medica($_POST['receitamedica']);
 	$consulta->setDescricao($_POST['descricao']);
 	$id=$consultapa->retornarUltimo();
-	if ($id>=0) {
-		$id++;
-	}else{
-		$id=1;
+
+		if ($id>=0) {
+			$id++;
+		}else{
+			$id=1;
+		}
+	
+		$consulta->setId_funcionario_fk($_POST['dentistas']);
+		$consulta->setId_Paciente_fk($_POST['pacientes']);
+		$consulta->setId_consulta_pk($id);
+		$resp=$consultapa->cadastrar($consulta);
+		if(!$resp){
+			echo"<p>Erro ao tentar cadastrar consulta</p>";
+		}else{
+			echo"<p>Consulta cadastrada com sucesso</p>";
+		}
 	}
-}
+
 
 ?>
-<br/>
-<br/>
 <br/>
 <?php
 
