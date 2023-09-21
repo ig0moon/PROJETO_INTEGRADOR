@@ -26,15 +26,16 @@ class ConsultaPA{
 
 	public function retornarUltimo()
 	{
-		$sql="select max(id) from consulta";
+		$sql="select max(id_consulta_pk) from consulta";
+		var_dump($sql);
 		$consulta=$this->conexao->consultar($sql);
 		if(!$consulta){
 			return false;
 		}else{
 			$linha=$consulta->fetch_assoc();
 			$situacao=0;
-			if($linha['max(id)']!=null){
-				$situacao=$linha['max(id)'];
+			if($linha['max(id_consulta_pk)']!=null){
+				$situacao=$linha['max(id_consulta_pk)'];
 			}
 			return $situacao;
 		}
@@ -46,7 +47,10 @@ class ConsultaPA{
 		between $inicio and $fim";
 		return $this->conexao->consultar($sql);
 	}
-
+	public function listar(){
+		$sql="select * from consulta";
+		return $this->conexao->consultar($sql);
+	}
 	public function excluir($situacao)
 	{
 		$sql="consulta deletada com sucesso!";
