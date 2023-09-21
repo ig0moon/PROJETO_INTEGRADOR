@@ -2,7 +2,7 @@
 require_once 'cabecalho.php';
 ?>
 <form action="" class="normal" method="POST">
-	<H1>Login Administrador</H1>
+	<h2>Login Administrador</h2>
 	<p>Usuário:<input type="text" name="admin" 
 		size="20" maxlength="20" 
 		pattern="[0-9a-zA-Z_]{1,20}" required></p>
@@ -26,7 +26,8 @@ require_once 'cabecalho.php';
 			echo "<h2>Bem vindo ".
 			$admin->getNome()."!</h2>";
 			setcookie("admin",$admin->getNome());
-			echo "<section><a href='/PROJETO_INTEGRADOR/'>Entrar</a></section>";
+			echo "<meta http-equiv='refresh' content='2;url=/PROJETO_INTEGRADOR/'>";
+			// echo "<section><a href='/PROJETO_INTEGRADOR/'>Entrar</a></section>";
 		}else{
 			echo "<h2>Login Incorreto!</h2>";
 		}

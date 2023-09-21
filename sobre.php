@@ -4,7 +4,7 @@ require_once 'cabecalho.php'
 
 ?>
 
-  <h1>Sobre:</h1>
+  <h2>Sobre:</h2>
 
 	<h2>Bem-vindo à OMAGA: O Sorriso que Transforma Vidas</h2>
 
@@ -26,7 +26,7 @@ require_once 'cabecalho.php'
 
 <p>Oferecemos uma ampla gama de serviços odontológicos, desde tratamentos preventivos até procedimentos avançados de reabilitação oral. Nossos serviços incluem:</p>
 
-	<ul>
+	<ul class="sobrepag">
 		<li>Limpeza e prevenção;</li>
 		<li>Tratamentos estéticos, como clareamento dental e facetas de porcelana;</li>
 		<li>Implantes dentários e reabilitação oral;</li>

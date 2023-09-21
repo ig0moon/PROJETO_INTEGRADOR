@@ -18,7 +18,7 @@ body {
 	display: flex;
 	min-height: 100vh;
 	background-color: var(--color-white);
-	color: var();
+/*	color: var();*/
 	flex-direction: column;
 	font-family: 'Poppins', sans-serif;
 	
@@ -110,11 +110,11 @@ iframe {
 	height: auto;
 	background-color: var(--color-blue1);
 	box-shadow: 1px 1px 5px var(--color-dark1);
-	color: var(--color-white);
 	z-index: 2;
 }
 
 #sobre {
+	color: var(--color-white);
 	margin: auto;
 	text-align: center;
 }
@@ -134,6 +134,11 @@ iframe {
 }
 
 #sobre2 {
+	color: var(--color-white);
 	margin: auto;
 	text-align: center;
+}
+
+.sobrepag {
+	list-style-type: circle;
 }

@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `dentista`
 --
 
-DROP TABLE IF EXISTS `dentista`;
+-- DROP TABLE IF EXISTS `dentista`;
 CREATE TABLE `dentista` (
   `id_funcionario_pk` int(12) NOT NULL,
   `cpf` varchar(11) DEFAULT NULL,

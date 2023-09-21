@@ -3,7 +3,7 @@
 ?>
 
 	<form action="cadastrardentista.php" method="POST" enctype="multipart/form-data">
-		<h1>Cadastrar Dentista</h1>
+		<h2>Cadastrar Dentista</h2>
         
         <p>Nome:</p>
 		<p><input type="text" name="nome" size="50" maxlength="50" required></p>

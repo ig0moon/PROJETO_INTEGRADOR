@@ -2,7 +2,7 @@
 require_once 'cabecalho.php';
 ?>
 <form action="login_dentista.php" method="POST">
-	<H1>Login Dentista</H1>
+	<h2>Login Dentista</h2>
 	<p>Nome:<input type="text" name="nome" 
 		size="20" maxlength="20" 
 		pattern="[0-9a-zA-Z_]{1,20}" required></p>

@@ -4,7 +4,7 @@ require_once 'cabecalho.php'
 
 ?>
 
-  		<h1>Perguntas Frequentes:</h1>
+  		<h2>Perguntas Frequentes:</h2>
 
 
 	<h2>Quais são os serviços oferecidos pela sua clínica odontológica?</h2>

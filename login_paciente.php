@@ -2,7 +2,7 @@
 require_once 'cabecalho.php';
 ?>
 <form action="login_paciente.php" class="" method="POST">
-	<h1>Login Paciente</h1>
+	<h2>Login Paciente</h2>
 	<p>Digite seu nome:<input type="text" name="usuario" size="20" maxlength="20" pattern="[0-9a-zA-Z_]{1,20}" required></p>
 	<p>Digite seu CPF:<input type="text" name="cpf" size="11" maxlength="11" pattern="[0-9_]{1,11}" required></p>
 	<p><input type="submit" name="botao" value="Logar"></p>
