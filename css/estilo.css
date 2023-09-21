@@ -52,6 +52,15 @@ h2 {
 	font-family: 'Poppins', sans-serif;
 }
 
+h3 {
+
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: 500;
+}
+
 li.cpf p {
 	color: var(--color-white);
 	font-size: 20px;
@@ -118,11 +127,20 @@ iframe {
 	box-shadow: 1px 1px 5px var(--color-dark1);
 }
 
+#painel h2 {
+	text-align: center;
+}
+
 #painel p {
 	padding: 1em;
 	font-size: 20px;
 	text-align: center;
 	font-weight: bold;
+}
+
+.btn {
+	font-size: ;
+	padding: 10px;
 }
 
 #painel a {
