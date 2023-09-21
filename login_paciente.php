@@ -14,7 +14,7 @@ require_once 'cabecalho.php';
 
 		<p><input class="btn" type="submit" name="botao" value="Logar"></p>
 	</form>
-</div>
+
 <?php
 	if (isset($_POST['botao'])) {
 		require_once 'persistence/PacientePA.php';
@@ -24,10 +24,12 @@ require_once 'cabecalho.php';
 			echo "<h2>Login Incorreto!</h2>";
 		}else{
 			setcookie("paciente",$_POST['cpf']);
-			echo "<h2>Login com sucesso!<h2>";
+			echo "<p>Login com sucesso!</p>";
 			echo "<meta http-equiv='refresh' content='2;url=/PROJETO_INTEGRADOR/paciente'>";
 		}
 	}
 ?>
+
+</div>
 </body>
 </html>
