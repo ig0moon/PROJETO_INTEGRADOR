@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 20-Set-2023 às 22:26
+-- Generation Time: 21-Set-2023 às 18:51
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
 
@@ -25,37 +25,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `dentista`
+-- Estrutura da tabela `exame`
 --
 
--- DROP TABLE IF EXISTS `dentista`;
-CREATE TABLE `dentista` (
-  `id_funcionario_pk` int(12) NOT NULL,
-  `cpf` varchar(11) DEFAULT NULL,
-  `especialidade` text,
-  `nome` text,
-  `endereco` text,
-  `telefone` bigint(12) DEFAULT NULL,
-  `email` text,
-  `crm` text
+DROP TABLE IF EXISTS `exame`;
+CREATE TABLE `exame` (
+  `id_examen_pk` int(11) NOT NULL,
+  `id_dentista_fk` int(11) NOT NULL,
+  `id_paciente_fk` int(11) NOT NULL,
+  `tipo` text,
+  `descricao` text,
+  `resultado` text,
+  `hora` time DEFAULT NULL,
+  `data_agenda` date DEFAULT NULL,
+  `imagem` longblob
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `dentista`
---
-
-INSERT INTO `dentista` (`id_funcionario_pk`, `cpf`, `especialidade`, `nome`, `endereco`, `telefone`, `email`, `crm`) VALUES
-(1, '11111111111', 'dentisto', 'juancho', 'Rua x Y', 123456789012, 'nombre@pepe.com', '123');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `dentista`
+-- Indexes for table `exame`
 --
-ALTER TABLE `dentista`
-  ADD PRIMARY KEY (`id_funcionario_pk`);
+ALTER TABLE `exame`
+  ADD PRIMARY KEY (`id_examen_pk`),
+  ADD KEY `id_dentista_fk` (`id_dentista_fk`),
+  ADD KEY `id_paciente_fk` (`id_paciente_fk`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
