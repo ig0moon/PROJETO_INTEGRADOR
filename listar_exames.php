@@ -12,7 +12,7 @@ if (isset($_POST['inicio'])) {
 require_once 'persistence/ExamePA.php';
 $examepa=new ExamePA();
 $consultar=$examepa->listar($inicio,$fim);
-if(!$consulta){
+if(!$consultar){
 	echo "<h2>Logo fica bão!</h2>";
 }else{
 
