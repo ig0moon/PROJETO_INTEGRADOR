@@ -9,8 +9,6 @@ require_once 'cabecalho.php'
 =======
   		<h1>Perguntas Frequentes:</h1>
 
-
->>>>>>> 213d6505fc65a15d0137e99595c5f56acd3df3b7
 	<h2>Quais são os serviços oferecidos pela sua clínica odontológica?</h2>
 <br>
 <p>Oferecemos uma ampla gama de serviços odontológicos, incluindo limpeza dental, restaurações, tratamento de canal, extrações, implantes, ortodontia, odontopediatria e muito mais. Nossa equipe está preparada para atender às suas necessidades odontológicas.</p>
