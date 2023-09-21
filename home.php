@@ -114,10 +114,3 @@
 
 </body>
 </html>
-=======
-<br/>
-
-<?php
-	require_once 'rodape.php';
-?>
->>>>>>> bc9cced3fc186ad6dd22daae4512973ed9e8af76

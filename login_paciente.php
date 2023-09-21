@@ -1,12 +1,20 @@
 <?php
 require_once 'cabecalho.php';
 ?>
-<form action="login_paciente.php" class="" method="POST">
-	<h2>Login Paciente</h2>
-	<p>Digite seu nome:<input type="text" name="usuario" size="20" maxlength="20" pattern="[0-9a-zA-Z_]{1,20}" required></p>
-	<p>Digite seu CPF:<input type="text" name="cpf" size="11" maxlength="11" pattern="[0-9_]{1,11}" required></p>
-	<p><input type="submit" name="botao" value="Logar"></p>
-</form>
+
+<div id="painel">
+	<form action="login_paciente.php" class="" method="POST">
+		<h2>Login Paciente</h2>
+
+		<p>Digite seu nome:</p>
+		<p><input type="text" name="usuario" size="20" maxlength="20" pattern="[0-9a-zA-Z_]{1,20}" required></p>
+
+		<p>Digite seu CPF:</p>
+		<p><input type="text" name="cpf" size="11" maxlength="11" pattern="[0-9_]{1,11}" required></p>
+
+		<p><input class="btn" type="submit" name="botao" value="Logar"></p>
+	</form>
+</div>
 <?php
 	if (isset($_POST['botao'])) {
 		require_once 'persistence/PacientePA.php';

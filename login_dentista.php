@@ -1,18 +1,21 @@
 <?php
 require_once 'cabecalho.php';
 ?>
-<form action="login_dentista.php" method="POST">
 
-	<h2>Login Dentista</h2>
-	<p>Nome:</p>
-	<p><input type="text" name="nome" size="20" maxlength="20" pattern="[0-9a-zA-Z_]{1,20}" required></p>
+<div id="painel">
+	<form action="login_dentista.php" method="POST">
+		<h2>Login Dentista</h2>
 
-	<p>CRM:</p>
-	<p><input type="text" name="crm" size="10" maxlength="10" pattern="[0-9a-zA-Z_\s@]{1,10}" required></p>
+		<p>Nome:</p>
+		<p><input type="text" name="nome" size="20" maxlength="20" pattern="[0-9a-zA-Z_]{1,20}" required></p>
 
-	<p><input type="submit" name="botao" value="Logar"></p>
+		<p>CRM:</p>
+		<p><input type="text" name="crm" size="10" maxlength="10" pattern="[0-9a-zA-Z_\s@]{1,10}" required></p>
 
-</form>
+		<p><input class="btn" type="submit" name="botao" value="Logar"></p>
+	</form>
+</div>
+
 <?php
 	if (isset($_POST['botao'])) {
 		require_once 'model/Dentista.php';
