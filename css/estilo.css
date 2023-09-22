@@ -208,6 +208,37 @@ input {
 	height: 30px;
 	border-radius: 4px;
 	border: 1px solid grey;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+}
+
+textarea {
+	margin: auto;
+	width: 20vw;
+	height: 20vh;
+	resize: none;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	border-radius: 4px;
+	border: 1px solid grey;
+}
+
+select {
+	display: block;
+	margin: 0 auto;
+	width: 20vw;
+	height: 40px;
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	font-weight: 600;
+	border-radius: 4px;
+	border: 1px solid grey;
+}
+
+option {
+	font-weight: 600;
 }
 
 .btn {

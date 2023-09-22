@@ -4,8 +4,12 @@ require_once 'cabecalho.php';
 
 ?>
 
+	<div id="painel">
+
 <form action="cadastrarconsulta.php" method="POST" class="">
 	<h2>Cadastrar Consulta</h2>
+
+	
 	<?php
 		require_once "model/Paciente.php";
 		require_once "persistence/PacientePA.php";
@@ -34,14 +38,30 @@ require_once 'cabecalho.php';
 			}
 		echo "</select>";
 	?>
-	<p>Diagnostico:<textarea name="diagnostico" rows="5" cols="100" required></textarea></p>
-	<p>Data:<input type="date" name="data"></p>
-	<p>Valor R$:<input type="text" name="valor" maxlength="7" size="7" pattern="[0-9,.]{1,5}[0-9]{2}" placeholder="99.99"></p>
-	<p>Situação:<textarea name="situacao" rows="5" cols="100" required></textarea></p>
-	<p>Hora:<input type="time" name="hora"></p>
-	<p>Receita medica:<textarea name="receitamedica" rows="5" cols="100" required></textarea></p>
-	<p>Descrição:<textarea name="descricao" rows="5" cols="100" required></textarea></p>
-	<p><input type="submit" name="botao" value="Cadastrar"></p>
+
+	<p>Diagnostico:</p>
+	<p><textarea name="diagnostico" rows="5" cols="100" required></textarea></p>
+
+	<p>Data:</p>
+	<p><input type="date" name="data"></p>
+
+	<p>Valor R$:</p>
+	<p><input type="text" name="valor" maxlength="7" size="7" pattern="[0-9,.]{1,5}[0-9]{2}" placeholder="99.99"></p>
+
+	<p>Situação:</p>
+	<p><textarea name="situacao" rows="5" cols="100" required></textarea></p>
+
+	<p>Hora:</p>
+	<p><input type="time" name="hora"></p>
+
+	<p>Receita medica:</p>
+	<p><textarea name="receitamedica" rows="5" cols="100" required></textarea></p>
+
+	<p>Descrição:</p>
+	<p><textarea name="descricao" rows="5" cols="100" required></textarea></p>
+
+	<p><input class="btn" type="submit" name="botao" value="Cadastrar"></p>
+
 </form>
 
 <?php  
@@ -81,6 +101,8 @@ if (isset($_POST['botao'])) {
 
 
 ?>
+
+</div>
 <br/>
 <?php
 
