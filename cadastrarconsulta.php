@@ -19,7 +19,7 @@ require_once 'cabecalho.php';
 		$pacientepa=new PacientePA();
 		$consultaP=$pacientepa->listar();
 		while($linha=$consultaP->fetch_assoc()){
-			$paciente->setId($linha['id_paciente_pk']);
+			$paciente->setId_paciente_pk($linha['id_paciente_pk']);
 			$paciente->setNome($linha['nome']);
 			echo "<option value='".$paciente->getId()."'>".$paciente->getNome()."</option>";
 			}
