@@ -1,27 +1,38 @@
 <?php
 require_once 'cabecalho.php';
 ?>
-<form action="cadastrarexame.php" method="POST" 
-enctype="multipart/form-data" class="normal">
+
+<div id="painel">
+	<form action="cadastrarexame.php" method="POST" enctype="multipart/form-data" class="normal">
+
 	<h2>Cadastrar Exame</h2>
-	<p>Dentista:<p><input type="text" name="id_dentista_fk" 
-		size="25" maxlength="25" required></p>
-	<p>Paciente:<p><input type="text" name="id_paciente_fk" 
-		size="25" maxlength="25" required></p>
-	<p>Tipo:<input type="text" name="tipo" 
-		size="25" maxlength="25" required></p>
+
+	<p>Dentista:</p>
+	<p><input type="text" name="id_dentista_fk" size="25" maxlength="25" required></p>
+
+	<p>Paciente:</p>
+	<p><input type="text" name="id_paciente_fk" size="25" maxlength="25" required></p>
+	
+	<p>Tipo:</p>
+	<p><input type="text" name="tipo" size="25" maxlength="25" required></p>
+
 	<p>Descrição:</p>
 	<p><input type="text" name="descricao" size="25" maxlength="100" required></p>
-	<p>Resultado:<p><input type="text" name="resultado" 
-		size="25" maxlength="100" required></p>
-	<p>Hora:<p><input type="time" name="hora" 
-		size="25" maxlength="25" required></p>
-	<p>Data:<p><input type="date" name="data" 
-		size="25" maxlength="25" required></p>
+
+	<p>Resultado:</p>
+	<p><input type="text" name="resultado" size="25" maxlength="100" required></p>
+
+	<p>Hora:</p>
+	<p><input type="time" name="hora" size="25" maxlength="25" required></p>
+
+	<p>Data:</p>
+	<p><input type="date" name="data" size="25" maxlength="25" required></p>
+
 	<p>Imagem:</p>
 	<p><input type="file" name="imagem" required></p>
-	<p><input type="submit" name="botao" value="Cadastrar" 
-     onclick="escrever()"></p>
+
+	<p><input class="btn" type="submit" name="botao" value="Cadastrar" onclick="escrever()"></p>
+
 </form>
 <?php
 	if (isset($_POST['botao'])) {
@@ -31,7 +42,7 @@ enctype="multipart/form-data" class="normal">
 		$examepa=new ExamePA();
 
 		$exame->setTipo($_POST['tipo']);
-		$exame->setData($_POST['data']);
+		$exame->setData_agenda($_POST['data']);
 		$exame->setHora($_POST['hora']);
 		$exame->setId_paciente_fk($_POST['id_paciente_fk']);
 		$exame->setId_dentista_fk($_POST['id_dentista_fk']);
@@ -64,6 +75,7 @@ enctype="multipart/form-data" class="normal">
 	}
 
 ?>
+</div>
 <br/>
 <br/>
 <br/>
