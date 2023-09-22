@@ -25,15 +25,31 @@
         <span class='material-symbols-outlined'>logout</span></a></li>";
 
     } else if (isset($_COOKIE['paciente'])) {
-        echo "<li class='cpf'>CPF: ".$_COOKIE['paciente']."</li>";
-        echo "<li><a href='sair.php'><span class='material-symbols-outlined'>logout</span></a></li>                                         <!-- sair -->";
-        echo "<li><a href='carrinho.php' target='quadro'><span class='material-symbols-outlined'>shopping_cart</span></a></li>              <!-- cart -->";
+
+        echo "<li class='cpf'><p>CPF: ".$_COOKIE['paciente']."</p></li>";
+
+        echo "<li><a href='/PROJETO_INTEGRADOR/paciente' target='quadro'><span class='material-symbols-outlined'>personal_injury</span></a></li>";
+
+        echo "<li><a href='/PROJETO_INTEGRADOR/sair'><span class='material-symbols-outlined'>logout</span></a></li>";
+
+    } else if (isset($_COOKIE['dentista'])) {
+
+        echo "<li class='cpf'><p>CRM: ".$_COOKIE['dentista']."</p></li>";
+
+        echo "<li><a href='/PROJETO_INTEGRADOR/dentista' target='quadro'><span class='material-symbols-outlined'>dentistry</span></a></li>";
+
+        echo "<li><a href='/PROJETO_INTEGRADOR/sair'><span class='material-symbols-outlined'>logout</span></a></li>";
 
     } else{
+
         echo "<li><a href='/PROJETO_INTEGRADOR/login'>Entrar</a></li>";
+
         echo "<li><a href='/PROJETO_INTEGRADOR/cadpac' target='quadro'>Cadastrar</a></li>";
+
         echo "<li><a href='/PROJETO_INTEGRADOR/loginadmin'>Admin</a></li>";
+
         echo "<li><a href='/PROJETO_INTEGRADOR/logindentista'>Dentista</a></li>";
+
         }               
 ?>
         	</ul>

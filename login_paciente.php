@@ -25,7 +25,7 @@ require_once 'cabecalho.php';
 		}else{
 			setcookie("paciente",$_POST['cpf']);
 			echo "<p>Login com sucesso!</p>";
-			echo "<meta http-equiv='refresh' content='2;url=/PROJETO_INTEGRADOR/paciente'>";
+			echo "<meta http-equiv='refresh' content='2;url=/PROJETO_INTEGRADOR/'>";
 		}
 	}
 ?>

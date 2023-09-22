@@ -14,7 +14,7 @@
 	</div>
 
 	<div id="sobre2">
-		<p>Desenvolvido no SENAC&trade; Ponta Grossa</p>
+		<p>Desenvolvido no SENAC&trade;</p>
 		<p>Av. João Manoel dos Santos Ribas, 313 - Nova Rússia</p>
 		<p>Ponta Grossa - PR</p>
 	</div>

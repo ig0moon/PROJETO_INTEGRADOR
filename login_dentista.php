@@ -30,7 +30,7 @@ require_once 'cabecalho.php';
 			echo "<h2>Bem vindo ".
 			$dentista->getNome()."!</h2>";
 			setcookie("dentista",$dentista->getNome());
-			echo "<meta http-equiv='refresh' content='2;url=/PROJETO_INTEGRADOR/dentista'>";
+			echo "<meta http-equiv='refresh' content='2;url=/PROJETO_INTEGRADOR/'>";
 		}else{
 			echo "<h2>Login Incorreto!</h2>";
 		}
