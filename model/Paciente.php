@@ -1,18 +1,18 @@
 <?php
 
   class Paciente{
-   	private $id;
+   	private $id_paciente_pk;
    	private $nome;
    	private $telefone;
    	private $cpf;
    	private $email;
     private $endereco;
 
-    public function setId($id){
-   	  $this->id=$id;
+    public function setId_paciente_pk($id_paciente_pk){
+   	  $this->id_paciente_pk=$id_paciente_pk;
    	}
-    public function getId(){
-      return $this->id;
+    public function getId_paciente_pk(){
+      return $this->id_paciente_pk;
       }
       public function setNome($nome){
    	    $this->nome=$nome;

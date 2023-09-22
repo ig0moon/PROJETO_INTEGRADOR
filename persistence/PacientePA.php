@@ -10,7 +10,7 @@ class PacientePA{
 
 	public function cadastrar($paciente){
 		$sql="insert into paciente values(".
-		$paciente->getId().",'".
+		$paciente->getId_paciente_pk().",'".
 		$paciente->getNome()."','".
 		$paciente->getTelefone()."','".
 		$paciente->getEmail()."',".
