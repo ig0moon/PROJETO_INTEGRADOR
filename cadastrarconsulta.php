@@ -21,7 +21,7 @@ require_once 'cabecalho.php';
 		while($linha=$consultaP->fetch_assoc()){
 			$paciente->setId_paciente_pk($linha['id_paciente_pk']);
 			$paciente->setNome($linha['nome']);
-			echo "<option value='".$paciente->getId()."'>".$paciente->getNome()."</option>";
+			echo "<option value='".$paciente->getId_paciente_pk()."'>".$paciente->getNome()."</option>";
 			}
 		echo "</select>";
 		require_once "model/Dentista.php";
