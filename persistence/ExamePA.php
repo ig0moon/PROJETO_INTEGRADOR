@@ -14,26 +14,30 @@ class ExamePA{
 	public function cadastrar($exame)
 	{
 		$sql="insert into exame values(".
-			$exame->getTipo().",'".
+			$exame->getId_examen_pk().",".
+			$exame->getId_dentista_fk().",".
+			$exame->getId_paciente_fk().",'".
+			$exame->getTipo()."','".
+			$exame->getDescricao()."','".
+			$exame->getResultado()."','".
+			$exame->getHora()."','".
 			$exame->getData()."','".
-			$exame->getHora()."',".
-			$exame->getImagem().",'".
-			$exame->getResultado()."')";
-
+			$exame->getImagem()."')";
+		
 		return $this->conexao->executar($sql);
 	}
 
 	public function retornarUltimo()
 	{
-		$sql="select max(id) from exame";
+		$sql="select max(id_examen_pk) from exame";
 		$consulta=$this->conexao->consultar($sql);
 		if(!$consulta){
 			return false;
 		}else{
 			$linha=$consulta->fetch_assoc();
-			$exame=0;
-			if($linha['max(id)']!=null){
-				$situacao=$linha['max(id)'];
+			$id=0;
+			if($linha['max(id_examen_pk)']!=null){
+				$id=$linha['max(id_examen_pk)'];
 			}
 			return $id;
 		}

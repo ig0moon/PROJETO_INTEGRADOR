@@ -34,7 +34,7 @@
 
     } else if (isset($_COOKIE['dentista'])) {
 
-        echo "<li class='cpf'><p>CRM: ".$_COOKIE['dentista']."</p></li>";
+        echo "<li class='cpf'><p>CRM: ".$_COOKIE['dentistacrm']."</p></li>";
 
         echo "<li><a href='/PROJETO_INTEGRADOR/dentista' target='quadro'><span class='material-symbols-outlined'>dentistry</span></a></li>";
 
