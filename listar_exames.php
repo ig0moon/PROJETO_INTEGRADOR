@@ -18,26 +18,34 @@ if(!$consultar){
 
 	echo "<table>";
 	echo "<tr>";
+	echo "<th>Id examen</th>";
+	echo "<th>Id dentista</th>";
+	echo "<th>Id paciente</th>";
 	echo "<th>Tipo</th>";
-	echo "<th>Imagem</th>";
+	echo "<th>Descrição</th>";
 	echo "<th>Resultado</th>";
-	echo "<th>Data</th>";
 	echo "<th>Hora</th>";
+	echo "<th>Data agenda</th>";
+	echo "<th>Imagem</th>";
 	echo "</tr>";
 
 	while ($linha=$consultar->fetch_assoc()) {
 		echo "<tr>";
+		echo "<td>".$linha['id_examen_pk']."</td>";
+		echo "<td>".$linha['id_dentista_fk']."</td>";
+		echo "<td>".$linha['id_paciente_fk']."</td>";
 		echo "<td>".$linha['tipo']."</td>";
-		echo "<td><img src='data:image/jpg;base64,".base64_encode($linha['imagem'])."'></td>";
+		echo "<td>".$linha['descricao']."</td>";
 		echo "<td>".$linha['resultado']."</td>";
-		echo "<td>".$linha['data']."</td>";
 		echo "<td>".$linha['hora']."</td>";
+		echo "<td>".$linha['data_agenda']."</td>";
+		echo "<td><div><img src='data:image/jpg;base64,".base64_encode($linha['imagem'])."'></div></td>";
 		echo "</tr>";
 	}
 	echo "</table>";
 
 	echo "<section>";
-	$max=$produtopa->retornarUltimo();
+	$max=$examepa->retornarUltimo();
 	if ($fim<$max) {
 		$inicio=$fim+1;
 		echo "<form action='listar_exames.php' method='POST'>";

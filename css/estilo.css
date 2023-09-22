@@ -288,6 +288,17 @@ th {
 	border: 1px solid black;
 }
 
+td div {
+	margin: auto;
+	width: 100px;
+	height: 100px;
+}
+
+td div img {
+	width: 100%;
+	height: 100%;
+}
+
 td {
 	height: 30px;
 	text-align: center;
