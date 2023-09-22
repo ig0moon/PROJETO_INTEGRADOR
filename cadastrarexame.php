@@ -55,7 +55,7 @@ require_once 'cabecalho.php';
 		}else{
 			$id=1;
 		}
-		$exame->setId_examen_pk($id);
+		$exame->setId_exame_pk($id);
 		$imagem=$_FILES['imagem']['tmp_name'];
 		$tamanho=filesize($imagem);
 		if($tamanho>4294967295){

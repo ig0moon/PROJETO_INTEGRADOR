@@ -3,7 +3,7 @@
 class Consulta{
 		private $id_funcionario_fk;
 		private $id_paciente_fk;
-		private $id_consulta_fk;
+		private $id_consulta_pk;
 		private $descricao;
 		private $situacao;
 		private $receita_medica;

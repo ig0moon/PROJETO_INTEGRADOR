@@ -1,7 +1,7 @@
 <?php
 
 class Exame{
-		private $id_consulta_pk;
+		private $id_exame_pk;
 		private $id_dentista_fk;
 		private $id_paciente_fk;
 		private $tipo;
