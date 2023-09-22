@@ -14,7 +14,7 @@ class ExamePA{
 	public function cadastrar($exame)
 	{
 		$sql="insert into exame values(".
-			$exame->getId_examen_pk().",".
+			$exame->getId_exame_pk().",".
 			$exame->getId_dentista_fk().",".
 			$exame->getId_paciente_fk().",'".
 			$exame->getTipo()."','".

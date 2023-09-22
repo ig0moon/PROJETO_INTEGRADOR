@@ -11,11 +11,11 @@ class Exame{
 		private $data_agenda;
 		private $imagem;
 
-	public function setId_consulta_pk($id_consulta_pk)
+	public function setId_exame_pk($id_consulta_pk)
 	{
 		$this->id_consulta_pk=$id_consulta_pk;
 	}
-	public function getId_consulta_pk()
+	public function getId_exame_pk()
 	{
 		return $this->id_consulta_pk;
 	}
