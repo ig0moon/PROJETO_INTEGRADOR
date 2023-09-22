@@ -14,6 +14,9 @@
         echo "<p><a href='/PROJETO_INTEGRADOR/listarex' target='quadro' title='Listar Exames'>
         <span class='material-symbols-outlined'>vital_signs</span><span class='material-symbols-outlined'>list</span> Listar Exames</a></p>";
 
+       echo "<p><a href='/PROJETO_INTEGRADOR/listarres' target='quadro' title='Listar Resultados'>
+        <span class='material-symbols-outlined'>healing</span><span class='material-symbols-outlined'>list</span> Listar Resultados</a></p>";
+
         echo "</div>";
 
     } else {
