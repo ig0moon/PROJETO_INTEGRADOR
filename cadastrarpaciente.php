@@ -8,7 +8,7 @@
 			<h2>Cadastrar Paciente</h2>
 
 			<p>Nome:</p>
-			<p><input type="text" name="nome" maxlength="25" pattern="[A-Za-z\éÉãÃ]{3,50}" required></p>
+			<p><input type="text" name="nome" maxlength="25" pattern="[A-Za-z\éÉãÃçÇ]{3,50}" required></p>
 
 			<p>CPF:</p>
 			<p><input type="number" name="cpf" maxlength="20" pattern="[0-9]{11}" required></p>
@@ -20,7 +20,7 @@
 			<p><input type="number" name="telefone" maxlength="30" pattern="[0-9]{9,12}" required></p>
 			
 			<p>Endereço:</p>
-			<p><input type="text" name="endereco" maxlength="30" pattern="[A-Za-z0-9\éÉãÃ]{3,50}" required></p>
+			<p><input type="text" name="endereco" maxlength="30" pattern="[A-Za-z0-9\éÉãÃçÇ]{3,50}" required></p>
 
 			<p><input class="btn" type="submit" name="botao" value="Cadastrar"></p>
 		</form>
