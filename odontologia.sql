@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 20-Set-2023 às 21:54
+-- Generation Time: 21-Set-2023 às 19:36
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
 
@@ -21,6 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `odontologia`
 --
+DROP DATABASE IF EXISTS `odontologia`;
 CREATE DATABASE IF NOT EXISTS `odontologia` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `odontologia`;
 
@@ -74,7 +75,7 @@ CREATE TABLE `consulta` (
 
 DROP TABLE IF EXISTS `dentista`;
 CREATE TABLE `dentista` (
-  `id_funcionario_pk` int(11) NOT NULL,
+  `id_funcionario_pk` int(12) NOT NULL,
   `cpf` varchar(11) DEFAULT NULL,
   `especialidade` text,
   `nome` text,
@@ -83,6 +84,13 @@ CREATE TABLE `dentista` (
   `email` text,
   `crm` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `dentista`
+--
+
+INSERT INTO `dentista` (`id_funcionario_pk`, `cpf`, `especialidade`, `nome`, `endereco`, `telefone`, `email`, `crm`) VALUES
+(1, '11111111111', 'dentisto', 'juancho', 'Rua x Y', 123456789012, 'nombre@pepe.com', '123');
 
 -- --------------------------------------------------------
 
@@ -113,11 +121,19 @@ DROP TABLE IF EXISTS `paciente`;
 CREATE TABLE `paciente` (
   `id_paciente_pk` int(11) NOT NULL,
   `nome` text,
-  `telefone` varchar(11) DEFAULT NULL,
+  `telefone` bigint(11) DEFAULT NULL,
   `email` text,
-  `cpf` bigint(11) DEFAULT NULL,
+  `cpf` bigint(12) DEFAULT NULL,
   `endereco` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `paciente`
+--
+
+INSERT INTO `paciente` (`id_paciente_pk`, `nome`, `telefone`, `email`, `cpf`, `endereco`) VALUES
+(1, 'chincharron', 4249876549, 'chicharron@gmail.com', 123456789012, 'Rua X Y'),
+(2, 'pepito', 4249998834522, 'yanose@gmail.com', 12345678902, 'Rua X Z');
 
 --
 -- Indexes for dumped tables

@@ -1,16 +1,20 @@
 <?php
 require_once 'cabecalho.php';
 ?>
-<form action="login_dentista.php" method="POST">
-	<H1>Login Dentista</H1>
-	<p>Nome:<input type="text" name="nome" 
-		size="20" maxlength="20" 
-		pattern="[0-9a-zA-Z_]{1,20}" required></p>
-	<p>Senha:<input type="password" name="senha" 
-		size="10" maxlength="10" 
-		pattern="[0-9a-zA-Z_\s@]{1,10}" required></p>
-	<p><input type="submit" name="botao" value="Logar"></p>
-</form>
+
+<div id="painel">
+	<form action="login_dentista.php" method="POST">
+		<h2>Login Dentista</h2>
+
+		<p>Nome:</p>
+		<p><input type="text" name="nome" size="20" maxlength="20" pattern="[0-9a-zA-Z_]{1,20}" required></p>
+
+		<p>CRM:</p>
+		<p><input type="text" name="crm" size="10" maxlength="10" pattern="[0-9a-zA-Z_\s@]{1,10}" required></p>
+
+		<p><input class="btn" type="submit" name="botao" value="Logar"></p>
+	</form>
+
 <?php
 	if (isset($_POST['botao'])) {
 		require_once 'model/Dentista.php';
@@ -19,14 +23,14 @@ require_once 'cabecalho.php';
 		$dentistapa=new DentistaPA();
 
 		$dentista->setNome($_POST['nome']);
-		$dentista->setSenha($_POST['senha']);
+		$dentista->setCrm($_POST['crm']);
 		$resp=$dentistapa->logar(
-			$dentista->getNome(),$dentista->getSenha());
+			$dentista->getNome(),$dentista->getCrm());
 		if($resp){
 			echo "<h2>Bem vindo ".
 			$dentista->getNome()."!</h2>";
 			setcookie("dentista",$dentista->getNome());
-			echo "<section><a href='/PROJETO_INTEGRADOR/admin'>Entrar</a></section>";
+			echo "<meta http-equiv='refresh' content='2;url=/PROJETO_INTEGRADOR/'>";
 		}else{
 			echo "<h2>Login Incorreto!</h2>";
 		}
@@ -35,5 +39,7 @@ require_once 'cabecalho.php';
 
 
 ?>
+
+</div>
 </body>
 </html>

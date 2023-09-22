@@ -3,7 +3,7 @@ require_once 'cabecalho.php';
 ?>
 <form action="cadastrarexame.php" method="POST" 
 enctype="multipart/form-data" class="normal">
-	<h1>Cadastrar Exame</h1>
+	<h2>Cadastrar Exame</h2>
 	<p>Tipo:<input type="text" name="nome" 
 		size="25" maxlength="25" required></p>
 	<p>Descrição:</p>
@@ -51,6 +51,21 @@ enctype="multipart/form-data" class="normal">
 		}
 	}
 
+?>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<?php
+	require_once 'rodape.php';
 ?>
 </body>
 </html>

@@ -16,8 +16,16 @@ switch ($url) {
 		require_once './principaladm.php';
 		break;
 
-	case '/PROJETO_INTEGRADOR/sairadmin':
-		require_once './sairadm.php';
+	case '/PROJETO_INTEGRADOR/dentista':
+		require_once './principaldentista.php';
+		break;
+
+	case '/PROJETO_INTEGRADOR/paciente':
+		require_once './principalpaciente.php';
+		break;
+
+	case '/PROJETO_INTEGRADOR/sair':
+		require_once './sair.php';
 		break;
 
 	case '/PROJETO_INTEGRADOR/login':
@@ -26,6 +34,10 @@ switch ($url) {
 
 	case '/PROJETO_INTEGRADOR/loginadmin':
 		require_once './logaradmin.php';
+		break;
+
+	case '/PROJETO_INTEGRADOR/logindentista':
+		require_once './login_dentista.php';
 		break;
 
 	case '/PROJETO_INTEGRADOR/cadden':
@@ -40,6 +52,10 @@ switch ($url) {
 		require_once './cadastrarpaciente.php';
 		break;
 
+	case '/PROJETO_INTEGRADOR/cadcon':
+		require_once './cadastrarconsulta.php';
+		break;
+
 	case '/PROJETO_INTEGRADOR/listarpac':
 		require_once './listarpaciente.php';
 		break;
@@ -52,8 +68,20 @@ switch ($url) {
 		require_once './listar_exames.php';
 		break;
 
-	case '/PROJETO_INTEGRADOR/listcon':
+	case '/PROJETO_INTEGRADOR/listarcon':
 		require_once './listarconsulta.php';
+		break;
+
+	case '/PROJETO_INTEGRADOR/listarres':
+		require_once './listarresultados.php';
+		break;
+
+	case '/PROJETO_INTEGRADOR/ajuda':
+		require_once './ajuda.php';
+		break;
+
+	case '/PROJETO_INTEGRADOR/sobre':
+		require_once './sobre.php';
 		break;
 
 	default:

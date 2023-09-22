@@ -11,7 +11,7 @@ if (isset($_POST['inicio'])){
 
 require_once 'persistence/ConsultaPA.php';
 $consultapa=new consultaPA();
-$consulta=$consultapa->listar($inicio,$fim);
+$consulta=$consultapa->listar_inicio_fim($inicio,$fim);
 if (!$consulta){
     echo "<h2>Consulta não encontrada!</h2>";
 }else{

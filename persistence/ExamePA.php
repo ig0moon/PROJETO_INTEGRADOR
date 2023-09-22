@@ -51,6 +51,11 @@ class ExamePA{
 		$sql="select diagnostico from exame where id=$id";
 		return $this->conexao->executar($sql);
 	}
+	public function listarResultado($inicio,$fim)
+	{
+		$sql="select resultado,id_examen_pk from exame where between $inicio and $fim";
+		return $this->conexao->consultar($sql);
+	}
 }
 
 ?>

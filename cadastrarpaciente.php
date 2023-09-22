@@ -1,23 +1,30 @@
-<?php
-	require_once 'cabecalho.php';
+ 	<?php
+	require_once 'cabecalho.php'
 ?>
 
-	<form action="cadastrarpaciente.php" method="POST" enctype="multipart/form-data" class="normal">
-		<h2>Cadastrar Paciente</h2>
+	<div id="painel">
+		<form action="cadastrarpaciente.php" method="POST" enctype="multipart/form-data" class="normal">
 
-		<p>Nome:</p>
-		<p><input type="text" name="nome" maxlength="25" required></p>
-		<p>CPF:</p>
-		<p><input type="number" name="cpf" maxlength="11" required></p>
-		<p>Email:</p>
-		<p><input type="text" name="email" maxlength="30" required></p>
-		<p>Telefone:</p>
-		<p><input type="text" name="telefone" maxlength="14" required></p>
-		<p>Endereço:</p>
-		<p><input type="text" name="endereco" maxlength="100" required></p>
+			<h2>Cadastrar Paciente</h2>
 
-		<p><input class="logar" type="submit" name="botao" value="Cadastrar"></p>
-	</form>
+			<p>Nome:</p>
+			<p><input type="text" name="nome" maxlength="25" required></p>
+
+			<p>CPF:</p>
+			<p><input type="number" name="cpf" maxlength="11" required></p>
+
+			<p>Email:</p>
+			<p><input type="text" name="email" maxlength="30" required></p>
+
+			<p>Telefone:</p>
+			<p><input type="text" name="telefone" maxlength="14" required></p>
+			
+			<p>Endereço:</p>
+			<p><input type="text" name="endereco" maxlength="14" required></p>
+
+			<p><input class="btn" type="submit" name="botao" value="Cadastrar"></p>
+		</form>
+	</div>
 
 <?php
 
@@ -33,7 +40,6 @@
 		$paciente->setTelefone($_POST['telefone']);
 		$paciente->setEndereco($_POST['endereco']);
 		$id=$pacientepa->retornarUltimo();
-
 		if ($id>0){
 			$id++;
 		} else{
@@ -49,4 +55,5 @@
 		}
 	}
 
+	require_once 'rodape.php';
 ?>
