@@ -58,7 +58,7 @@ enctype="multipart/form-data" class="normal">
 				Tente Novamente!</h2>";
 
 			}else{
-				echo "<h2>Produto cadastrado com Sucesso!</h2>";
+				echo "<h2>Exame cadastrado com Sucesso!</h2>";
 			}
 		}
 	}
