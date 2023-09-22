@@ -17,6 +17,7 @@
 		echo "<h2>Ainda não exitem pacientes.</h2>";
 
 	} else{
+		echo "<h2>Pacientes</h2>";
 		echo "<table>";
 		echo "<tr>";
 		echo "<th>ID</th>";
