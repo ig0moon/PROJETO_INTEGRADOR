@@ -30,8 +30,6 @@ if(!$consulta){
 		echo "</tr>";
 	}
 	echo "</table>";
-
-	echo "<section>";
 	
 }
 ?>
@@ -50,16 +48,7 @@ if(!$consulta){
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
 <?php
 	require_once 'rodape.php';
 ?>

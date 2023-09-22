@@ -4,7 +4,7 @@
 	--color-white: #f2f2f2;
 	--color-blue1: rgb(0, 151, 178);
 	--color-blue2: #509CD0;
-	--color-blue3: ;
+	--color-blue3: rgb(89, 182, 227);
 	--color-dark1: #1c1c1c;
 	--color-text: #d9d9d9;
 	--color-hover: rgb(255, 255, 255, 0.2);
@@ -264,6 +264,36 @@ option {
 
 #painel a:hover {
 	border-bottom: 3px solid var(--color-text);
+}
+
+table {
+	width: 90vw;
+	margin: auto;
+	border: 1px solid black;
+	color: var(--color-white);
+	background-color: var(--color-blue2);
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px var(--color-dark1);
+	padding: 1em;
+}
+
+tr {
+	border: 1px solid white;
+}
+
+th {
+	background-color: var(--color-blue3);
+	border: 1px solid black;
+}
+
+td {
+	text-align: center;
+	border: 1px solid black;
+	transition: 0.5s;
+}
+
+td:hover {
+	background-color: var(--color-hover);
 }
 
 .rodape {
