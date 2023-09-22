@@ -8,19 +8,19 @@
 			<h2>Cadastrar Paciente</h2>
 
 			<p>Nome:</p>
-			<p><input type="text" name="nome" maxlength="25" required></p>
+			<p><input type="text" name="nome" maxlength="25" pattern="[A-Za-z\éÉãÃ]{3,50}" required></p>
 
 			<p>CPF:</p>
-			<p><input type="number" name="cpf" maxlength="11" required></p>
+			<p><input type="number" name="cpf" maxlength="20" pattern="[0-9]{11}" required></p>
 
 			<p>Email:</p>
-			<p><input type="text" name="email" maxlength="30" required></p>
+			<p><input type="text" name="email" maxlength="30" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}${3,50}" required></p>
 
 			<p>Telefone:</p>
-			<p><input type="text" name="telefone" maxlength="14" required></p>
+			<p><input type="number" name="telefone" maxlength="30" pattern="[0-9]{9,12}" required></p>
 			
 			<p>Endereço:</p>
-			<p><input type="text" name="endereco" maxlength="14" required></p>
+			<p><input type="text" name="endereco" maxlength="30" pattern="[A-Za-z0-9\éÉãÃ]{3,50}" required></p>
 
 			<p><input class="btn" type="submit" name="botao" value="Cadastrar"></p>
 		</form>
