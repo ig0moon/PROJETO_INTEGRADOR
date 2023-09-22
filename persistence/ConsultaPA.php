@@ -55,6 +55,7 @@ class ConsultaPA{
 	}
 	public function excluir($situacao)
 	{
+		/*nao funciona, por tanto nao use*/
 		$sql="consulta deletada com sucesso!";
 		return $this->conexao->executar($sql);
 	}

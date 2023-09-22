@@ -35,11 +35,11 @@ class ExamePA{
 			return false;
 		}else{
 			$linha=$consulta->fetch_assoc();
-			$exame=0;
+			$situacao=0;
 			if($linha['max(id_examen_pk)']!=null){
 				$situacao=$linha['max(id_examen_pk)'];
 			}
-			return $id;
+			return $situacao;
 		}
 	}
 
@@ -52,6 +52,7 @@ class ExamePA{
 
 	public function excluir($exame)
 	{
+		/*nao usar pois nao funciona*/
 		$sql="select diagnostico from exame where id_examen_pk=$id";
 		return $this->conexao->executar($sql);
 	}
