@@ -278,15 +278,18 @@ table {
 }
 
 tr {
+	height: 30px;
 	border: 1px solid white;
 }
 
 th {
+	height: 30px;
 	background-color: var(--color-blue3);
 	border: 1px solid black;
 }
 
 td {
+	height: 30px;
 	text-align: center;
 	border: 1px solid black;
 	transition: 0.5s;

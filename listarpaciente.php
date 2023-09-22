@@ -19,7 +19,7 @@
 	} else{
 		echo "<table>";
 		echo "<tr>";
-		echo "<th>Id</th>";
+		echo "<th>ID</th>";
 		echo "<th>Nome</th>";
 		echo "<th>Telefone</th>";
 		echo "<th>CPF</th>";
@@ -49,15 +49,6 @@
 		}
 	}
 ?>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 <br/>
 <br/>
 <br/>
