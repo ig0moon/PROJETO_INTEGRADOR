@@ -19,7 +19,7 @@
 	}else{
 		echo "<table>";
 		echo "<tr>";
-		echo "<th>Id</th>";
+		echo "<th>Id Consulta</th>";
 		echo "<th>Resultado</th>";
 		echo "</tr>";
 

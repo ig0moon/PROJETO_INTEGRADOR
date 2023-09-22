@@ -29,15 +29,15 @@ class ExamePA{
 
 	public function retornarUltimo()
 	{
-		$sql="select max(id) from exame";
+		$sql="select max(id_consulta_pk) from exame";
 		$consulta=$this->conexao->consultar($sql);
 		if(!$consulta){
 			return false;
 		}else{
 			$linha=$consulta->fetch_assoc();
 			$exame=0;
-			if($linha['max(id)']!=null){
-				$situacao=$linha['max(id)'];
+			if($linha['max(id_consulta_pk)']!=null){
+				$situacao=$linha['max(id_consulta_pk)'];
 			}
 			return $id;
 		}
@@ -57,7 +57,7 @@ class ExamePA{
 	}
 		public function listarResultado($inicio,$fim)
 	{
-		$sql="select resultado,id_examen_pk from exame where between id_examen_pk $inicio and $fim";
+		$sql="select resultado,id_examen_pk from exame where id_examen_pk between $inicio and $fim";
 		return $this->conexao->consultar($sql);
 	}
 }
