@@ -29,9 +29,29 @@ require_once 'cabecalho.php';
 	<p><input type="date" name="data" size="25" maxlength="25" required></p>
 
 	<p>Imagem:</p>
-	<p><input type="file" name="imagem" required></p>
+
+	<div id="yourBtn" style="height: 50px; width: 10vw;border: 1px dashed #BBB; cursor:pointer; text-align: center; margin: auto;" onclick="getFile()">Adicionar imagem</div>
+
+  	<div style='height: 0px;width:0px; overflow:hidden;'>
+  		<input id="upfile" type="file" value="upload" name="imagem" onchange="sub(this)" required/>
+  	</div>
 
 	<p><input class="btn" type="submit" name="botao" value="Cadastrar" onclick="escrever()"></p>
+
+
+  	<script type="text/javascript">
+
+  	function getFile(){
+    	document.getElementById("upfile").click();
+	}
+
+	function sub(obj) {
+		var file = obj.value;
+  		var fileName = file.split("\\");
+  		document.getElementById("yourBtn").innerHTML = fileName[fileName.length - 1];
+  	}
+
+	</script>
 
 </form>
 <?php
@@ -55,7 +75,7 @@ require_once 'cabecalho.php';
 		}else{
 			$id=1;
 		}
-		$exame->setId_exame_pk($id);
+		$exame->setId_examen_pk($id);
 		$imagem=$_FILES['imagem']['tmp_name'];
 		$tamanho=filesize($imagem);
 		if($tamanho>4294967295){
