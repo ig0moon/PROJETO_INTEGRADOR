@@ -6,8 +6,14 @@ class Exame{
 		private $resultado;
 		private $data;
 		private $hora;
+		private $descricao;
+		private $id_paciente_fk;
+		private $id_examen_pk;
+		private $id_dentista_fk;
+		
+		
 
-public function setTipo($tipo)
+ 	public function setTipo($tipo)
 	{
 		$this->tipo=$tipo;
 	}
@@ -47,7 +53,7 @@ public function setTipo($tipo)
 		return $this->data;
 	}
 
-	public function setHoras($hora)
+	public function setHora($hora)
 	{
 		$this->hora=$hora;
 	}
@@ -56,6 +62,44 @@ public function setTipo($tipo)
 	{
 		return $this->hora;
 	}
+	
+	public function setDescricao($descricao)
+	{
+		$this->descricao=$descricao;
+	}
+
+	public function getdescricao()
+	{
+		return $this->descricao;
+	}
+	public function setId_examen_pk($id_examen_pk)
+	{
+		$this->id_examen_pk=$id_examen_pk;
+	}
+
+	public function getId_examen_pk()
+	{
+		return $this->id_examen_pk;
+	}
+	public function setId_dentista_fk($id_dentista_fk)
+	{
+		$this->id_dentista_fk=$id_dentista_fk;
+	}
+
+	public function getId_dentista_fk()
+	{
+		return $this->id_dentista_fk;
+	}
+	public function setId_paciente_fk($id_paciente_fk)
+	{
+		$this->id_paciente_fk=$id_paciente_fk;
+	}
+
+	public function getId_paciente_fk()
+	{
+		return $this->id_paciente_fk;
+	}
+	
 }
 
 ?>
