@@ -45,7 +45,7 @@
 		} else{
 			$id=1;
 		}
-		$paciente->setId($id);
+		$paciente->setId_paciente_pk($id);
 		
 		$resp=$pacientepa->cadastrar($paciente);
 		if (!$resp){
