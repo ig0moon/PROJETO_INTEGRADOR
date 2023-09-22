@@ -39,9 +39,9 @@
 			}
 		}
 
-		public function logar($nome,$cpf)
+		public function logar($nome,$crm)
 		{
-			$sql="select nome,cpf from dentista";
+			$sql="select nome,crm from dentista";
 			$consulta=$this->conexao->consultar($sql);
 			if(!$consulta){
 				return false;
@@ -49,7 +49,7 @@
 				$teste=false;
 				while($linha=$consulta->fetch_assoc()){
 					if($linha['nome']==$nome){
-						if($linha['cpf']==$cpf){
+						if($linha['crm']==$crm){
 							return true;
 						}
 					}

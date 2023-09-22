@@ -10,4 +10,8 @@ if(isset($_COOKIE['paciente'])){
 	header('Location: /PROJETO_INTEGRADOR/');
 }
 
+if (isset($_COOKIE['dentista'])) {
+	header('Location: /PROJETO_INTEGRADOR/dentista');
+}
+
 ?>

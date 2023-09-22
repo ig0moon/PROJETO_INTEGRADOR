@@ -64,5 +64,20 @@ enctype="multipart/form-data" class="normal">
 	}
 
 ?>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<?php
+	require_once 'rodape.php';
+?>
 </body>
 </html>

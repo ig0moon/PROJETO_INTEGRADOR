@@ -12,14 +12,14 @@
 
 	require_once 'persistence/PacientePA.php';
 	$pacientepa=new PacientePA();
-	$consulta=$pacientepa->listar($inicio,$fim);
+	$consulta=$pacientepa->listar_inicio_fim($inicio,$fim);
 	if (!$consulta){
 		echo "<h2>Ainda não exitem pacientes.</h2>";
 
 	} else{
 		echo "<table>";
 		echo "<tr>";
-		echo "<th>Id</th>";
+		echo "<th>ID</th>";
 		echo "<th>Nome</th>";
 		echo "<th>Telefone</th>";
 		echo "<th>CPF</th>";
@@ -48,6 +48,27 @@
 		echo "</section>"; 
 		}
 	}
+?>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<?php
+	require_once 'rodape.php';
+?>
+<?php
+	require_once 'rodape.php';
 ?>
 </body>
 </html>

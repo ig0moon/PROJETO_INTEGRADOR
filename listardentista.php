@@ -30,10 +30,27 @@ if(!$consulta){
 		echo "</tr>";
 	}
 	echo "</table>";
-
-	echo "<section>";
 	
 }
+?>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<?php
+	require_once 'rodape.php';
 ?>
 </body>
 </html>

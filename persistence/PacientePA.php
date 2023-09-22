@@ -37,11 +37,14 @@ class PacientePA{
 		}
 	}
 
-	public function listar($inicio,$fim){
+	public function listar_inicio_fim($inicio,$fim){
 		$sql="select * from paciente where id_paciente_pk between $inicio and $fim";
 		return $this->conexao->consultar($sql);
 	}
-
+	public function listar(){
+		$sql="select * from paciente";
+		return $this->conexao->consultar($sql);
+	}
 	public function logar($nome,$cpf)
 		{
 			$sql="select nome,cpf from paciente";
