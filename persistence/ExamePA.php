@@ -21,23 +21,23 @@ class ExamePA{
 			$exame->getDescricao()."','".
 			$exame->getResultado()."','".
 			$exame->getHora()."','".
-			$exame->getData()."','".
+			$exame->getData_agenda()."','".
 			$exame->getImagem()."')";
-		
+
 		return $this->conexao->executar($sql);
 	}
 
 	public function retornarUltimo()
 	{
-		$sql="select max(id_examen_pk) from exame";
+		$sql="select max(id) from exame";
 		$consulta=$this->conexao->consultar($sql);
 		if(!$consulta){
 			return false;
 		}else{
 			$linha=$consulta->fetch_assoc();
-			$id=0;
-			if($linha['max(id_examen_pk)']!=null){
-				$id=$linha['max(id_examen_pk)'];
+			$exame=0;
+			if($linha['max(id)']!=null){
+				$situacao=$linha['max(id)'];
 			}
 			return $id;
 		}
@@ -45,21 +45,23 @@ class ExamePA{
 
 	public function listar($inicio,$fim)
 	{
-		$sql="select * from exame where id 
+		$sql="select * from exame where id_examen_pk 
 		between $inicio and $fim";
 		return $this->conexao->consultar($sql);
 	}
 
 	public function excluir($exame)
 	{
-		$sql="select diagnostico from exame where id=$id";
+		$sql="select diagnostico from exame where id_examen_pk=$id";
 		return $this->conexao->executar($sql);
 	}
-	public function listarResultado($inicio,$fim)
+		public function listarResultado($inicio,$fim)
 	{
-		$sql="select resultado,id_examen_pk from exame where between $inicio and $fim";
+		$sql="select resultado,id_examen_pk from exame where between id_examen_pk $inicio and $fim";
 		return $this->conexao->consultar($sql);
 	}
 }
 
 ?>
+</body>
+</html>
