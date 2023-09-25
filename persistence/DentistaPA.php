@@ -72,5 +72,10 @@
 			$sql="select * from dentista";
 			return $this->conexao->consultar($sql);
 		}
+
+		public function buscar($busca){
+			$sql="select * from dentista where id_funcionario_pk='$busca' or cpf like '%$busca%' or especialidade like '%$busca%' or nome like '%$busca%' or endereco like '%$busca%' or telefone like '%$busca%' or email like '%$busca%'";
+			return $this->conexao->consultar($sql);
+		}
 	}
 ?>

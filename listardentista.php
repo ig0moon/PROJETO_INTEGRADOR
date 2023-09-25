@@ -8,6 +8,8 @@ if(!$consulta){
 	echo "<h2>Ainda estamos cadastrando!</h2>";
 }else{
 
+	require_once 'buscaden.php';
+
 	echo "<table>";
 	echo "<tr>";
 	echo "<th>Especialidade</th>";
@@ -33,7 +35,7 @@ if(!$consulta){
 	
 }
 ?>
-<br/>
+<!-- <br/>
 <br/>
 <br/>
 <br/>
@@ -51,6 +53,6 @@ if(!$consulta){
 
 <?php
 	require_once 'rodape.php';
-?>
+?> -->
 </body>
 </html>

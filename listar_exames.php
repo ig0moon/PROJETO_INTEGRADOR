@@ -15,6 +15,8 @@ $consultar=$examepa->listar_inicio_fim($inicio,$fim);
 if(!$consultar){
 	echo "<h2>Não há nenhum exame cadastrado no sistema.</h2>";
 }else{
+	
+	require_once 'buscaex.php';
 
 	echo "<table>";
 	echo "<tr>";
@@ -26,7 +28,7 @@ if(!$consultar){
 	echo "<th>Resultado</th>";
 	echo "<th>Hora</th>";
 	echo "<th>Data agenda</th>";
-	echo "<th>Imagem</th>";
+	// echo "<th>Imagem</th>";
 	echo "</tr>";
 
 	while ($linha=$consultar->fetch_assoc()) {
@@ -39,7 +41,7 @@ if(!$consultar){
 		echo "<td>".$linha['resultado']."</td>";
 		echo "<td>".$linha['hora']."</td>";
 		echo "<td>".$linha['data_agenda']."</td>";
-		echo "<td><div><img src='data:image/jpg;base64,".base64_encode($linha['imagem'])."'></div></td>";
+		// echo "<td><div><img src='data:image/jpg;base64,".base64_encode($linha['imagem'])."'></div></td>";
 		echo "</tr>";
 	}
 	echo "</table>";
