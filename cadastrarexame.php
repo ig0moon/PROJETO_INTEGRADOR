@@ -56,45 +56,51 @@ require_once 'cabecalho.php';
 </form>
 <?php
 	if (isset($_POST['botao'])) {
-		require_once 'model/Exame.php';
-		require_once 'persistence/ExamePA.php';
-		$exame=new Exame();
-		$examepa=new ExamePA();
+		$dataatual=strtotime("+3 day");
+		$datasetada=strtotime($_POST['data']);
+		if($dataatual<$datasetada){
+			require_once 'model/Exame.php';
+			require_once 'persistence/ExamePA.php';
+			$exame=new Exame();
+			$examepa=new ExamePA();
 
-		$exame->setTipo($_POST['tipo']);
-		$exame->setData_agenda($_POST['data']);
-		$exame->setHora($_POST['hora']);
-		$exame->setId_paciente_fk($_POST['id_paciente_fk']);
-		$exame->setId_dentista_fk($_POST['id_dentista_fk']);
-		$exame->setDescricao($_POST['descricao']);
-		$exame->setResultado($_POST['resultado']);
-		$id=$examepa->retornarUltimo();
+			$exame->setTipo($_POST['tipo']);
+			$exame->setData_agenda($_POST['data']);
+			$exame->setHora($_POST['hora']);
+			$exame->setId_paciente_fk($_POST['id_paciente_fk']);
+			$exame->setId_dentista_fk($_POST['id_dentista_fk']);
+			$exame->setDescricao($_POST['descricao']);
+			$exame->setResultado($_POST['resultado']);
+			$id=$examepa->retornarUltimo();
 
-		if($id>=0){
-			$id++;
-		}else{
-			$id=1;
-		}
-		$exame->setId_exame_pk($id);
-		$imagem=$_FILES['imagem']['tmp_name'];
-		$tamanho=filesize($imagem);
-		if($tamanho>4294967295){
-			echo "<h2>A imagem selecionada é muito grande!</h2>";
-		}else{
-			//$nome_imagem=basename($imagem);
-			//var_dump($nome_imagem);
-			//$novo_nome=str_replace(" ","_",$nome_imagem);
-			//rename($imagem,$novo_nome);
-			$imagem=addslashes(file_get_contents($imagem));
-			$exame->setImagem($imagem);
-			$resp=$examepa->cadastrar($exame);
-			if(!$resp){//false
-				echo "<h2>Erro na tentativa de Cadastrar! 
-				Tente Novamente!</h2>";
-
+			if($id>=0){
+				$id++;
 			}else{
-				echo "<h2>Exame cadastrado com Sucesso!</h2>";
+				$id=1;
 			}
+			$exame->setId_exame_pk($id);
+			$imagem=$_FILES['imagem']['tmp_name'];
+			$tamanho=filesize($imagem);
+			if($tamanho>4294967295){
+				echo "<h2>A imagem selecionada é muito grande!</h2>";
+			}else{
+				//$nome_imagem=basename($imagem);
+				//var_dump($nome_imagem);
+				//$novo_nome=str_replace(" ","_",$nome_imagem);
+				//rename($imagem,$novo_nome);
+				$imagem=addslashes(file_get_contents($imagem));
+				$exame->setImagem($imagem);
+				$resp=$examepa->cadastrar($exame);
+				if(!$resp){//false
+					echo "<h2>Erro na tentativa de Cadastrar! 
+					Tente Novamente!</h2>";
+
+				}else{
+					echo "<h2>Exame cadastrado com Sucesso!</h2>";
+				}
+			}
+		}else{
+			echo"<h2>Favor inserir uma data e horario válido.</h2>";
 		}
 	}
 
