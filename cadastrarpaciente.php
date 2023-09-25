@@ -10,8 +10,8 @@
 			<p>Nome:</p>
 			<p><input type="text" name="nome" maxlength="25" pattern="[A-Za-z\éÉãÃçÇ]{3,50}" required></p>
 
-			<p>CPF:</p>
-			<p><input type="number" name="cpf" maxlength="20" pattern="[0-9]{11}" required></p>
+			<p>Senha:</p>
+			<p><input type="password" name="senha" maxlength="20" required></p>
 
 			<p>Email:</p>
 			<p><input type="text" name="email" maxlength="30" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}${3,50}" required></p>
@@ -35,7 +35,7 @@
 		$pacientepa=new PacientePA();
 
 		$paciente->setNome($_POST['nome']);
-		$paciente->setCpf($_POST['cpf']);
+		$paciente->setSenha($_POST['senha']);
 		$paciente->setEmail($_POST['email']);
 		$paciente->setTelefone($_POST['telefone']);
 		$paciente->setEndereco($_POST['endereco']);
