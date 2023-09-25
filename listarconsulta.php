@@ -15,6 +15,9 @@ $consulta=$consultapa->listar_inicio_fim($inicio,$fim);
 if (!$consulta){
     echo "<h2>Consulta não encontrada!</h2>";
 }else{
+
+    require_once 'buscacon.php';
+
     echo "<table>";
     echo "<tr>";
     echo "<th>Id</th>";

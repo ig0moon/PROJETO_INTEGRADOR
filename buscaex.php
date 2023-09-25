@@ -26,7 +26,7 @@
 		if (!$consulta){
 			echo "<h2>Nenhum exame encontrado.</h2>";
 		} else{
-			if (isset($_COOKIE['paciente'])){
+			if (isset($_COOKIE['dentista'])){
 
 				echo "<table>";
 					echo "<tr>";

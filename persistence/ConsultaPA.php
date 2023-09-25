@@ -59,6 +59,11 @@ class ConsultaPA{
 		$sql="consulta deletada com sucesso!";
 		return $this->conexao->executar($sql);
 	}
+
+	public function buscar($busca){
+			$sql="select * from consulta where id_consulta_pk='$busca' or id_dentista_fk='$busca' or id_paciente_fk='$busca' or diagnostico like '%$busca%' or data like '%$busca%' or valor like '%$busca%' or situacao like '%$busca%' or hora like '%$busca%' or receita_medica like '%$busca%' or descricao like '%$busca%'";
+			return $this->conexao->consultar($sql);
+		}
 }
 
 ?>
