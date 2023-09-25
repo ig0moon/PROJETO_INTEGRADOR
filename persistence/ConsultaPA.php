@@ -45,7 +45,7 @@ class ConsultaPA{
 
 	public function listar_inicio_fim($inicio,$fim)
 	{
-		$sql="select * from consulta where id 
+		$sql="select * from consulta where id_consulta_pk 
 		between $inicio and $fim";
 		return $this->conexao->consultar($sql);
 	}
