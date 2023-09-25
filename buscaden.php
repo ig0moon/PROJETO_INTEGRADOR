@@ -38,8 +38,6 @@
 						echo "<th>CRM</th>";
 					echo "</tr>";
 
-					var_dump($sql);
-
 			while ($linha=$consulta->fetch_assoc()){
 					echo "<tr>";
 						echo "<td>".$linha['especialidade']."</td>";
