@@ -18,25 +18,29 @@ if (!$consulta){
     echo "<table>";
     echo "<tr>";
     echo "<th>Id</th>";
-    echo "<th>situacao</th>";
-    echo "<th>Descricao</th>";
-    echo "<th>Valor</th>";
-    echo "<th>Hora</th>";
+    echo "<th>Dentista</th>";
+    echo "<th>Paciente</th>";
     echo "<th>Diagnostico</th>";
     echo "<th>Data</th>";
+    echo "<th>Valor</th>";
+    echo "<th>Situacao</th>";
+    echo "<th>Hora</th>";
     echo "<th>Receita medica</th>";
+    echo "<th>Descricao</th>";
     echo "</th>";
 
     while ($linha=$consulta->fetch_assoc()){
         echo "<tr>";
-        echo "<td>".$linha['id']."</td>";
-        echo "<td>".$linha['situacao']."</td>";
-        echo "<td>".$linha['descricao']."</td>";
-        echo "<td>".$linha['valor']."</td>";
-        echo "<td>".$linha['hora']."</td>";
+        echo "<td>".$linha['id_consulta_pk']."</td>";
+        echo "<td>".$linha['id_dentista_fk']."</td>";
+        echo "<td>".$linha['id_paciente_fk']."</td>";
         echo "<td>".$linha['diagnostico']."</td>";
         echo "<td>".$linha['data']."</td>";
-        echo "<td>".$linha['receita medica']."</td>";
+        echo "<td>".$linha['valor']."</td>";
+        echo "<td>".$linha['situacao']."</td>";
+        echo "<td>".$linha['hora']."</td>";
+        echo "<td>".$linha['receita_medica']."</td>";
+        echo "<td>".$linha['descricao']."</td>";
         echo "</tr>";
      }
      echo "</table>";
