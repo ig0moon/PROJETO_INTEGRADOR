@@ -11,16 +11,16 @@ if (isset($_POST['inicio'])) {
 
 require_once 'persistence/ExamePA.php';
 $examepa=new ExamePA();
-$consultar=$examepa->listar($inicio,$fim);
+$consultar=$examepa->listar_inicio_fim($inicio,$fim);
 if(!$consultar){
-	echo "<h2>Logo fica bão!</h2>";
+	echo "<h2>Não há nenhum exame cadastrado no sistema.</h2>";
 }else{
 
 	echo "<table>";
 	echo "<tr>";
 	echo "<th>Id examen</th>";
-	echo "<th>Id dentista</th>";
-	echo "<th>Id paciente</th>";
+	echo "<th>dentista</th>";
+	echo "<th>paciente</th>";
 	echo "<th>Tipo</th>";
 	echo "<th>Descrição</th>";
 	echo "<th>Resultado</th>";
