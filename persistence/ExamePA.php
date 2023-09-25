@@ -43,16 +43,20 @@ class ExamePA{
 		}
 	}
 
-	public function listar($inicio,$fim)
+	public function listar_inicio_fim($inicio,$fim)
 	{
 		$sql="select * from exame where id_examen_pk 
 		between $inicio and $fim";
 		return $this->conexao->consultar($sql);
 	}
+	public function listar(){
+		$sql="select * from exame";
+		return $this->conexao->consultar($sql);
+	}
 
 	public function excluir($exame)
 	{
-		/*nao usar pois nao funciona*/
+		/*Essa função não faz o menor sentido ainda, não sei quem criou. se alguém for usar, favor arrumar. ASSINADO:PDREAM-KA-EL O SPAMCA_BOMBA*/
 		$sql="select diagnostico from exame where id_examen_pk=$id";
 		return $this->conexao->executar($sql);
 	}
