@@ -6,12 +6,34 @@ require_once 'cabecalho.php';
 	<form action="cadastrarexame.php" method="POST" enctype="multipart/form-data" class="normal">
 	
 	<h2>Cadastrar Exame</h2>
-
-	<p>Dentista:</p>
-	<p><input type="text" name="id_dentista_fk" size="25" maxlength="25" required></p>
-
-	<p>Paciente:</p>
-	<p><input type="text" name="id_paciente_fk" size="25" maxlength="25" required></p>
+	<?php
+		require_once "model/Paciente.php";
+		require_once "persistence/PacientePA.php";
+		echo"<p>Pacientes</p>";
+		echo "<select name='pacientes' required>";
+		$paciente=new Paciente();
+		$pacientepa=new PacientePA();
+		$consultaP=$pacientepa->listar();
+		while($linha=$consultaP->fetch_assoc()){
+			$paciente->setId_paciente_pk($linha['id_paciente_pk']);
+			$paciente->setNome($linha['nome']);
+			echo "<option value='".$paciente->getId_paciente_pk()."'>".$paciente->getNome()."</option>";
+			}
+		echo "</select>";
+		require_once "model/Dentista.php";
+		require_once "persistence/DentistaPA.php";
+		echo"<p>Dentista</p>";
+		echo "<select name='dentistas' required>";
+		$Dentista=new Dentista();
+		$Dentistapa=new DentistaPA();
+		$consultaD=$Dentistapa->listar();
+		while($linha=$consultaD->fetch_assoc()){
+			$Dentista->setId_Funcionario_Pk($linha['id_funcionario_pk']);
+			$Dentista->setNome($linha['nome']);
+			echo "<option value='".$Dentista->getId_Funcionario_Pk()."'>".$Dentista->getNome()."</option>";
+			}
+		echo "</select>";
+	?>
 	
 	<p>Tipo:</p>
 	<p><input type="text" name="tipo" size="25" maxlength="25" required></p>
@@ -67,8 +89,8 @@ require_once 'cabecalho.php';
 			$exame->setTipo($_POST['tipo']);
 			$exame->setData_agenda($_POST['data']);
 			$exame->setHora($_POST['hora']);
-			$exame->setId_paciente_fk($_POST['id_paciente_fk']);
-			$exame->setId_dentista_fk($_POST['id_dentista_fk']);
+			$exame->setId_paciente_fk($_POST['pacientes']);
+			$exame->setId_dentista_fk($_POST['dentistas']);
 			$exame->setDescricao($_POST['descricao']);
 			$exame->setResultado($_POST['resultado']);
 			$id=$examepa->retornarUltimo();

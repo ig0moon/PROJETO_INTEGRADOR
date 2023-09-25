@@ -67,35 +67,41 @@ require_once 'cabecalho.php';
 <?php  
 
 if (isset($_POST['botao'])) {
-	require_once 'model/Consulta.php';
-	require_once 'persistence/ConsultaPA.php';
-	$consulta=new Consulta();
-	$consultapa=new ConsultaPA();
+	$dataatual=strtotime("+3 day");
+	$datasetada=strtotime($_POST['data']);
+	if($dataatual<$datasetada){
+		require_once 'model/Consulta.php';
+		require_once 'persistence/ConsultaPA.php';
+		$consulta=new Consulta();
+		$consultapa=new ConsultaPA();
 
-	$consulta->setDiagnostico($_POST['diagnostico']);
-	$consulta->setData($_POST['data']);
-	$consulta->setValor($_POST['valor']);
-	$consulta->setValor(str_replace(",",".",$consulta->getValor()));
-	$consulta->setSituacao($_POST['situacao']);
-	$consulta->setHora($_POST['hora']);
-	$consulta->setReceita_medica($_POST['receitamedica']);
-	$consulta->setDescricao($_POST['descricao']);
-	$id=$consultapa->retornarUltimo();
+		$consulta->setDiagnostico($_POST['diagnostico']);
+		$consulta->setData($_POST['data']);
+		$consulta->setValor($_POST['valor']);
+		$consulta->setValor(str_replace(",",".",$consulta->getValor()));
+		$consulta->setSituacao($_POST['situacao']);
+		$consulta->setHora($_POST['hora']);
+		$consulta->setReceita_medica($_POST['receitamedica']);
+		$consulta->setDescricao($_POST['descricao']);
+		$id=$consultapa->retornarUltimo();
 
-		if ($id>=0) {
-			$id++;
+			if ($id>=0) {
+				$id++;
+			}else{
+				$id=1;
+			}
+		
+			$consulta->setId_funcionario_fk($_POST['dentistas']);
+			$consulta->setId_Paciente_fk($_POST['pacientes']);
+			$consulta->setId_consulta_pk($id);
+			$resp=$consultapa->cadastrar($consulta);
+			if(!$resp){
+				echo"<p>Erro ao tentar cadastrar consulta</p>";
+			}else{
+				echo"<p>Consulta cadastrada com sucesso</p>";
+			}
 		}else{
-			$id=1;
-		}
-	
-		$consulta->setId_funcionario_fk($_POST['dentistas']);
-		$consulta->setId_Paciente_fk($_POST['pacientes']);
-		$consulta->setId_consulta_pk($id);
-		$resp=$consultapa->cadastrar($consulta);
-		if(!$resp){
-			echo"<p>Erro ao tentar cadastrar consulta</p>";
-		}else{
-			echo"<p>Consulta cadastrada com sucesso</p>";
+			echo"<h2>Favor inserir uma data e horario válido.</h2>";
 		}
 	}
 
