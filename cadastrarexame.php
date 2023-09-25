@@ -1,10 +1,10 @@
 <?php
 require_once 'cabecalho.php';
 ?>
-
+<?php //phpinfo(); ?>
 <div id="painel">
 	<form action="cadastrarexame.php" method="POST" enctype="multipart/form-data" class="normal">
-
+	
 	<h2>Cadastrar Exame</h2>
 
 	<p>Dentista:</p>
@@ -81,6 +81,10 @@ require_once 'cabecalho.php';
 		if($tamanho>4294967295){
 			echo "<h2>A imagem selecionada é muito grande!</h2>";
 		}else{
+			//$nome_imagem=basename($imagem);
+			//var_dump($nome_imagem);
+			//$novo_nome=str_replace(" ","_",$nome_imagem);
+			//rename($imagem,$novo_nome);
 			$imagem=addslashes(file_get_contents($imagem));
 			$exame->setImagem($imagem);
 			$resp=$examepa->cadastrar($exame);
