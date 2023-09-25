@@ -1,6 +1,10 @@
 <?php
 require_once 'cabecalho.php';
+?>
 
+    <h2>Dentistas</h2>
+
+<?php
 require_once 'persistence/DentistaPA.php';
 $dentistapa=new DentistaPA();
 $consulta=$dentistapa->listar();

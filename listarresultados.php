@@ -1,6 +1,10 @@
 <?php
 	require_once 'cabecalho.php';
+?>
 
+    <h2>Resultados</h2>
+
+<?php
 	if(isset($_POST['inicio'])){
 		$inicio=$_POST['inicio'];
 		$fim=$inicio+4;

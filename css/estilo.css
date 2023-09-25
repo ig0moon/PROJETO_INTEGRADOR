@@ -109,6 +109,7 @@ h1 {
 }
 
 h2 {
+	text-align: center;
 	color: var(--color-dark1);
 	font-family: 'Poppins', sans-serif;
 }
