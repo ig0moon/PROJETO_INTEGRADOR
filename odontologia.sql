@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 26-Set-2023 às 19:09
+-- Generation Time: 26-Set-2023 às 19:15
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
 
@@ -136,6 +136,14 @@ CREATE TABLE `paciente` (
   `cpf` bigint(11) DEFAULT NULL,
   `endereco` text
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `paciente`
+--
+
+INSERT INTO `paciente` (`id_paciente_pk`, `nome`, `telefone`, `email`, `senha`, `cpf`, `endereco`) VALUES
+(1, 'chiapaneco', '12345678912', 'alien@chiapaneco.com', '12345', 10293847561, 'Rua F'),
+(2, 'miguelon', '01928374651', 'tumamawe@gmail.com', '09876', 987654312, 'Rua j');
 
 --
 -- Indexes for dumped tables
