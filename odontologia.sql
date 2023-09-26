@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 22-Set-2023 às 21:28
+-- Generation Time: 26-Set-2023 às 18:40
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
 
@@ -132,7 +132,7 @@ CREATE TABLE `paciente` (
   `nome` text,
   `telefone` bigint(11) DEFAULT NULL,
   `email` text,
-  `cpf` bigint(12) DEFAULT NULL,
+  `senha` varchar(100) DEFAULT NULL,
   `endereco` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -140,9 +140,9 @@ CREATE TABLE `paciente` (
 -- Extraindo dados da tabela `paciente`
 --
 
-INSERT INTO `paciente` (`id_paciente_pk`, `nome`, `telefone`, `email`, `cpf`, `endereco`) VALUES
-(1, 'chincharron', 4249876549, 'chicharron@gmail.com', 123456789012, 'Rua X Y'),
-(2, 'pepito', 4249998834522, 'yanose@gmail.com', 12345678902, 'Rua X Z');
+INSERT INTO `paciente` (`id_paciente_pk`, `nome`, `telefone`, `email`, `senha`, `endereco`) VALUES
+(1, 'chincharron', 4249876549, 'chicharron@gmail.com', '123456789012', 'Rua X Y'),
+(2, 'pepito', 4249998834522, 'yanose@gmail.com', '12345678902', 'Rua X Z');
 
 --
 -- Indexes for dumped tables
