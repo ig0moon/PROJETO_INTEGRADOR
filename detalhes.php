@@ -30,10 +30,6 @@ if (isset($_POST['id_examen_pk'])&& isset($_POST['botao'])) {
 	<section class="descricao">
 		<p><?= $exame->getDescricao()?></p>
 	</section>
-	<div id="campos">
-			<h1><?= $exame->getTipo() ?></h1>
-			<p>R$<?= $exame->getValor() ?></p>
-		</div>
 
 <?php
 	}
