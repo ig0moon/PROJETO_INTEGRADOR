@@ -10,11 +10,14 @@
 			<p>Nome:</p>
 			<p><input type="text" name="nome" maxlength="25" pattern="[A-Za-z\éÉãÃçÇ]{3,50}" required></p>
 
-			<p>Senha:</p>
-			<p><input type="password" name="senha" maxlength="20" required></p>
-
+			<p>CPF:</p>
+			<p><input type="number" name="cpf" maxlength="11" pattern="[0-9]{9,12}" required></p>
+			
 			<p>Email:</p>
 			<p><input type="text" name="email" maxlength="30" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}${3,50}" required></p>
+
+			<p>Senha:</p>
+			<p><input type="password" name="senha" maxlength="20" required></p>
 
 			<p>Telefone:</p>
 			<p><input type="number" name="telefone" maxlength="30" pattern="[0-9]{9,12}" required></p>
@@ -39,6 +42,7 @@
 		$paciente->setEmail($_POST['email']);
 		$paciente->setTelefone($_POST['telefone']);
 		$paciente->setEndereco($_POST['endereco']);
+		$paciente->setCpf($_POST['cpf']);
 		$id=$pacientepa->retornarUltimo();
 		if ($id>0){
 			$id++;

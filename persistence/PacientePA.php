@@ -13,7 +13,8 @@ class PacientePA{
 		$paciente->getId_paciente_pk().",'".
 		$paciente->getNome()."','".
 		$paciente->getTelefone()."','".
-		$paciente->getEmail()."',".
+		$paciente->getEmail()."','".
+		$paciente->getSenha()."',".
 		$paciente->getCpf().",'".
 		$paciente->getEndereco()."')";
 		

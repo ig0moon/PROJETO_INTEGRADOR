@@ -36,9 +36,10 @@
 
       public function getSenha(){
         return $this->senha;
+      }
 
-            public function setCpf($cpf){
-   	   	    $this->cpf=$cpf;
+      public function setCpf($cpf){
+   	   	  $this->cpf=$cpf;
    	   }
 
       public function getCpf(){
