@@ -12,7 +12,7 @@
 		<p><input type="text" name="nome" size="50" pattern="[A-Za-z\sãÃéÉÇç]{3,50}" maxlength="50"  required></p>
 
 		<p>Especialidade:</p>
-		<p><input type="text" name="especialidade" size="25" pattern= "[A-Za-z\sãÃéÉÇç]{5,20}" maxlength="25" required></p>  
+		<p><input type="text" name="especialidade" size="25" pattern= "[A-Za-z\sãÃÁáÉéÇç]{5,20}" maxlength="25" required></p>  
 
 		<p>Endereço:</p>
 		<p><input type="text" name="endereco" size="100" pattern="[A-Za-z\sãÃéçÇÉ0-9]{10,100}" maxlength="100" required></p>
