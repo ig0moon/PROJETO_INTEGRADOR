@@ -1,7 +1,7 @@
 <?php
 require_once 'cabecalho.php';
 
-if (isset($_POST['id'])&& isset($_POST['botao'])) {
+if (isset($_POST['id_examen_pk'])&& isset($_POST['botao'])) {
 	require_once 'model/Exame.php';
 	require_once 'persistence/ExamePA.php';
 	$exame=new Exame();
@@ -30,6 +30,10 @@ if (isset($_POST['id'])&& isset($_POST['botao'])) {
 	<section class="descricao">
 		<p><?= $exame->getDescricao()?></p>
 	</section>
+	<div id="campos">
+			<h1><?= $exame->getTipo() ?></h1>
+			<p>R$<?= $exame->getValor() ?></p>
+		</div>
 
 <?php
 	}
