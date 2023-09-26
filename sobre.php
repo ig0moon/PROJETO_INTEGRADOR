@@ -4,6 +4,8 @@ require_once 'cabecalho.php'
 
 ?>
 
+	<section id="blog">
+
 	<h2>Bem-vindo à OMAGA: O Sorriso que Transforma Vidas</h2>
 <br>
 <p>Na Clínica Odontológica OMAGA, estamos comprometidos em transformar sorrisos e vidas. Nossa jornada começa com uma paixão profunda pela Odontologia e a missão de proporcionar cuidados de qualidade excepcional aos nossos pacientes.</p>
@@ -25,29 +27,15 @@ require_once 'cabecalho.php'
 <p>Oferecemos uma ampla gama de serviços odontológicos, desde tratamentos preventivos até procedimentos avançados de reabilitação oral. Nossos serviços incluem:</p>
 <br>
 
-	<ul class="sobrepag">
-		<li>&#129463;Limpeza e prevenção;</li>
-		<li>&#129463;Tratamentos estéticos, como clareamento dental e facetas de porcelana;</li>
-		<li>&#129463;Implantes dentários e reabilitação oral;</li>
-		<li>&#129463;Ortodontia, incluindo Invisalign®;</li>
-		<li>&#129463;Cirurgia bucal e maxilofacial;</li>
-		<li>&#129463;Odontopediatria para cuidar dos sorrisos das crianças;</li>
-		<li>&#129463;Tratamento de periodontite e gengivite e;</li>
-		<li>&#129463;Restaurações de alta qualidade, incluindo restaurações estéticas e coroas.</li>
+		<p>&#129463; Limpeza e prevenção;</p>
+		<p>&#129463; Tratamentos estéticos, como clareamento dental e facetas de porcelana;</p>
+		<p>&#129463; Implantes dentários e reabilitação oral;</p>
+		<p>&#129463; Ortodontia, incluindo Invisalign®;</p>
+		<p>&#129463; Cirurgia bucal e maxilofacial;</p>
+		<p>&#129463; Odontopediatria para cuidar dos sorrisos das crianças;</p>
+		<p>&#129463; Tratamento de periodontite e gengivite e;</p>
+		<p>&#129463; Restaurações de alta qualidade, incluindo restaurações estéticas e coroas.</p>
 
-	<ul>
-
-	<ul class="sobrepag">
-		<li>Limpeza e prevenção;</li>
-		<li>Tratamentos estéticos, como clareamento dental e facetas de porcelana;</li>
-		<li>Implantes dentários e reabilitação oral;</li>
-		<li>Ortodontia, incluindo Invisalign®;</li>
-		<li>Cirurgia bucal e maxilofacial;</li>
-		<li>Odontopediatria para cuidar dos sorrisos das crianças;</li>
-		<li>Tratamento de periodontite e gengivite e;</li>
-		<li>Restaurações de alta qualidade, incluindo restaurações estéticas e coroas.</li>
-
-	</ul>
 <br>
 	<h3>Nossa Dedicação à Comunidade</h3>
 <br>
@@ -59,8 +47,9 @@ require_once 'cabecalho.php'
 <br>
 <p>Na Clínica Odontológica OMAGA, acreditamos que um sorriso saudável é uma porta de entrada para uma vida mais feliz e confiante. Estamos aqui para ajudá-lo a alcançar o sorriso dos seus sonhos. Marque uma consulta hoje mesmo e descubra como podemos transformar sua saúde bucal e sua qualidade de vida. Junte-se a nós nesta jornada para um sorriso que transforma vidas!</p>
 <br>
+
+</section>
+
 <?php
 	require_once 'rodape.php';
 ?>
-</body>
-</html>

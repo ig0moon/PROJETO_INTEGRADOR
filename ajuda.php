@@ -4,7 +4,13 @@ require_once 'cabecalho.php'
 
 ?>
 
+	<section id="blog">
+
+		<div id="avalia">
   		<h2>Perguntas Frequentes:</h2>
+  		</div>
+  		
+  		<br>
 	<h2>Quais são os serviços oferecidos pela sua clínica odontológica?</h2>
 <br>
 <p>Oferecemos uma ampla gama de serviços odontológicos, incluindo limpeza dental, restaurações, tratamento de canal, extrações, implantes, ortodontia, odontopediatria e muito mais. Nossa equipe está preparada para atender às suas necessidades odontológicas.</p>
@@ -45,8 +51,9 @@ require_once 'cabecalho.php'
 <br>
 <p>Sim, aceitamos muitos planos de seguro odontológico. Entre em contato conosco com informações sobre seu seguro, e nossa equipe terá prazer em ajudá-lo a entender os detalhes da cobertura.</p>
 <br>
+
+</section>
+
 <?php
 	require_once 'rodape.php';
 ?>
-</body>
-</html>

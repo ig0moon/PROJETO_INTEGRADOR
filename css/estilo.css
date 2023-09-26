@@ -48,6 +48,10 @@ body {
 	background-color: var(--color-blue2);
 }
 
+#blog li {
+	list-style: none;
+}
+
 #blog h2,h4 {
 	color: var(--color-white);
 }
