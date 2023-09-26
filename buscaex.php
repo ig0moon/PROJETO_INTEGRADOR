@@ -35,6 +35,7 @@
 						echo "<th>Resultado</th>";
 						echo "<th>Hora</th>";
 						echo "<th>Data agenda</th>";
+						echo "<th>Detalhes</th>";
 					echo "</tr>";
 
 			while ($linha=$consulta->fetch_assoc()){
@@ -44,7 +45,7 @@
 						echo "<td>".$linha['resultado']."</td>";
 						echo "<td>".$linha['hora']."</td>";
 						echo "<td>".$linha['data_agenda']."</td>";
-					// echo "<td>".$linha['detalhes']."</td>";
+						echo "<td><button class='btn' onclick='window.location.href='/PROJETO_INTEGRADOR/detalhes';'>Ver detalhes</td>";
 					echo "</tr>";
 			}
 			echo "</table>";

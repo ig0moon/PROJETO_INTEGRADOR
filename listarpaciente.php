@@ -21,6 +21,9 @@
 		echo "<h2>Ainda não exitem pacientes.</h2>";
 
 	} else{
+
+		require_once 'buscapac.php';
+
 		echo "<table>";
 		echo "<tr>";
 		echo "<th>ID</th>";

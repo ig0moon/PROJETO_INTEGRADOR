@@ -73,5 +73,10 @@ class PacientePA{
            $sql="select nome from paciente where id_paciente_pk=$id";
            return $this->conexao->consultar($sql);
 		}
+
+		public function buscar($busca){
+			$sql="select * from paciente where id_paciente_pk='$busca' or nome like '%$busca%' or telefone like '%$busca%' or email like '%$busca%' or cpf like '%$busca%' or endereco like '%$busca%'";
+			return $this->conexao->consultar($sql);
+		}
 	}
 ?>

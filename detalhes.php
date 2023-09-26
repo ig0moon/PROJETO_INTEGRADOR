@@ -5,8 +5,8 @@ if (isset($_POST['id'])&& isset($_POST['botao'])) {
 	require_once 'model/Exame.php';
 	require_once 'persistence/ExamePA.php';
 	$exame=new Exame();
-	$examepa=new ProdutoPA();
-	$consulta=$examepa->buscarPorId($_POST['id']);
+	$examepa=new ExamePA();
+	$consulta=$examepa->buscarPorId($_POST['id_examen_pk']);
 	if (!$consulta) {
 		echo "<h2>Exame não encontrado</h2>";
 	}else{

@@ -20,7 +20,7 @@
 			<p><input type="password" name="senha" maxlength="20" required></p>
 
 			<p>Telefone:</p>
-			<p><input type="number" name="telefone" maxlength="30" pattern="[0-9]{9,12}" placeholder="xx xxxxx-xxxx" required></p>
+			<p><input type="number" name="telefone" maxlength="30" pattern="[0-9]{9,12}" placeholder="yyxxxxxxxxx" required></p>
 			
 			<p>Endereço:</p>
 			<p><input type="text" name="endereco" maxlength="30" pattern="[A-Za-z0-9\éÉãÃçÇ]{3,50}" required></p>

@@ -32,7 +32,7 @@ if(!$consultar){
 	echo "<th>Resultado</th>";
 	echo "<th>Hora</th>";
 	echo "<th>Data agenda</th>";
-	// echo "<th>Imagem</th>";
+	echo "<th>Detalhes</th>";
 	echo "</tr>";
 
 	while ($linha=$consultar->fetch_assoc()) {
@@ -45,7 +45,7 @@ if(!$consultar){
 		echo "<td>".$linha['resultado']."</td>";
 		echo "<td>".$linha['hora']."</td>";
 		echo "<td>".$linha['data_agenda']."</td>";
-		// echo "<td><div><img src='data:image/jpg;base64,".base64_encode($linha['imagem'])."'></div></td>";
+		echo "<td><a class='det' href='/PROJETO_INTEGRADOR/detalhes'>Ver detalhes</td>";
 		echo "</tr>";
 	}
 	echo "</table>";
