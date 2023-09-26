@@ -19,8 +19,6 @@ $consultar=$examepa->listar_inicio_fim($inicio,$fim);
 if(!$consultar){
 	echo "<h2>Não há nenhum exame cadastrado no sistema.</h2>";
 }else{
-	
-	require_once 'buscaex.php';
 
 	echo "<table>";
 	echo "<tr>";

@@ -22,8 +22,6 @@
 
 	} else{
 
-		require_once 'buscapac.php';
-
 		echo "<table>";
 		echo "<tr>";
 		echo "<th>ID</th>";

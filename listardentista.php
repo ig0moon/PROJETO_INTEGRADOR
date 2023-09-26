@@ -12,8 +12,6 @@ if(!$consulta){
 	echo "<h2>Ainda estamos cadastrando!</h2>";
 }else{
 
-	require_once 'buscaden.php';
-
 	echo "<table>";
 	echo "<tr>";
 	echo "<th>Especialidade</th>";
