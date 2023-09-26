@@ -44,9 +44,9 @@ class PacientePA{
 		$sql="select * from paciente";
 		return $this->conexao->consultar($sql);
 	}
-	public function logar($nome,$cpf)
+	public function logar($nome,$senha)
 		{
-			$sql="select nome,cpf from paciente";
+			$sql="select nome,senha from paciente";
 			$consulta=$this->conexao->consultar($sql);
 			if(!$consulta){
 				return false;
@@ -54,7 +54,7 @@ class PacientePA{
 				$teste=false;
 				while($linha=$consulta->fetch_assoc()){
 					if($linha['nome']==$nome){
-						if($linha['cpf']==$cpf){
+						if($linha['senha']==$senha){
 							return true;
 						}
 					}
