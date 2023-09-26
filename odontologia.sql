@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 26-Set-2023 às 19:15
+-- Generation Time: 26-Set-2023 às 20:06
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
 
@@ -65,6 +65,14 @@ CREATE TABLE `consulta` (
   `receita_medica` text,
   `descricao` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `consulta`
+--
+
+INSERT INTO `consulta` (`id_consulta_pk`, `id_dentista_fk`, `id_paciente_fk`, `diagnostico`, `data`, `valor`, `situacao`, `hora`, `receita_medica`, `descricao`) VALUES
+(1, 1, 1, 'falta de coca', '2023-09-26', '100.00', 'precisa uma coca', '15:00:00', 'coca', 'tomar coca'),
+(2, 2, 1, 'voce vai morer', '2023-09-27', '50.00', 'Vou cobrar barato porque você vai morrer de qualquer jeito', '17:00:00', 'nada', 'morte');
 
 -- --------------------------------------------------------
 
@@ -143,7 +151,8 @@ CREATE TABLE `paciente` (
 
 INSERT INTO `paciente` (`id_paciente_pk`, `nome`, `telefone`, `email`, `senha`, `cpf`, `endereco`) VALUES
 (1, 'chiapaneco', '12345678912', 'alien@chiapaneco.com', '12345', 10293847561, 'Rua F'),
-(2, 'miguelon', '01928374651', 'tumamawe@gmail.com', '09876', 987654312, 'Rua j');
+(2, 'miguelon', '01928374651', 'tumamawe@gmail.com', '09876', 987654312, 'Rua j'),
+(3, 'Shang tsung', '09876543218', 'chicharon@gmail.com', 'tumamawe', 12345678902, 'Rua M');
 
 --
 -- Indexes for dumped tables
