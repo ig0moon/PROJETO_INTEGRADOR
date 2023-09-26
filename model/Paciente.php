@@ -4,6 +4,7 @@
    	private $id_paciente_pk;
    	private $nome;
    	private $telefone;
+    private $senha;
    	private $cpf;
    	private $email;
     private $endereco;
@@ -28,6 +29,14 @@
       public function getTelefone(){
       	return $this->telefone;
       }
+
+      public function setSenha($senha){
+        $this->senha=$senha;
+      }
+
+      public function getSenha(){
+        return $this->senha;
+
             public function setCpf($cpf){
    	   	    $this->cpf=$cpf;
    	   }
