@@ -70,6 +70,13 @@ class ExamePA{
 			$sql="select * from exame where Id_examen_pk='$busca' or Id_dentista_fk='$busca' or Id_paciente_fk='$busca' or hora like '%$busca%' or data_agenda like '%$busca%' or tipo like '%$busca%' or descricao like '%$busca%'";
 			return $this->conexao->consultar($sql);
 		}
+
+	public function buscarPorId($id)
+		{
+			$sql="select * from examen where id_examen_pk=$id";
+			return $this->conexao->consultar($sql);
+
+		}	
 }
 
 ?>

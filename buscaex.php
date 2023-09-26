@@ -35,7 +35,6 @@
 						echo "<th>Resultado</th>";
 						echo "<th>Hora</th>";
 						echo "<th>Data agenda</th>";
-						echo "<th>Detalhes</th>";
 					echo "</tr>";
 
 			while ($linha=$consulta->fetch_assoc()){
