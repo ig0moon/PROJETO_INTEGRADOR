@@ -36,7 +36,7 @@ require_once 'cabecalho.php';
 	?>
 	
 	<p>Tipo:</p>
-	<p><input type="text" name="tipo" size="25" maxlength="25" required></p>
+	<p><input type="text" name="tipo" size="25" maxlength="30" required></p>
 
 	<p>Descrição:</p>
 	<p><input type="text" name="descricao" size="25" maxlength="100" required></p>
