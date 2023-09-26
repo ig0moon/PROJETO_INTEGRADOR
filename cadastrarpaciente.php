@@ -11,7 +11,7 @@
 			<p><input type="text" name="nome" maxlength="25" pattern="[A-Za-z\éÉãÃçÇ]{3,50}" required></p>
 
 			<p>CPF:</p>
-			<p><input type="number" name="cpf" maxlength="11" pattern="[0-9]{9,12}" required></p>
+			<p><input type="number" name="cpf" maxlength="11" pattern="[0-9]{9,12}" placeholder="11 números" required></p>
 			
 			<p>Email:</p>
 			<p><input type="text" name="email" maxlength="30" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}${3,50}" required></p>
@@ -20,7 +20,7 @@
 			<p><input type="password" name="senha" maxlength="20" required></p>
 
 			<p>Telefone:</p>
-			<p><input type="number" name="telefone" maxlength="30" pattern="[0-9]{9,12}" required></p>
+			<p><input type="number" name="telefone" maxlength="30" pattern="[0-9]{9,12}" placeholder="xx xxxxx-xxxx" required></p>
 			
 			<p>Endereço:</p>
 			<p><input type="text" name="endereco" maxlength="30" pattern="[A-Za-z0-9\éÉãÃçÇ]{3,50}" required></p>

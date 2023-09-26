@@ -18,16 +18,16 @@
 		<p><input type="text" name="endereco" size="100" pattern="[A-Za-z\sãÃéçÇÉ0-9]{10,100}" maxlength="100" required></p>
 
 		<p>Telefone:</p>
-		<p><input type="text" name="telefone" size="14"  pattern= "[0-9]{4,20}" maxlength="14" required></p>
+		<p><input type="text" name="telefone" size="14"  pattern= "[0-9]{4,20}" maxlength="14" placeholder="xx xxxxx-xxxx" required></p>
 
 		<p>E-mail:</p>
 		<p><input type="text" name="email" size="50" pattern= "[A-Za-z\sãÃéÉ0-9@.]{5,50}" maxlength="50" required></p>
 
 		<p>CPF:</p>
-		<p><input type="text" name="cpf" size="25" pattern= "[0-9]{11,11}" maxlength="25" required></p>
+		<p><input type="text" name="cpf" size="25" pattern= "[0-9]{11,11}" maxlength="25" placeholder="11 números" required></p>
 
 		<p>CRM:</p>
-		<p><input type="number" name="crm" size="14" pattern= "[0-9]{14,14}" maxlength="14" required></p>
+		<p><input type="number" name="crm" size="14" pattern= "[0-9]{14,14}" maxlength="14" placeholder="14 números" required></p>
 
 		<p><input class="btn" type="submit" name="botao" value="Cadastrar"></p>
 	</form>

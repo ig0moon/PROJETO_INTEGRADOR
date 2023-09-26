@@ -80,7 +80,7 @@ require_once 'cabecalho.php';
 	if (isset($_POST['botao'])) {
 		$dataatual=strtotime("+3 day");
 		$datasetada=strtotime($_POST['data']);
-		if($dataatual<$datasetada){
+		if($dataatual != $datasetada){
 			require_once 'model/Exame.php';
 			require_once 'persistence/ExamePA.php';
 			$exame=new Exame();
