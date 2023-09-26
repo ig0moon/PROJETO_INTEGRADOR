@@ -17,10 +17,7 @@ class PacientePA{
 		$paciente->getSenha()."',".
 		$paciente->getCpf().",'".
 		$paciente->getEndereco()."')";
-		var_dump($sql);
 		
-		
-
 		return $this->conexao->executar($sql);
 	}
 
