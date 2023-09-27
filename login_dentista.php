@@ -1,5 +1,7 @@
 <?php
 require_once 'cabecalho.php';
+//pattern="[0-9éÉa-zA-Z_]{1,20}"
+//pattern="[0-9a-zA-Z_\s@]{0,9}"
 ?>
 
 <div id="painel">
@@ -7,10 +9,10 @@ require_once 'cabecalho.php';
 		<h2>Login Dentista</h2>
 
 		<p>Nome:</p>
-		<p><input type="text" name="nome" size="15" maxlength="50" pattern="[0-9éÉa-zA-Z_]{1,20}" required></p>
+		<p><input type="text" name="nome" size="15" maxlength="50" required></p>
 
 		<p>CRM:</p>
-		<p><input type="text" name="crm" size="14" maxlength="14" pattern="[0-9a-zA-Z_\s@]{1,10}" required></p>
+		<p><input type="text" name="crm" size="14" maxlength="14"  required></p>
 
 		<p><input class="btn" type="submit" name="botao" value="Logar"></p>
 	</form>
