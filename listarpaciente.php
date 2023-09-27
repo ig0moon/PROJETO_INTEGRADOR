@@ -31,9 +31,11 @@
 		echo "<th>Email</th>";
 
 		if (isset($_COOKIE['admin'])) {
+
 			echo "<th>Alterar</th>";
+
 		}
-		
+
 		echo "</tr>";
 
 		while ($linha=$consulta->fetch_assoc()){
@@ -45,6 +47,7 @@
 			echo "<td>".$linha['email']."</td>";
 
 			if (isset($_COOKIE['admin'])) {
+
 				echo "<td>
 					<form action='alterarpaciente.php' method='POST'>"."
 					<input type='hidden' name='id' value='".$linha['id_paciente_pk']."'>"."
@@ -53,6 +56,7 @@
 					</div>
 					</form>
 					</td>";
+
 			}
 			echo "</tr>";
 		}
@@ -88,5 +92,3 @@
 <?php
 	require_once 'rodape.php';
 ?>
-</body>
-</html>
