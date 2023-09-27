@@ -29,7 +29,7 @@
 ?>
 		<form action="alterarpaciente.php" method="POST" enctype="multipart/form-data" class="normal">
 
-		<h2>Alterar Produto</h2>
+		<h2>Alterar Paciente</h2>
 
 		<p>Nome:</p>
 		<p><input type="text" name="nome" maxlength="25" placeholder="<?= $paciente->getNome() ?>" maxlength="25" pattern="[A-Za-z\éÉãÃçÇ]{3,50}"></p>
