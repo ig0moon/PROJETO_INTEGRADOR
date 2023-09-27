@@ -78,10 +78,29 @@
 			return $this->conexao->consultar($sql);
 		}
 
-		public function alterar($dentista)
+		public function alterar($dentistas,$tipo)
 		{
-		$sql="update dentista set especialidade='".$dentista->getEspecialidade()."',nome='".$dentista->getNome()."',endereco=".$dentista->getEndereco().",telefone='".$dentista->getTelefone()."',email='".$dentista->getEmail()."' where id=".$dentista->getId_Funcionario_Pk();
+		if ($tipo=="dentistas") {
+			$sql="update dentista set especialidade='".
+			$dentistas->getEspecialidade()."' where id=".
+			$dentistas->getId_Funcionario_Pk();
+		}else{
+			$sql="update dentista set nome='".
+			$dentistas->getNome()."' where id=".
+			$dentistas->getId_Funcionario_Pk();
 
+			$sql="update dentista set endereco='".
+			$dentistas->getEndereco()."' where id=".
+			$dentistas->getId_Funcionario_Pk();
+
+			$sql="update dentista set telefone='".
+			$dentistas->getTelefone()."' where id=".
+			$dentistas->getId_Funcionario_Pk();
+
+			$sql="update dentista set email='".
+			$dentistas->getEmail()."' where id=".
+			$dentistas->getId_Funcionario_Pk();
+		}
 		return $this->conexao->executar($sql);
 		}
 	}
