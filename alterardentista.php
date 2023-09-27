@@ -11,9 +11,9 @@ $consulta=$dentistapa->listar();
 if (!$consulta) {
 	echo "<h2>Erro ao tentar recuperar dados de Usuario!</h2>";
 }else{
-	
-	echo "<select name='dentistass'>";
+	echo "<select name='dentistas'>";
 	while ($linha=$consulta->fetch_assoc()) {
+		$dentista->setId_Funcionario_Pk($linha['id']);
 		$dentista->setEspecialidade($linha['especialidade']);
 		$dentista->setNome($linha['nome']);
 		$dentista->setEndereco($linha['endereco']);
@@ -24,37 +24,39 @@ if (!$consulta) {
 	}
 	echo "</select>";
 	echo "<p>Mudar:</p>";
-	echo "<p><input type='radio' name='tipo' value='especialidade'>Especialidade</p>";
-	echo "<p><input type='radio' name='tipo' value='nome'>Nome</p>";
-	echo "<p><input type='radio' name='tipo' value='endereco'>Endereco</p>";
-	echo "<p><input type='radio' name='tipo' value='telefone'>Telefone</p>";
-	echo "<p><input type='radio' name='tipo' value='email'>Email</p>";
+	echo "<p><input type='radio' name='tipo' value='especialidade' required>Especialidade</p>";
+	echo "<p><input type='radio' name='tipo' value='nome' required>Nome</p>";
+	echo "<p><input type='radio' name='tipo' value='endereco' required>Endereco</p>";
+	echo "<p><input type='radio' name='tipo' value='telefone' required>Telefone</p>";
+	echo "<p><input type='radio' name='tipo' value='email' required>Email</p>";
 	echo "<p>Para: <input type='text' name='para' size='20'></p>";
 	echo "<p><input type='submit' name='botao' value='Alterar'></p>";
 }
 echo "</form>";
 
 if (isset($_POST['botao'])) {
-	if ($_POST['dentistas']=="tipo") {
-		$dentista->setEspecialidade($_POST['para']);
-		$dentista->setEspecialidade($_POST['dentistas']);
-		$resp=$dentistapa->alterar($dentista,$_POST['dentista']);
-	}else if($_POST['dentistas']=="tipo"){
-		$dentista->setNome($_POST['para']);
-		$dentista->setNome($_POST['dentistass']);
-		$resp=$dentistapa->alterar($dentista,$_POST['dentista']);
-	}else if($_POST['dentistas']=="tipo"){
-		$dentista->setEndereco($_POST['para']);
-		$dentista->setEndereco($_POST['dentistass']);
-		$resp=$dentistapa->alterar($dentista,$_POST['dentistas']);
-	}else if($_POST['dentistas']=="tipo"){
-		$dentista->setTelfone($_POST['para']);
-		$dentista->setTelfone($_POST['dentistass']);
-		$resp=$dentistapa->alterar($dentista,$_POST['dentista']);
-	}else if($_POST['dentistas']=="tipo"){
-		$dentista->setEmail($_POST['para']);
-		$dentista->setEmail($_POST['dentistass']);
-		$resp=$dentistapa->alterar($dentistas,$_POST['dentista']);
+	$sdentista=new Dentista();
+	$sdentistapa=new DentistaPA();
+	if ($_POST['tipo']=="especialidade") {
+		$sdentista->setEspecialidade($_POST['para']);
+		$sdentista->setId_Funcionario_Pk($_POST['dentistas']);
+		$resp=$sdentistapa->alterar($sdentista,$_POST['tipo']);
+	}else if($_POST['tipo']=="nome"){
+		$sdentista->setNome($_POST['para']);
+		$sdentista->setId_Funcionario_Pk($_POST['dentistas']);
+		$resp=$sdentistapa->alterar($sdentista,$_POST['tipo']);
+	}else if($_POST['tipo']=="endereco"){
+		$sdentista->setEndereco($_POST['para']);
+		$sdentista->setId_Funcionario_Pk($_POST['dentistas']);
+		$resp=$sdentistapa->alterar($sdentista,$_POST['tipo']);
+	}else if($_POST['tipo']=="telefone"){
+		$sdentista->setTelfone($_POST['para']);
+		$sdentista->setId_Funcionario_Pk($_POST['dentistas']);
+		$resp=$sdentistapa->alterar($sdentista,$_POST['tipo']);
+	}else if($_POST['tipo']=="email"){
+		$sdentista->setEmail($_POST['para']);
+		$sdentista->setId_Funcionario_Pk($_POST['dentistas']);
+		$resp=$sdentistapa->alterar($sdentista,$_POST['tipo']);
 	}
 	if (!$resp) {
 		echo "<h2>Erro na tentativa de alterar Dentista!</h2>";

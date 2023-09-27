@@ -78,30 +78,67 @@
 			return $this->conexao->consultar($sql);
 		}
 
-		public function alterar($dentistas,$tipo)
+		public function alterar($dentista,$tipo)
 		{
-		if ($tipo=="dentistas") {
+
+			switch ($tipo) {
+        case "especialidade":
+            $sql="update dentista set especialidade='".
+			$dentista->getEspecialidade()."' where id_funcionario_pk=".
+			$dentista->getId_Funcionario_Pk();
+            break;
+        case "nome":
+            $sql="update dentista set nome='".
+			$dentista->getNome()."' where id_funcionario_pk=".
+			$dentista->getId_Funcionario_Pk();
+            break;
+        case "endereco":
+            $sql="update dentista set endereco='".
+			$dentista->getEndereco()."' where id_funcionario_pk=".
+			$dentista->getId_Funcionario_Pk();
+            break;
+        case "telefone":
+            $sql="update dentista set telefone='".
+			$dentista->getTelefone()."' where id_funcionario_pk=".
+			$dentista->getId_Funcionario_Pk();
+            break;
+        case "email":
+            $sql="update dentista set email='".
+			$dentista->getEmail()."' where id_funcionario_pk=".
+			$dentista->getId_Funcionario_Pk();
+            break;
+		}
+		return $this->conexao->executar($sql);
+		
+    	
+	}
+}
+/*
+		public function alterar($dentista,$tipo)
+		{
+		if ($tipo=="dentista") {
 			$sql="update dentista set especialidade='".
-			$dentistas->getEspecialidade()."' where id=".
-			$dentistas->getId_Funcionario_Pk();
+			$dentista->getEspecialidade()."' where id_funcionario_pk=".
+			$dentista->getId_Funcionario_Pk();
 		}else{
 			$sql="update dentista set nome='".
-			$dentistas->getNome()."' where id=".
-			$dentistas->getId_Funcionario_Pk();
+			$dentista->getNome()."' where id_funcionario_pk=".
+			$dentista->getId_Funcionario_Pk();
 
 			$sql="update dentista set endereco='".
-			$dentistas->getEndereco()."' where id=".
-			$dentistas->getId_Funcionario_Pk();
+			$dentista->getEndereco()."' where id_funcionario_pk=".
+			$dentista->getId_Funcionario_Pk();
 
 			$sql="update dentista set telefone='".
-			$dentistas->getTelefone()."' where id=".
-			$dentistas->getId_Funcionario_Pk();
+			$dentista->getTelefone()."' where id_funcionario_pk=".
+			$dentista->getId_Funcionario_Pk();
 
 			$sql="update dentista set email='".
-			$dentistas->getEmail()."' where id=".
-			$dentistas->getId_Funcionario_Pk();
+			$dentista->getEmail()."' where id_funcionario_pk=".
+			$dentista->getId_Funcionario_Pk();
 		}
 		return $this->conexao->executar($sql);
 		}
 	}
+	*/
 ?>
