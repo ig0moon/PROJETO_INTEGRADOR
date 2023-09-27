@@ -6,7 +6,8 @@
 
 <div id="art">
 
-<h2>Clínica Odontológica OMAGA: Credibilidade e Experiência Inigualáveis no Mercado Odontológico</h2>
+<h2>Clínica Odontológica OMAGA<br>
+	Credibilidade e Experiência Inigualáveis no Mercado Odontológico</h2>
 	<br/>
 <h2>Em meio à agitação do dia a dia, muitas vezes negligenciamos a importância dos cuidados odontológicos regulares. No entanto, a saúde bucal desempenha um papel crucial em nosso bem-estar geral. Neste artigo, vamos explorar por que cuidar dos seus dentes e gengivas não deve ser uma reflexão tardia, mas sim uma prioridade em sua rotina de cuidados de saúde.</h2>
 <br/>

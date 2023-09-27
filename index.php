@@ -76,6 +76,10 @@ switch ($url) {
 		require_once './listarresultados.php';
 		break;
 
+	case '/PROJETO_INTEGRADOR/alterarpac':
+		require_once './alterarpaciente.php';
+		break;
+
 	case '/PROJETO_INTEGRADOR/detalhes':
 		require_once './detalhes.php';
 		break;

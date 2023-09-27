@@ -218,6 +218,17 @@ input {
 	font-weight: 600;
 }
 
+#alterar {
+	height: 30px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#alterar input {
+	width: 5vw;
+
+}
+
 textarea {
 	margin: auto;
 	width: 20vw;

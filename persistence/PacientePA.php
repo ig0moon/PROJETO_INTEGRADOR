@@ -74,9 +74,19 @@ class PacientePA{
            return $this->conexao->consultar($sql);
 		}
 
+		public function buscarPorId($idbsc){
+			$sql="select * from paciente where id_paciente_pk=$idbsc";
+			return $this->conexao->consultar($sql);
+		}
+
 		public function buscar($busca){
 			$sql="select * from paciente where id_paciente_pk='$busca' or nome like '%$busca%' or telefone like '%$busca%' or email like '%$busca%' or cpf like '%$busca%' or endereco like '%$busca%'";
 			return $this->conexao->consultar($sql);
+		}
+
+		public function alterar($paciente){
+			$sql="update paciente set nome='".$paciente->getNome()."', telefone='".$paciente->getTelefone()."', email='".$paciente->getEmail()."', senha='".$paciente->getSenha()."', endereco='".$paciente->getEndereco()."' where id_paciente_pk=".$paciente->getId_paciente_pk();
+			return $this->conexao->executar($sql);
 		}
 	}
 ?>

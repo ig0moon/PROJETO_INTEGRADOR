@@ -29,6 +29,7 @@
 		echo "<th>Telefone</th>";
 		echo "<th>CPF</th>";
 		echo "<th>Email</th>";
+		echo "<th>Alterar</th>";
 		echo "</tr>";
 
 		while ($linha=$consulta->fetch_assoc()){
@@ -38,6 +39,14 @@
 			echo "<td>".$linha['telefone']."</td>";
 			echo "<td>".$linha['cpf']."</td>";
 			echo "<td>".$linha['email']."</td>";
+			echo "<td>
+				<form action='alterarpaciente.php' method='POST'>"."
+				<input type='hidden' name='id' value='".$linha['id_paciente_pk']."'>"."
+				<div id='alterar'>"."
+				<input type='submit' name='botao' value='Alterar ".$linha['nome']."'>"."
+				</div>
+				</form>
+				</td>";
 			echo "</tr>";
 		}
 		echo "</table>";
@@ -69,9 +78,6 @@
 <br/>
 <br/>
 <br/>
-<?php
-	require_once 'rodape.php';
-?>
 <?php
 	require_once 'rodape.php';
 ?>
