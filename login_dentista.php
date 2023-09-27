@@ -10,7 +10,7 @@ require_once 'cabecalho.php';
 		<p><input type="text" name="nome" size="15" maxlength="50" pattern="[0-9a-zA-Z_]{1,20}" required></p>
 
 		<p>CRM:</p>
-		<p><input type="text" name="crm" size="14" maxlength="14" pattern="[0-9a-zA-Z_\s@]{1,10}" required></p>
+		<p><input type="text" name="crm" size="14" maxlength="14" pattern="[0-9éÉa-zA-Z_\s@]{1,10}" required></p>
 
 		<p><input class="btn" type="submit" name="botao" value="Logar"></p>
 	</form>
