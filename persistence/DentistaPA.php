@@ -77,5 +77,12 @@
 			$sql="select * from dentista where id_funcionario_pk='$busca' or cpf like '%$busca%' or especialidade like '%$busca%' or nome like '%$busca%' or endereco like '%$busca%' or telefone like '%$busca%' or email like '%$busca%'";
 			return $this->conexao->consultar($sql);
 		}
+
+		public function alterar($dentista)
+		{
+		$sql="update dentista set especialidade='".$dentista->getEspecialidade()."',nome='".$dentista->getNome()."',endereco=".$dentista->getEndereco().",telefone='".$dentista->getTelefone()."',email='".$dentista->getEmail()."' where id=".$dentista->getId_Funcionario_Pk();
+
+		return $this->conexao->executar($sql);
+		}
 	}
 ?>
