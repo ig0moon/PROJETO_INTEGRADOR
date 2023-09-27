@@ -103,7 +103,7 @@ require_once 'cabecalho.php';
 			$exame->setId_exame_pk($id);
 			$imagem=$_FILES['imagem']['tmp_name'];
 			$tamanho=filesize($imagem);
-			if($tamanho>4294967295){
+			if($tamanho>2097152||$tamanho==0){
 				echo "<h2>A imagem selecionada é muito grande!</h2>";
 			}else{
 				//$nome_imagem=basename($imagem);
