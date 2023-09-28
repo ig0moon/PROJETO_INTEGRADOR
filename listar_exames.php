@@ -43,7 +43,14 @@ if(!$consultar){
 		echo "<td>".$linha['resultado']."</td>";
 		echo "<td>".$linha['hora']."</td>";
 		echo "<td>".$linha['data_agenda']."</td>";
-		echo "<td><a class='det' href='/PROJETO_INTEGRADOR/detalhes'>Ver detalhes</td>";
+		echo "<td>
+			<form action='detalhes.php' method='POST'>"."
+			<input type='hidden' name='id' value='".$linha['id_examen_pk']."'>"."
+			<div id='alterar'>"."
+			<input type='submit' name='botao' value='Ver mais'>"."
+			</div>
+			</form>
+			</td>";
 		echo "</tr>";
 	}
 	echo "</table>";
@@ -61,4 +68,4 @@ if(!$consultar){
 }
 ?>
 </body>
-</html>
+</html> 

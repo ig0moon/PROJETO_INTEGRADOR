@@ -1,14 +1,14 @@
 <?php
 require_once 'cabecalho.php';
 
-if (isset($_POST['id_examen_pk'])&& isset($_POST['botao'])) {
+if (isset($_POST['botao'])&&isset($_POST['id'])) {
 	require_once 'model/Exame.php';
 	require_once 'persistence/ExamePA.php';
 	$exame=new Exame();
 	$examepa=new ExamePA();
-	$consulta=$examepa->buscarPorId($_POST['id_examen_pk']);
+	$consulta=$examepa->buscarPorId($_POST['id']);
 	if (!$consulta) {
-		echo "<h2>Exame não encontrado</h2>";
+		echo "<h2>Exame não encontrado.</h2>";
 	}else{
 		while ($linha=$consulta->fetch_assoc()) {
 			$exame->setId_examen_pk($linha['id_examen_pk']);
@@ -35,10 +35,10 @@ if (isset($_POST['id_examen_pk'])&& isset($_POST['botao'])) {
 	}
 
 }else{
-	echo "<h2>Deve escolher um examen</h2>";
+	echo "<h2>Deve escolher um examen.</h2>";
 
 }
 
 ?>
 </body>
-</html>
+</html> 
