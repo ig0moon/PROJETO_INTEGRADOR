@@ -5,18 +5,15 @@
     <h2>Resultados</h2>
 
 <?php
-	if(isset($_POST['inicio'])){
-		$inicio=$_POST['inicio'];
-		$fim=$inicio+4;
+if (isset($_COOKIE['paciente'])){
+	require_once 'persistence/PacientePA.php';
+	$pacientepa=new PacientePA();
+	$senha=$_COOKIE['paciente'];
+	$consulta=$pacientepa->converteSenhaParaId($senha);
+	$linha=$consulta->fetch_assoc();
+	$id=$linha['id_paciente_pk'];
 
-	} else{
-		$inicio=1;
-		$fim=5;
-	}
-
-	require_once 'persistence/ExamePA.php';
-	$examepa=new ExamePA();
-	$resultados=$examepa->listarResultado($inicio,$fim);
+	$resultados=$pacientepa->buscaPorResultado($id);
 	if (!$resultados){
 		echo "<h2>Ainda não tem resultados.</h2>";
 
@@ -36,16 +33,8 @@
 		echo "</table>";
 
 	echo "<section>";
-    $max=$examepa->retornarUltimo();
-    if ($fim<$max){
-        $inicio=$fim+1;
-        echo "<form action='listarresultados.php' method='POST'>";
-        echo "<input type='hidden' name='inicio'
-         value='$inicio'>";
-          echo "</form>";
-        }
-        echo "</section>";
- }
+ 	}
+}
 ?>
 </body>
 
