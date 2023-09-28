@@ -77,11 +77,14 @@ class ExamePA{
 			return $this->conexao->consultar($sql);
 
 		}
+<<<<<<< HEAD
+=======
 		public function buscaPorResultado($id)	
 		{
 		$sql = "select resultado from exame where id_paciente_fk=$id";
 		return $this->conexao->consultar($sql);
 	}
+>>>>>>> e849d391d5b12f80f7d38ffe36d3118d5b48610a
 }
 
 ?>

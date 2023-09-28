@@ -88,5 +88,15 @@ class PacientePA{
 			$sql="update paciente set nome='".$paciente->getNome()."', telefone='".$paciente->getTelefone()."', email='".$paciente->getEmail()."', senha='".$paciente->getSenha()."', endereco='".$paciente->getEndereco()."' where id_paciente_pk=".$paciente->getId_paciente_pk();
 			return $this->conexao->executar($sql);
 		}
+		public function buscaPorResultado($id)	
+		{
+		$sql = "select id_examen_pk,resultado from exame where id_paciente_fk=$id";
+		return $this->conexao->consultar($sql);
+	}
+	public function converteSenhaParaId($senha)
+		{
+			$sql="select id_paciente_pk from paciente where senha='$senha'";
+			return $this->conexao->consultar($sql);
+		}
 	}
 ?>
