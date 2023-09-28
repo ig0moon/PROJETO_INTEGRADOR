@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 28-Set-2023 às 18:43
+-- Generation Time: 26-Set-2023 às 20:06
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
 
@@ -21,7 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `odontologia`
 --
-DROP DATABASE IF EXISTS `odontologia`;
 CREATE DATABASE IF NOT EXISTS `odontologia` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `odontologia`;
 
@@ -38,7 +37,7 @@ CREATE TABLE `admin` (
   `email` text,
   `nome` text,
   `senha` text
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `admin`
@@ -58,14 +57,14 @@ CREATE TABLE `consulta` (
   `id_consulta_pk` int(11) NOT NULL,
   `id_dentista_fk` int(11) NOT NULL,
   `id_paciente_fk` int(11) NOT NULL,
-  `diagnostico` text CHARACTER SET utf8mb4,
+  `diagnostico` text,
   `data` date DEFAULT NULL,
   `valor` decimal(10,2) DEFAULT NULL,
-  `situacao` text NOT NULL,
+  `situacao` text,
   `hora` time DEFAULT NULL,
-  `receita_medica` text CHARACTER SET utf8mb4,
-  `descricao` text CHARACTER SET utf8mb4
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `receita_medica` text,
+  `descricao` text
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `consulta`
@@ -84,14 +83,14 @@ INSERT INTO `consulta` (`id_consulta_pk`, `id_dentista_fk`, `id_paciente_fk`, `d
 DROP TABLE IF EXISTS `dentista`;
 CREATE TABLE `dentista` (
   `id_funcionario_pk` int(12) NOT NULL,
-  `cpf` varchar(11) CHARACTER SET utf8mb4 DEFAULT NULL,
-  `especialidade` text CHARACTER SET utf8mb4,
-  `nome` text CHARACTER SET utf8mb4,
-  `endereco` text CHARACTER SET utf8mb4,
+  `cpf` varchar(11) DEFAULT NULL,
+  `especialidade` text,
+  `nome` text,
+  `endereco` text,
   `telefone` bigint(12) DEFAULT NULL,
-  `email` text CHARACTER SET utf8mb4,
-  `crm` text CHARACTER SET utf8mb4
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `email` text,
+  `crm` text
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `dentista`
@@ -112,13 +111,13 @@ CREATE TABLE `exame` (
   `id_examen_pk` int(11) NOT NULL,
   `id_dentista_fk` int(11) NOT NULL,
   `id_paciente_fk` int(11) NOT NULL,
-  `tipo` text CHARACTER SET utf8mb4,
-  `descricao` text NOT NULL,
-  `resultado` text NOT NULL,
+  `tipo` text,
+  `descricao` text,
+  `resultado` text,
   `hora` time DEFAULT NULL,
   `data_agenda` date DEFAULT NULL,
   `imagem` longblob
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `exame`
