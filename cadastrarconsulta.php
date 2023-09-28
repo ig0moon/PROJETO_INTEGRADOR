@@ -56,10 +56,17 @@ require_once 'cabecalho.php';
 
 	<p>Receita medica:</p>
 	<p><textarea name="receitamedica" rows="5" cols="100"></textarea></p>
-
-	<p>Descrição:</p>
-	<p><textarea name="descricao" rows="5" cols="100"></textarea></p>
-
+	<p>Procedimentos:</p>
+	<select name="descricao">
+		<option value="Limpeza">Limpeza</option>
+		<option value="Clareamento">Clareamento</option>
+		<option value="Tratamento de canal">Tratamento de canal</option>
+		<option value="Implantes">Implantes</option>
+		<option value="Manutenção de aparelhos">Manutenção de aparelhos</option>
+		<option value="Extrações">Extrações</option>
+		<option value="Proteses">Proteses</option>
+		<option value="Trauma">Trauma</option>
+	</select>
 	<p><input class="btn" type="submit" name="botao" value="Cadastrar"></p>
 
 </form>

@@ -31,7 +31,7 @@ if (!$consulta){
     echo "<th>Situacao</th>";
     echo "<th>Hora</th>";
     echo "<th>Receita medica</th>";
-    echo "<th>Descricao</th>";
+    echo "<th>Procedimento</th>";
     echo "</th>";
 
     while ($linha=$consulta->fetch_assoc()){
