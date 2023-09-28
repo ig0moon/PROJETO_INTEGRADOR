@@ -65,6 +65,23 @@ class ExamePA{
 		$sql="select resultado,id_examen_pk from exame where id_examen_pk between $inicio and $fim";
 		return $this->conexao->consultar($sql);
 	}
+
+	public function buscar($busca){
+			$sql="select * from exame where Id_examen_pk='$busca' or Id_dentista_fk='$busca' or Id_paciente_fk='$busca' or hora like '%$busca%' or data_agenda like '%$busca%' or tipo like '%$busca%' or descricao like '%$busca%'";
+			return $this->conexao->consultar($sql);
+		}
+
+	public function buscarPorId($id)
+		{
+			$sql="select * from exame where id_examen_pk=$id";
+			return $this->conexao->consultar($sql);
+
+		}
+		public function buscaPorResultado($id)	
+		{
+		$sql = "select resultado from exame where id_paciente_fk=$id";
+		return $this->conexao->consultar($sql);
+	}
 }
 
 ?>
