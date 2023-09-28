@@ -73,10 +73,15 @@ class ExamePA{
 
 	public function buscarPorId($id)
 		{
-			$sql="select * from examen where id_examen_pk=$id";
+			$sql="select * from exame where id_examen_pk=$id";
 			return $this->conexao->consultar($sql);
 
-		}	
+		}
+		public function buscaPorResultado($id)	
+		{
+		$sql = "select resultado from exame where id_paciente_fk=$id";
+		return $this->conexao->consultar($sql);
+	}
 }
 
 ?>
