@@ -226,7 +226,11 @@ input {
 
 #alterar input {
 	width: 5vw;
+}
 
+#alterar a {
+	text-decoration: none;
+	text-align: center;
 }
 
 textarea {

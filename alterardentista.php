@@ -1,6 +1,10 @@
 <?php  
 require_once 'cabecalho.php';
+?>
 
+	<div id="painel">
+
+<?php
 echo "<form action='alterardentista.php' method='POST' class='normal'>";
 echo "<h1>Alterar ".$_COOKIE['admin']."</h1>";
 require_once 'persistence/DentistaPA.php';
@@ -65,5 +69,6 @@ if (isset($_POST['botao'])) {
 	}
 }
 ?>
+</div>
 </body>
 </html>

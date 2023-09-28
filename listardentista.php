@@ -20,6 +20,11 @@ if(!$consulta){
 	echo "<th>Telefone</th>";
 	echo "<th>Email</th>";
 	echo "<th>CRM</th>";
+
+	if (isset($_COOKIE['admin'])) {
+			echo "<th>Alterar</th>";
+		}
+
 	echo "</tr>";
 
 	while($linha=$consulta->fetch_assoc()){
@@ -30,7 +35,13 @@ if(!$consulta){
 		echo "<td>".$linha['telefone']."</td>";
 		echo "<td>".$linha['email']."</td>";
 		echo "<td>".$linha['crm']."</td>";
-		
+		if (isset($_COOKIE['admin'])) {
+			echo "<td>
+			<div id='alterar'>
+			<a href='/PROJETO_INTEGRADOR/alterarden'>Alterar</a>
+			</div>
+			</td>";
+		}		
 		echo "</tr>";
 	}
 	echo "</table>";

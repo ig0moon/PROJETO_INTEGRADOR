@@ -80,6 +80,10 @@ switch ($url) {
 		require_once './alterarpaciente.php';
 		break;
 
+	case '/PROJETO_INTEGRADOR/alterarden':
+		require_once './alterardentista.php';
+		break;
+
 	case '/PROJETO_INTEGRADOR/detalhes':
 		require_once './detalhes.php';
 		break;
