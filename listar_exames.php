@@ -36,8 +36,14 @@ if(!$consultar){
 	while ($linha=$consultar->fetch_assoc()) {
 		echo "<tr>";
 		echo "<td>".$linha['id_examen_pk']."</td>";
-		echo "<td>".$linha['id_dentista_fk']."</td>";
-		echo "<td>".$linha['id_paciente_fk']."</td>";
+		$aux=$examepa->converteIdParaNomeDentista($linha['id_dentista_fk']);
+		$linhaG=$aux->fetch_assoc();
+		echo "<td>".$linhaG['nome']."</td>";
+		$aux=$examepa->converteIdParaNomePaciente($linha['id_paciente_fk']);
+		$linhaG=$aux->fetch_assoc();
+		echo "<td>".$linhaG['nome']."</td>";
+		//echo "<td>".$linha['id_dentista_fk']."</td>";
+		//echo "<td>".$linha['id_paciente_fk']."</td>";
 		echo "<td>".$linha['tipo']."</td>";
 		echo "<td>".$linha['descricao']."</td>";
 		echo "<td>".$linha['resultado']."</td>";

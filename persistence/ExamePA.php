@@ -83,8 +83,20 @@ class ExamePA{
 		return $this->conexao->consultar($sql);
 	}
 
-}
+	public function converteIdParaNomeDentista($id)
+		{
+			$sql="select dentista.nome as nome from exame join dentista on exame.id_dentista_fk=dentista.id_funcionario_pk where id_funcionario_pk=$id";
+			return $this->conexao->consultar($sql);
+		}
 
+
+	public function converteIdParaNomePaciente($id)
+		{
+			$sql="select paciente.nome as nome from exame join paciente on exame.id_paciente_fk=paciente.id_paciente_pk where id_paciente_pk=$id";
+			return $this->conexao->consultar($sql);
+		}
+
+}
 ?>
 </body>
 </html>
