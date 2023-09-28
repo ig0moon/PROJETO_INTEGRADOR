@@ -13,7 +13,7 @@ if (!$consulta) {
 }else{
 	echo "<select name='dentistas'>";
 	while ($linha=$consulta->fetch_assoc()) {
-		$dentista->setId_Funcionario_Pk($linha['id']);
+		$dentista->setId_Funcionario_Pk($linha['id_funcionario_pk']);
 		$dentista->setEspecialidade($linha['especialidade']);
 		$dentista->setNome($linha['nome']);
 		$dentista->setEndereco($linha['endereco']);
