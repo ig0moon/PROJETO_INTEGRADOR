@@ -43,22 +43,22 @@ require_once 'cabecalho.php';
 	<p><textarea name="diagnostico" rows="5" cols="100" required></textarea></p>
 
 	<p>Data:</p>
-	<p><input type="date" name="data"></p>
+	<p><input type="date" name="data" required></p>
 
 	<p>Valor R$:</p>
-	<p><input type="text" name="valor" maxlength="7" size="7" pattern="[0-9,.]{1,5}[0-9]{2}" placeholder="99.99"></p>
+	<p><input type="text" name="valor" maxlength="7" size="7" pattern="[0-9,.]{1,5}[0-9]{2}" placeholder="99.99" required></p>
 
 	<p>Situação:</p>
-	<p><textarea name="situacao" rows="5" cols="100" required></textarea></p>
+	<p><textarea name="situacao" rows="5" cols="100"></textarea></p>
 
 	<p>Hora:</p>
-	<p><input type="time" name="hora"></p>
+	<p><input type="time" name="hora" required></p>
 
 	<p>Receita medica:</p>
-	<p><textarea name="receitamedica" rows="5" cols="100" required></textarea></p>
+	<p><textarea name="receitamedica" rows="5" cols="100"></textarea></p>
 
 	<p>Descrição:</p>
-	<p><textarea name="descricao" rows="5" cols="100" required></textarea></p>
+	<p><textarea name="descricao" rows="5" cols="100"></textarea></p>
 
 	<p><input class="btn" type="submit" name="botao" value="Cadastrar"></p>
 
