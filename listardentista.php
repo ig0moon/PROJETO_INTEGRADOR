@@ -36,11 +36,15 @@ if(!$consulta){
 		echo "<td>".$linha['email']."</td>";
 		echo "<td>".$linha['crm']."</td>";
 		if (isset($_COOKIE['admin'])) {
-			echo "<td>
-			<div id='alterar'>
-			<a href='/PROJETO_INTEGRADOR/alterarden'>Alterar</a>
-			</div>
-			</td>";
+
+			echo "<td><form action='alterardentista.php'>";
+			echo "<div id='alterar'>";
+			echo "<input type='submit' name='alterar' value='Alterar'></div></td>";
+			// echo "<td>
+			// <div id='alterar'>
+			// <a href='/PROJETO_INTEGRADOR/alterarden'>Alterar</a>
+			// </div>
+			// </td>";
 		}		
 		echo "</tr>";
 	}

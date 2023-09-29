@@ -6,7 +6,7 @@ require_once 'cabecalho.php';
 
 <?php
 echo "<form action='alterardentista.php' method='POST' class='normal'>";
-echo "<h1>Alterar ".$_COOKIE['admin']."</h1>";
+echo "<h2>Alterar Dentista</h2>";
 require_once 'persistence/DentistaPA.php';
 require_once 'model/Dentista.php';
 $dentista=new Dentista();
@@ -28,12 +28,13 @@ if (!$consulta) {
 	}
 	echo "</select>";
 	echo "<p>Mudar:</p>";
-	echo "<p><input type='radio' name='tipo' value='especialidade' required>Especialidade</p>";
-	echo "<p><input type='radio' name='tipo' value='nome' required>Nome</p>";
-	echo "<p><input type='radio' name='tipo' value='endereco' required>Endereco</p>";
-	echo "<p><input type='radio' name='tipo' value='telefone' required>Telefone</p>";
-	echo "<p><input type='radio' name='tipo' value='email' required>Email</p>";
-	echo "<p>Para: <input type='text' name='para' size='20'></p>";
+	echo "<h5><input type='radio' name='tipo' value='especialidade' required>Especialidade</h5>";
+	echo "<h5><input type='radio' name='tipo' value='nome' required>Nome</h5>";
+	echo "<h5><input type='radio' name='tipo' value='endereco' required>Endereco</h5>";
+	echo "<h5><input type='radio' name='tipo' value='telefone' required>Telefone</h5>";
+	echo "<h5><input type='radio' name='tipo' value='email' required>Email</h5>";
+	echo "<p>Para:</p>";
+	echo "<p><input type='text' name='para' size='20'></p>";
 	echo "<p><input type='submit' name='botao' value='Alterar'></p>";
 }
 echo "</form>";
