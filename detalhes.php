@@ -30,20 +30,28 @@ if (isset($_POST['botao'])&&isset($_POST['id'])) {
 		$aux=$exame->getId_dentista_fk();
 ?>
 	<section class="detalhes">
+
 		<p>ID: <?= $exame->getId_exame_pk() ?></p>
+
 		<p>Denstista: <?php 
+		
 		$aux=$examepa->converteIdParaNomeDentista($aux);
 		$linhaG=$aux->fetch_assoc();
 		echo $linhaG['nome']; 
 	?>
 		
 	</p>
-	<p>Paciente: <?php
+	<p>Paciente: 
+
+	<?php
 	$aux=$exame->getId_paciente_fk();
 	$aux=$examepa->converteIdParaNomePaciente($aux);
 	$linhaG=$aux->fetch_assoc();
+
 	echo $linhaG['nome'];
+
 	?>
+
 	</p>
 
 	<p>Tipo de exame: <?= $exame->getTipo() ?>
@@ -53,8 +61,11 @@ if (isset($_POST['botao'])&&isset($_POST['id'])) {
 		</div>
 
 		<p><?= $exame->getDescricao()?></p>
+
 		<p>Resultado: <?= $exame->getResultado() ?></p>
+
 		<p>Data e hora: <?= $exame->getData_agenda() ?> às <?= $exame->getHora() ?></p>
+
 	</section>
 
 <?php

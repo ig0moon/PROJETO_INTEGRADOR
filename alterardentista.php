@@ -54,7 +54,7 @@ if (isset($_POST['botao'])) {
 		$sdentista->setId_Funcionario_Pk($_POST['dentistas']);
 		$resp=$sdentistapa->alterar($sdentista,$_POST['tipo']);
 	}else if($_POST['tipo']=="telefone"){
-		$sdentista->setTelfone($_POST['para']);
+		$sdentista->setTelefone($_POST['para']);
 		$sdentista->setId_Funcionario_Pk($_POST['dentistas']);
 		$resp=$sdentistapa->alterar($sdentista,$_POST['tipo']);
 	}else if($_POST['tipo']=="email"){
