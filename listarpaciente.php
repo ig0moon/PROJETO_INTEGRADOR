@@ -22,6 +22,14 @@
 
 	} else{
 
+		echo "<div id='painel'>";
+		echo "<form action='buscarpaciente.php' method='GET'>";
+		echo "<input type='search' name='busca'>";
+		$linha=$consulta->fetch_assoc();
+		echo "<input type='hidden' name='idbsc' value='".$linha['id_paciente_pk']."'>";
+		echo "<input class='btn' type='submit' name='botao' value='Buscar'>";
+		echo "</div>";
+
 		echo "<table>";
 		echo "<tr>";
 		echo "<th>ID</th>";
@@ -37,8 +45,8 @@
 		}
 
 		echo "</tr>";
-
-		while ($linha=$consulta->fetch_assoc()){
+		$consultag=$pacientepa->listar_inicio_fim($inicio,$fim);
+		while ($linha=$consultag->fetch_assoc()){
 			echo "<tr>";
 			echo "<td>".$linha['id_paciente_pk']."</td>";
 			echo "<td>".$linha['nome']."</td>";

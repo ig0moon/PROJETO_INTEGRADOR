@@ -10,12 +10,11 @@ if (isset($_GET['botao'])&&isset($_GET['busca'])){
 	 }else{
 	 	echo "<section>";
 	 	while ($linha=$consulta->fetch_assoc()){
-	 		echo "<div id='paciente'>";
+	 		echo "<div id='painel'>";
 	 		echo "<h2>".$linha['nome']."</h2>";
-	 		echo "<form action='detalhe.php' method='POST'>";
-	 		echo "<input type='hidden' value='".$linha['id']."'
-	 		name='id'>";
-	 		echo "<input type='submit' name='botao' value='Ver' class='ver'>";
+	 		echo "<form action='detalhes.php' method='POST'>";
+	 		echo "<input type='hidden' value='".$linha['id_paciente_pk']."' name='id'>";
+	 		echo "<input type='submit' name='botao' value='Ver' class='btn'>";
 	 		echo "</form>";
 	 		echo "</div>";
 	 	}

@@ -35,7 +35,7 @@ if (!$consulta) {
 	echo "<h5><input type='radio' name='tipo' value='email' required>Email</h5>";
 	echo "<p>Para:</p>";
 	echo "<p><input type='text' name='para' size='20'></p>";
-	echo "<p><input type='submit' name='botao' value='Alterar'></p>";
+	echo "<p><input class='btn' type='submit' name='botao' value='Alterar'></p>";
 }
 echo "</form>";
 
