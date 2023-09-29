@@ -95,7 +95,10 @@ class ExamePA{
 			$sql="select paciente.nome as nome from exame join paciente on exame.id_paciente_fk=paciente.id_paciente_pk where id_paciente_pk=$id";
 			return $this->conexao->consultar($sql);
 		}
-
+	public function buscarPorIdPaciente($id){
+		$sql="select * from exame where id_paciente_fk=$id";
+		return $this->conexao->consultar($sql);
+	}
 }
 ?>
 </body>
