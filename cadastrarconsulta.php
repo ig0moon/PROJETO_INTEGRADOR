@@ -43,7 +43,7 @@ require_once 'cabecalho.php';
 	<p><textarea name="diagnostico" rows="5" cols="100" required></textarea></p>
 
 	<p>Data:</p>
-	<p><input type="date" name="data" required></p>
+	<p><input type="date" name="data"required></p>
 
 	<p>Valor R$:</p>
 	<p><input type="text" name="valor" maxlength="7" size="7" pattern="[0-9,.]{1,5}[0-9]{2}" placeholder="99.99" required></p>
