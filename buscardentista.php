@@ -10,18 +10,19 @@ if (isset($_GET['botao'])&&isset($_GET['busca'])){
 	 }else{
 	 	echo "<section>";
 	 	while ($linha=$consulta->fetch_assoc()){
-	 		echo "<div id='painel'>";
-	 		echo "<h2>".$linha['nome']."</h2>";
-	 		require_once 'persistence/ExamePA.php';
-	 		$examepa=new ExamePA();
-	 	 	$consultag=$examepa->buscarPorIdDentista($linha['id_funcionario_pk']);
-	 		$linhag=$consultag->fetch_assoc();
-	 		echo "<form action='detalhes.php' method='POST'>";
-	 		echo "<input type='hidden' value='".$linhag['id_examen_pk']."' name='id'>";
-	 		echo "<input type='submit' name='botao' value='Ver' class='btn'>";
-	 		echo "</form>";
-	 		echo "</div>";
+	 	echo "<div id='painel'>";
+	 	echo "<h2>".$linha['nome']."</h2>";
+	 	require_once 'persistence/ExamePA.php';
+	 	$examepa=new ExamePA();
+	 	$consultag=$examepa->buscarPorIdDentista($linha['id_funcionario_pk']);
+	 	$linhag=$consultag->fetch_assoc();
+	 	echo "<form action='detalhes.php' method='POST'>";
+	 	echo "<input type='hidden' value='".$linhag['id_examen_pk']."' name='id'>";
+	 	echo "<input type='submit' name='botao' value='Ver' class='btn'>";
+	 	echo "</form>";
+	 	echo "</div>";
 	 	}
+	 	
 	 	echo "</section>";
 	 }
 }else{

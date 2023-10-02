@@ -34,8 +34,8 @@ if(!$consulta){
 		}
 
 	echo "</tr>";
-
-	while($linha=$consulta->fetch_assoc()){
+	$consultag=$dentistapa->listar();
+	while($linha=$consultag->fetch_assoc()){
 		echo "<tr>";
 		echo "<td>".$linha['especialidade']."</td>";
 		echo "<td>".$linha['nome']."</td>";
