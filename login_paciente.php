@@ -23,13 +23,11 @@ require_once 'cabecalho.php';
 		if (!$resp) {
 			echo "<h2>Login Incorreto!</h2>";
 		}else{
-			setcookie("paciente",$_POST['senha']);
+			setcookie("paciente",$_POST['usuario']);
 			echo "<p>Login com sucesso!</p>";
 			echo "<meta http-equiv='refresh' content='2;url=/PROJETO_INTEGRADOR/'>";
 		}
 	}
-		
-	
 ?>
 
 </div>

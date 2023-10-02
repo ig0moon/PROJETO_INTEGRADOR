@@ -26,7 +26,7 @@
 
     } else if (isset($_COOKIE['paciente'])) {
 
-        echo "<li class='cpf'><p>CPF: ".$_COOKIE['paciente']."</p></li>";
+        echo "<li class='cpf'><p>Paciente: ".$_COOKIE['paciente']."</p></li>";
 
         echo "<li><a href='/PROJETO_INTEGRADOR/paciente' target='quadro'><span class='material-symbols-outlined'>personal_injury</span></a></li>";
 
