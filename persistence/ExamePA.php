@@ -97,6 +97,7 @@ class ExamePA{
 		}
 	public function buscarPorIdPaciente($id){
 		$sql="select * from exame where id_paciente_fk=$id";
+		var_dump($sql);
 		return $this->conexao->consultar($sql);
 	}
 }

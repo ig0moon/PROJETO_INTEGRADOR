@@ -28,6 +28,8 @@ require_once 'cabecalho.php';
 			echo "<meta http-equiv='refresh' content='2;url=/PROJETO_INTEGRADOR/'>";
 		}
 	}
+		
+	
 ?>
 
 </div>
