@@ -1,7 +1,6 @@
 <?php
 require_once 'cabecalho.php';
 
-<<<<<<< HEAD
 if (isset($_GET['botao'])&&isset($_GET['busca'])){
      require_once 'persistence/PacientePA.php';
      $pacientepa=new PacientePA();
@@ -16,7 +15,6 @@ if (isset($_GET['botao'])&&isset($_GET['busca'])){
 	 		require_once 'persistence/examePA.php';
 	 		$examepa=new ExamePA();
 	 	 	$consultag=$examepa->buscarPorIdPaciente($linha['id_paciente_pk']);
-	 	 	var_dump($consultag);
 	 		$linhag=$consultag->fetch_assoc();
 	 		echo "<form action='detalhes.php' method='POST'>";
 	 		echo "<input type='hidden' value='".$linhag['id_examen_pk']."' name='id'>";
@@ -29,7 +27,6 @@ if (isset($_GET['botao'])&&isset($_GET['busca'])){
 }else{
 	echo "<h2>Digite nome do paciente &uarr;</h2>";
 }
-=======
 // if (isset($_GET['botao'])&&isset($_GET['busca'])){
 //      require_once 'persistence/PacientePA.php';
 //      $pacientepa=new PacientePA();
@@ -58,7 +55,7 @@ if (isset($_GET['botao'])&&isset($_GET['busca'])){
 // }else{
 // 	echo "<h2>Digite nome do paciente &uarr;</h2>";
 // }
->>>>>>> b84c86d1159f2f9a168f095d03212f22d70fb271
+
 ?>
 <!-- </body> -->
 
