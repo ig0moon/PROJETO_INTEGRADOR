@@ -99,6 +99,10 @@ class ExamePA{
 		$sql="select * from exame where id_paciente_fk=$id";
 		return $this->conexao->consultar($sql);
 	}
+	public function buscarPorIdDentista($id){
+		$sql="select * from exame where id_dentista_fk=$id";
+		return $this->conexao->consultar($sql);
+	}
 }
 ?>
 </body>

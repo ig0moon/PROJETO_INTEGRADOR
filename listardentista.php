@@ -12,6 +12,14 @@ if(!$consulta){
 	echo "<h2>Ainda estamos cadastrando!</h2>";
 }else{
 
+	echo "<div id='painel'>";
+	echo "<form action='buscardentista.php' method='GET'>";
+	echo "<input type='search' name='busca'>";
+		$linha=$consulta->fetch_assoc();
+	echo "<input type='hidden' name='idbsc' value='".$linha['id_funcionario_pk']."'>";
+	echo "<input class='btn' type='submit' name='botao' value='Buscar'>";
+	echo "</div>";
+
 	echo "<table>";
 	echo "<tr>";
 	echo "<th>Especialidade</th>";
