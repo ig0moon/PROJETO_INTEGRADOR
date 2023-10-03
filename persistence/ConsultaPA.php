@@ -64,6 +64,21 @@ class ConsultaPA{
 			$sql="select * from consulta where id_consulta_pk='$busca' or id_dentista_fk='$busca' or id_paciente_fk='$busca' or diagnostico like '%$busca%' or data like '%$busca%' or valor like '%$busca%' or situacao like '%$busca%' or hora like '%$busca%' or receita_medica like '%$busca%' or descricao like '%$busca%'";
 			return $this->conexao->consultar($sql);
 		}
+	public function buscarPorIdPaciente($id){
+		$sql="select * from consulta where id_paciente_fk=$id";
+		return $this->conexao->consultar($sql);
+	}
+	public function converteIdParaNomeDentista($id)
+		{
+			$sql="select dentista.nome as nome from consulta join dentista on consulta.id_dentista_fk=dentista.id_funcionario_pk where id_funcionario_pk=$id";
+			return $this->conexao->consultar($sql);
+		}
+
+	public function converteIdParaNomePaciente($id)
+		{
+			$sql="select paciente.nome as nome from consulta join paciente on consulta.id_paciente_fk=paciente.id_paciente_pk where id_paciente_pk=$id";
+			return $this->conexao->consultar($sql);
+		}
 }
 
 ?>

@@ -89,7 +89,6 @@ class ExamePA{
 			return $this->conexao->consultar($sql);
 		}
 
-
 	public function converteIdParaNomePaciente($id)
 		{
 			$sql="select paciente.nome as nome from exame join paciente on exame.id_paciente_fk=paciente.id_paciente_pk where id_paciente_pk=$id";
@@ -105,5 +104,3 @@ class ExamePA{
 	}
 }
 ?>
-</body>
-</html>
