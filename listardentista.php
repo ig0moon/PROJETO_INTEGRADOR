@@ -15,9 +15,10 @@ if(!$consulta){
 	echo "<div id='painel'>";
 	echo "<form action='buscardentista.php' method='GET'>";
 	echo "<input type='search' name='busca'>";
-		$linha=$consulta->fetch_assoc();
+	$linha=$consulta->fetch_assoc();
 	echo "<input type='hidden' name='idbsc' value='".$linha['id_funcionario_pk']."'>";
 	echo "<input class='btn' type='submit' name='botao' value='Buscar'>";
+	echo "</form>";
 	echo "</div>";
 
 	echo "<table>";
@@ -48,6 +49,7 @@ if(!$consulta){
 			echo "<td><form action='alterardentista.php'>";
 			echo "<div id='alterar'>";
 			echo "<input class='btn' type='submit' name='alterar' value='Alterar'></div></td>";
+			echo "</div>";
 			// echo "<td>
 			// <div id='alterar'>
 			// <a href='/PROJETO_INTEGRADOR/alterarden'>Alterar</a>

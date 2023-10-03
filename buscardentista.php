@@ -1,6 +1,6 @@
 <?php
 require_once 'cabecalho.php';
-
+/*
 if (isset($_GET['botao'])&&isset($_GET['busca'])){
      require_once 'persistence/DentistaPA.php';
      $dentistapa=new DentistaPA();
@@ -67,6 +67,64 @@ if (isset($_POST['botao'])&&isset($_POST['busca'])) {
 		echo "</table>";
 
 		echo "<section>";
+
+	}
+}*/
+
+echo"<h2>Dentistas</h2>";
+
+echo "<div id='painel'>";
+echo "<form action='buscardentista.php' method='GET'>";
+echo "<input type='search' name='busca'>";
+echo "<input class='btn' type='submit' name='botao' value='Buscar'>";
+echo"</form>";
+echo "</div>";
+
+if (isset($_GET['botao'])&&isset($_GET['busca'])){
+	require_once 'persistence/DentistaPA.php';
+     $dentistapa=new DentistaPA();
+     $fodase= $_GET['busca'];
+     echo $_GET['busca'];
+     $consulta=$dentistapa->buscar($_GET['busca']);
+     if (!$consulta){
+		echo "<h2>Não foi possível recuperar nenhum dentista.</h2>";
+
+	}else{
+		echo "<table>";
+		echo "<tr>";
+		echo "<th>Especialidade</th>";
+		echo "<th>Nome</th>";
+		echo "<th>Endereço</th>";
+		echo "<th>Telefone</th>";
+		echo "<th>Email</th>";
+		echo "<th>CRM</th>";
+		if (isset($_COOKIE['admin'])) {
+			echo "<th>Alterar</th>";
+		}
+		$consultag=$dentistapa->listar();
+		while($linha=$consultag->fetch_assoc()){
+			echo "<tr>";
+			echo "<td>".$linha['especialidade']."</td>";
+			echo "<td>".$linha['nome']."</td>";
+			echo "<td>".$linha['endereco']."</td>";
+			echo "<td>".$linha['telefone']."</td>";
+			echo "<td>".$linha['email']."</td>";
+			echo "<td>".$linha['crm']."</td>";
+			if (isset($_COOKIE['admin'])) {
+
+				echo "<td><form action='alterardentista.php'>";
+				echo "<div id='alterar'>";
+				echo "<input class='btn' type='submit' name='alterar' value='Alterar'></div></td>";
+				// echo "<td>
+				// <div id='alterar'>
+				// <a href='/PROJETO_INTEGRADOR/alterarden'>Alterar</a>
+				// </div>
+				// </td>";
+			}		
+			echo "</tr>";
+		}
+		echo "</table>";
+		echo "</tr>";
 
 	}
 }
