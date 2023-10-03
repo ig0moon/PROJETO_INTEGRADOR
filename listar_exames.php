@@ -27,7 +27,7 @@ if(!$consultar){
 	echo "<th>paciente</th>";
 	echo "<th>Tipo</th>";
 	echo "<th>Descrição</th>";
-	echo "<th>Resultado</th>";
+	//echo "<th>Resultado</th>";
 	echo "<th>Hora</th>";
 	echo "<th>Data agenda</th>";
 	echo "<th>Detalhes</th>";
@@ -46,14 +46,14 @@ if(!$consultar){
 		//echo "<td>".$linha['id_paciente_fk']."</td>";
 		echo "<td>".$linha['tipo']."</td>";
 		echo "<td>".$linha['descricao']."</td>";
-		echo "<td>".$linha['resultado']."</td>";
+		//echo "<td>".$linha['resultado']."</td>";
 		echo "<td>".$linha['hora']."</td>";
 		echo "<td>".$linha['data_agenda']."</td>";
 		echo "<td>
 			<form action='detalhes.php' method='POST'>"."
-			<input type='hidden' name='id' value='".$linha['id_examen_pk']."'>"."
-			<div id='alterar'>"."
-			<input type='submit' name='botao' value='Ver mais'>"."
+			<input type='hidden' name='idP' value='".$linha['id_paciente_fk']."'>
+			<div id='alterar'>
+			<input style='margin-left:0px;width:8vw;' type='submit' name='botao' value='Ver mais'>
 			</div>
 			</form>
 			</td>";

@@ -5,6 +5,131 @@ require_once 'cabecalho.php';
 	<div id="painel">
 
 <?php
+if(isset($_POST['botao'])&&isset($_POST['idP'])){
+	require_once 'model/Paciente.php';
+	require_once 'persistence/PacientePA.php';
+	$pacientepa=new PacientePA();
+	$paciente=new Paciente();
+	$consulta=$pacientepa->buscarPorId($_POST['idP']);
+	if(!$consulta){
+		echo"<h2>Favor selecionar um cliente</h2>";
+	}else{
+		while ($linha=$consulta->fetch_assoc()) {
+			$paciente->setId_paciente_pk($linha['id_paciente_pk']);
+			$paciente->setNome($linha['nome']);
+			$paciente->setTelefone($linha['telefone']);
+			$paciente->setSenha($linha['senha']);
+			$paciente->setCpf($linha['cpf']);
+			$paciente->setEmail($linha['email']);
+			$paciente->setEndereco($linha['endereco']);
+		}
+	}
+
+	
+?>
+	<section class="detalhes">
+		<h1>Paciente</h1>
+		<p>Nome:<?= $paciente->getNome()?></p>
+		<p>Telefone:<?= $paciente->getTelefone()?></p>
+		<p>cpf:<?= $paciente->getcpf()?></p>
+		<p>Email:<?= $paciente->getEmail()?></p>
+		<p>Endereço:<?= $paciente->getEndereco()?></p>
+	</section>
+<?php
+	
+	require_once 'persistence/ExamePA.php';
+$examepa=new ExamePA();
+$consultar=$examepa->buscarPorIdPaciente($paciente->getId_paciente_pk());
+echo"<h3>Exames:</h3>";
+echo"</div>";
+if(!$consultar){
+	echo "<h2>Não há nenhum exame cadastrado nesse paciente.</h2>";
+}else{
+	echo "<table>";
+	echo "<tr>";
+	echo "<th>Id examen</th>";
+	echo "<th>dentista</th>";
+	echo "<th>paciente</th>";
+	echo "<th>Tipo</th>";
+	echo "<th>Descrição</th>";
+	echo "<th>Resultado</th>";
+	echo "<th>Hora</th>";
+	echo "<th>Data agenda</th>";
+	echo "<th>Detalhes</th>";
+	echo "</tr>";
+	while ($linha=$consultar->fetch_assoc()) {
+		echo "<tr>";
+		echo "<td>".$linha['id_examen_pk']."</td>";
+		$aux=$examepa->converteIdParaNomeDentista($linha['id_dentista_fk']);
+		$linhaG=$aux->fetch_assoc();
+		echo "<td>".$linhaG['nome']."</td>";
+		$aux=$examepa->converteIdParaNomePaciente($linha['id_paciente_fk']);
+		$linhaG=$aux->fetch_assoc();
+		echo "<td>".$linhaG['nome']."</td>";
+		//echo "<td>".$linha['id_dentista_fk']."</td>";
+		//echo "<td>".$linha['id_paciente_fk']."</td>";
+		echo "<td>".$linha['tipo']."</td>";
+		echo "<td>".$linha['descricao']."</td>";
+		echo "<td>".$linha['resultado']."</td>";
+		echo "<td>".$linha['hora']."</td>";
+		echo "<td>".$linha['data_agenda']."</td>";
+		echo "<td>
+			<form action='detalhes.php' method='POST'>"."
+			<input type='hidden' name='id' value='".$linha['id_examen_pk']."'>
+			<div id='alterar'>
+			<input style='margin-left:0px;width:8vw;' type='submit' name='botaoDE' value='Ver mais'>
+			</div>
+			</form>
+			</td>";
+		echo "</tr>";
+	}
+	echo "</table>";
+}
+	require_once 'persistence/ConsultaPA.php';
+$consultapa=new consultaPA();
+$consulta=$consultapa->buscarPorIdPaciente($paciente->getId_paciente_pk());
+echo"<div id='painel'><h3>Consultas:</h3></div>";
+if (!$consulta){
+    echo "<h2>Não há nenhum exame cadastrado nesse paciente.</h2>";
+}else{
+
+    echo "<table>";
+    echo "<tr>";
+    echo "<th>Id</th>";
+    echo "<th>Dentista</th>";
+    echo "<th>Paciente</th>";
+    echo "<th>Diagnostico</th>";
+    echo "<th>Data</th>";
+    echo "<th>Valor</th>";
+    echo "<th>Situacao</th>";
+    echo "<th>Hora</th>";
+    echo "<th>Receita medica</th>";
+    echo "<th>Procedimento</th>";
+    echo "</th>";
+    while ($linha=$consulta->fetch_assoc()){
+        echo "<tr>";
+        echo "<td>".$linha['id_consulta_pk']."</td>";
+        //echo "<td>".$linha['id_dentista_fk']."</td>";
+        //echo "<td>".$linha['id_paciente_fk']."</td>";
+        $aux=$consultapa->converteIdParaNomeDentista($linha['id_dentista_fk']);
+		$linhaG=$aux->fetch_assoc();
+		echo "<td>".$linhaG['nome']."</td>";
+		$aux=$consultapa->converteIdParaNomePaciente($linha['id_paciente_fk']);
+		$linhaG=$aux->fetch_assoc();
+		echo "<td>".$linhaG['nome']."</td>";
+        echo "<td>".$linha['diagnostico']."</td>";
+        echo "<td>".$linha['data']."</td>";
+        echo "<td>".$linha['valor']."</td>";
+        echo "<td>".$linha['situacao']."</td>";
+        echo "<td>".$linha['hora']."</td>";
+        echo "<td>".$linha['receita_medica']."</td>";
+        echo "<td>".$linha['descricao']."</td>";
+        echo "</tr>";
+     }
+     echo "</table>";
+}
+	
+/*
 if (isset($_POST['botao'])&&isset($_POST['id'])) {
 	require_once 'model/Exame.php';
 	require_once 'persistence/ExamePA.php';
@@ -74,8 +199,8 @@ if (isset($_POST['botao'])&&isset($_POST['id'])) {
 }else{
 	echo "<h2>Deve escolher um examen.</h2>";
 
+}*/
 }
-
 ?>
 </div>
 </body>

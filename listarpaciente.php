@@ -25,9 +25,10 @@
 		echo "<div id='painel'>";
 		echo "<form action='buscarpaciente.php' method='GET'>";
 		echo "<input type='search' name='busca'>";
-		$linha=$consulta->fetch_assoc();
-		echo "<input type='hidden' name='idbsc' value='".$linha['id_paciente_pk']."'>";
+		//$linha=$consulta->fetch_assoc();
+		//echo "<input type='hidden' name='idbsc' value='".$linha['id_paciente_pk']."'>";
 		echo "<input class='btn' type='submit' name='botao' value='Buscar'>";
+		echo"</form>";
 		echo "</div>";
 
 		echo "<table>";
@@ -36,7 +37,7 @@
 		echo "<th>Nome</th>";
 		echo "<th>Telefone</th>";
 		echo "<th>CPF</th>";
-		echo "<th>Email</th>";
+		//echo "<th>Email</th>";
 
 		if (isset($_COOKIE['admin'])) {
 
@@ -52,7 +53,7 @@
 			echo "<td>".$linha['nome']."</td>";
 			echo "<td>".$linha['telefone']."</td>";
 			echo "<td>".$linha['cpf']."</td>";
-			echo "<td>".$linha['email']."</td>";
+			//echo "<td>".$linha['email']."</td>";
 
 			if (isset($_COOKIE['admin'])) {
 

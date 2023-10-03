@@ -37,8 +37,14 @@ if (!$consulta){
     while ($linha=$consulta->fetch_assoc()){
         echo "<tr>";
         echo "<td>".$linha['id_consulta_pk']."</td>";
-        echo "<td>".$linha['id_dentista_fk']."</td>";
-        echo "<td>".$linha['id_paciente_fk']."</td>";
+        //echo "<td>".$linha['id_dentista_fk']."</td>";
+        //echo "<td>".$linha['id_paciente_fk']."</td>";
+        $aux=$consultapa->converteIdParaNomeDentista($linha['id_dentista_fk']);
+        $linhaG=$aux->fetch_assoc();
+        echo "<td>".$linhaG['nome']."</td>";
+        $aux=$consultapa->converteIdParaNomePaciente($linha['id_paciente_fk']);
+        $linhaG=$aux->fetch_assoc();
+        echo "<td>".$linhaG['nome']."</td>";
         echo "<td>".$linha['diagnostico']."</td>";
         echo "<td>".$linha['data']."</td>";
         echo "<td>".$linha['valor']."</td>";
