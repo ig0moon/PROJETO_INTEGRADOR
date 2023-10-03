@@ -32,7 +32,8 @@ if (!$consulta){
     echo "<th>Hora</th>";
     echo "<th>Receita medica</th>";
     echo "<th>Procedimento</th>";
-    echo "</th>";
+    echo "<th>Detalhes</th>";
+    echo "</tr>";
 
     while ($linha=$consulta->fetch_assoc()){
         echo "<tr>";
@@ -52,6 +53,14 @@ if (!$consulta){
         echo "<td>".$linha['hora']."</td>";
         echo "<td>".$linha['receita_medica']."</td>";
         echo "<td>".$linha['descricao']."</td>";
+        echo "<td>
+            <form action='detalhes.php' method='POST'>"."
+            <input type='hidden' name='idP' value='".$linha['id_paciente_fk']."'>
+            <div id='alterar'>
+            <input style='margin-left:0px;width:8vw;' type='submit' name='botao' value='Ver mais'>
+            </div>
+            </form>
+            </td>";
         echo "</tr>";
      }
      echo "</table>";
