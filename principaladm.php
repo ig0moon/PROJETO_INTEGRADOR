@@ -36,5 +36,9 @@
     }
 ?>
 
+<div id="drop">
+    <p><a href="dropdatabase.php"><span class="material-symbols-outlined">arrow_drop_down</span><span class="material-symbols-outlined">database</span></a></p>
+</div>
+
 </body>
 </html>

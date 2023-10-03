@@ -62,7 +62,7 @@
 					<form action='alterarpaciente.php' method='POST'>"."
 					<input type='hidden' name='id' value='".$linha['id_paciente_pk']."'>"."
 					<div id='alterar'>"."
-					<input type='submit' name='botao' value='Alterar ".$linha['nome']."'>"."
+					<input class='btn' type='submit' name='botao' value='Alterar ".$linha['nome']."'>"."
 					</div>
 					</form>
 					</td>";
@@ -71,7 +71,7 @@
 				echo "<form action='detalhes.php' method='POST'>";
 				echo "<input type='hidden' name='idP' value='".$linha['id_paciente_pk']."'>";
 				echo"<div id='alterar'>";
- 				echo "<input type='submit' name='botao' value='Ver' >";//class='btn'
+ 				echo "<input class='btn' type='submit' name='botao' value='Ver' >";//class='btn'
  				echo"</div>";
  				echo"</form>";
 				echo"</td>";

@@ -28,20 +28,22 @@ if(isset($_POST['botao'])&&isset($_POST['idP'])){
 	
 ?>
 	<section class="detalhes">
-		<h1>Paciente</h1>
-		<p>Nome:<?= $paciente->getNome()?></p>
-		<p>Telefone:<?= $paciente->getTelefone()?></p>
-		<p>cpf:<?= $paciente->getcpf()?></p>
-		<p>Email:<?= $paciente->getEmail()?></p>
-		<p>Endereço:<?= $paciente->getEndereco()?></p>
+		<h3>Paciente</h3>
+		<p>Nome: <?= $paciente->getNome()?></p>
+		<p>Telefone: <?= $paciente->getTelefone()?></p>
+		<p>cpf: <?= $paciente->getcpf()?></p>
+		<p>Email: <?= $paciente->getEmail()?></p>
+		<p>Endereço: <?= $paciente->getEndereco()?></p>
 	</section>
 <?php
 	
 	require_once 'persistence/ExamePA.php';
 $examepa=new ExamePA();
 $consultar=$examepa->buscarPorIdPaciente($paciente->getId_paciente_pk());
-echo"<h3>Exames:</h3>";
 echo"</div>";
+echo"<div id='painel'>";
+echo"<p>Exames:</p>";
+echo "</div>";
 if(!$consultar){
 	echo "<h2>Não há nenhum exame cadastrado nesse paciente.</h2>";
 }else{

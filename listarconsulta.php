@@ -56,8 +56,8 @@ if (!$consulta){
         echo "<td>
             <form action='detalhes.php' method='POST'>"."
             <input type='hidden' name='idP' value='".$linha['id_paciente_fk']."'>
-            <div id='alterar'>
-            <input style='margin-left:0px;width:8vw;' type='submit' name='botao' value='Ver mais'>
+            <div id='alterardt'>
+            <input class='btndt' type='submit' name='botao' value='Ver mais'>
             </div>
             </form>
             </td>";
