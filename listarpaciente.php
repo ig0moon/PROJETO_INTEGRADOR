@@ -39,10 +39,11 @@
 		echo "<th>CPF</th>";
 		//echo "<th>Email</th>";
 
-		if (isset($_COOKIE['admin'])) {
-
-			echo "<th>Alterar</th>";
-
+		if (isset($_COOKIE['admin'])||isset($_COOKIE['paciente'])||isset($_COOKIE['dentista'])) {
+			if(isset($_COOKIE['admin'])){
+				echo "<th>Alterar</th>";
+			}
+			echo "<th>Detalhes</th>";
 		}
 
 		echo "</tr>";
@@ -55,8 +56,8 @@
 			echo "<td>".$linha['cpf']."</td>";
 			//echo "<td>".$linha['email']."</td>";
 
-			if (isset($_COOKIE['admin'])) {
-
+			if (isset($_COOKIE['admin'])||isset($_COOKIE['paciente'])||isset($_COOKIE['dentista'])) {
+				if(isset($_COOKIE['admin'])){
 				echo "<td>
 					<form action='alterarpaciente.php' method='POST'>"."
 					<input type='hidden' name='id' value='".$linha['id_paciente_pk']."'>"."
@@ -65,7 +66,15 @@
 					</div>
 					</form>
 					</td>";
-
+				}
+				echo "<td>";
+				echo "<form action='detalhes.php' method='POST'>";
+				echo "<input type='hidden' name='idP' value='".$linha['id_paciente_pk']."'>";
+				echo"<div id='alterar'>";
+ 				echo "<input type='submit' name='botao' value='Ver' >";//class='btn'
+ 				echo"</div>";
+ 				echo"</form>";
+				echo"</td>";
 			}
 			echo "</tr>";
 		}
